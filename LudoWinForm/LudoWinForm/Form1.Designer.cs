@@ -38,6 +38,9 @@
             this.lbl_sqr6 = new System.Windows.Forms.Label();
             this.lbl_sqr0 = new System.Windows.Forms.Label();
             this.pawn1 = new System.Windows.Forms.Label();
+            this.pawn2 = new System.Windows.Forms.Label();
+            this.nest1 = new System.Windows.Forms.Label();
+            this.nest2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_dice
@@ -128,7 +131,7 @@
             this.lbl_sqr0.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_sqr0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_sqr0.Image = global::LudoWinForm.Properties.Resources.field;
-            this.lbl_sqr0.Location = new System.Drawing.Point(281, 117);
+            this.lbl_sqr0.Location = new System.Drawing.Point(281, 200);
             this.lbl_sqr0.Name = "lbl_sqr0";
             this.lbl_sqr0.Size = new System.Drawing.Size(50, 50);
             this.lbl_sqr0.TabIndex = 8;
@@ -138,17 +141,47 @@
             // pawn1
             // 
             this.pawn1.Image = global::LudoWinForm.Properties.Resources.Pawn;
-            this.pawn1.Location = new System.Drawing.Point(281, 138);
+            this.pawn1.Location = new System.Drawing.Point(281, 66);
             this.pawn1.Name = "pawn1";
             this.pawn1.Size = new System.Drawing.Size(27, 29);
             this.pawn1.TabIndex = 9;
             this.pawn1.Click += new System.EventHandler(this.pawn1_Click);
+            // 
+            // pawn2
+            // 
+            this.pawn2.Image = global::LudoWinForm.Properties.Resources.Pawn;
+            this.pawn2.Location = new System.Drawing.Point(349, 66);
+            this.pawn2.Name = "pawn2";
+            this.pawn2.Size = new System.Drawing.Size(27, 29);
+            this.pawn2.TabIndex = 10;
+            this.pawn2.Click += new System.EventHandler(this.pawn2_Click);
+            // 
+            // nest1
+            // 
+            this.nest1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.nest1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.nest1.Image = global::LudoWinForm.Properties.Resources.field;
+            this.nest1.Location = new System.Drawing.Point(281, 66);
+            this.nest1.Name = "nest1";
+            this.nest1.Size = new System.Drawing.Size(50, 50);
+            this.nest1.TabIndex = 11;
+            // 
+            // nest2
+            // 
+            this.nest2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.nest2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.nest2.Image = global::LudoWinForm.Properties.Resources.field;
+            this.nest2.Location = new System.Drawing.Point(349, 66);
+            this.nest2.Name = "nest2";
+            this.nest2.Size = new System.Drawing.Size(50, 50);
+            this.nest2.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.pawn2);
             this.Controls.Add(this.pawn1);
             this.Controls.Add(this.lbl_sqr0);
             this.Controls.Add(this.lbl_sqr6);
@@ -159,6 +192,8 @@
             this.Controls.Add(this.lbl_sqr1);
             this.Controls.Add(this.btn_rollDice);
             this.Controls.Add(this.lbl_dice);
+            this.Controls.Add(this.nest1);
+            this.Controls.Add(this.nest2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
@@ -180,5 +215,8 @@
         private Label lbl_sqr6;
         private Label lbl_sqr0;
         private Label pawn1;
+        private Label pawn2;
+        private Label nest1;
+        private Label nest2;
     }
 }

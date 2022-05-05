@@ -6,7 +6,10 @@ namespace LudoWinForm
         int dice;
         Random random = new Random();
         int[,] boardcoordinates;
-        int stepsmade = 1;
+        int stepsmade1 = 0;
+        int stepsmade2 = 0;
+        int boxnumber = 0;
+        int boxnumber2 = 0;
 
         public Form1()
         {
@@ -39,17 +42,16 @@ namespace LudoWinForm
         {
                 RollDice();
 
-                stepsmade += dice;
 
-                pawn1.Left = boardcoordinates[stepsmade, 0];
-                pawn1.Top = boardcoordinates[stepsmade, 1];
+                //pawn1.Left = boardcoordinates[boxnumber, 0];
+                //pawn1.Top = boardcoordinates[boxnumber, 1];
 
         }
 
         private void RollDice()
         {
 
-                dice = random.Next(1, 2);
+                dice = random.Next(5, 7);
                 lbl_dice.Image = diceImages[dice];
 
             
@@ -67,8 +69,39 @@ namespace LudoWinForm
 
         private void pawn1_Click(object sender, EventArgs e)
         {
-            pawn1.Left = boardcoordinates[1, 0];
-            pawn1.Top = boardcoordinates[1, 1];
+            boxnumber += dice;
+
+            pawn1.Left = boardcoordinates[boxnumber, 0];
+            pawn1.Top = boardcoordinates[boxnumber, 1];
+
+            stepsmade1 += dice;
+            dice = 0;
+        }
+
+        private void pawn2_Click(object sender, EventArgs e)
+        {
+            if (dice == 6 && pawn2.Left == nest2.Location.X && pawn2.Top == nest2.Location.Y)
+            {
+                pawn2.Left = boardcoordinates[0, 0];
+                pawn2.Top = boardcoordinates[0, 1];
+                
+            }
+            else if (boxnumber2 >= 0 && dice > 0)
+            {
+                boxnumber2 += dice;
+
+                pawn2.Left = boardcoordinates[boxnumber2, 0];
+                pawn2.Top = boardcoordinates[boxnumber2, 1];
+
+                stepsmade2 += dice;
+                dice = 0;
+                if (stepsmade2 == 6)
+                {
+                    pawn2.Left = nest2.Location.X;
+                    pawn2.Top = nest2.Location.Y;
+                    pawn2.Visible = false;
+                }
+            }
         }
     }
 }
