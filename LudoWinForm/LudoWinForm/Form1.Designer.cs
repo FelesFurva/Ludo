@@ -67,7 +67,7 @@
             this.lbl_sqr1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_sqr1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_sqr1.Image = global::LudoWinForm.Properties.Resources.field;
-            this.lbl_sqr1.Location = new System.Drawing.Point(281, 262);
+            this.lbl_sqr1.Location = new System.Drawing.Point(281, 264);
             this.lbl_sqr1.Name = "lbl_sqr1";
             this.lbl_sqr1.Size = new System.Drawing.Size(50, 50);
             this.lbl_sqr1.TabIndex = 2;
@@ -128,7 +128,7 @@
             this.lbl_sqr0.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_sqr0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_sqr0.Image = global::LudoWinForm.Properties.Resources.field;
-            this.lbl_sqr0.Location = new System.Drawing.Point(281, 203);
+            this.lbl_sqr0.Location = new System.Drawing.Point(281, 117);
             this.lbl_sqr0.Name = "lbl_sqr0";
             this.lbl_sqr0.Size = new System.Drawing.Size(50, 50);
             this.lbl_sqr0.TabIndex = 8;
@@ -138,7 +138,7 @@
             // pawn1
             // 
             this.pawn1.Image = global::LudoWinForm.Properties.Resources.Pawn;
-            this.pawn1.Location = new System.Drawing.Point(281, 224);
+            this.pawn1.Location = new System.Drawing.Point(281, 138);
             this.pawn1.Name = "pawn1";
             this.pawn1.Size = new System.Drawing.Size(27, 29);
             this.pawn1.TabIndex = 9;

@@ -5,8 +5,8 @@ namespace LudoWinForm
         Image[] diceImages;
         int dice;
         Random random = new Random();
-        int[,] pawnposition;
-        
+        int[,] boardcoordinates;
+        int stepsmade = 1;
 
         public Form1()
         {
@@ -24,7 +24,7 @@ namespace LudoWinForm
             diceImages[5] = Properties.Resources.Dice_5;
             diceImages[6] = Properties.Resources.Dice_6;
 
-            pawnposition = new int[7,2] { 
+            boardcoordinates = new int[7,2] { 
                                         { lbl_sqr0.Location.X, lbl_sqr0.Location.Y },
                                         { lbl_sqr1.Location.X, lbl_sqr1.Location.Y },
                                         { lbl_sqr2.Location.X, lbl_sqr2.Location.Y },
@@ -33,21 +33,26 @@ namespace LudoWinForm
                                         { lbl_sqr5.Location.X, lbl_sqr5.Location.Y },
                                         { lbl_sqr6.Location.X, lbl_sqr6.Location.Y },
             };
-
-
         }
 
         private void btn_rollDice_Click(object sender, EventArgs e)
         {
-            RollDice();
+                RollDice();
+
+                stepsmade += dice;
+
+                pawn1.Left = boardcoordinates[stepsmade, 0];
+                pawn1.Top = boardcoordinates[stepsmade, 1];
+
         }
 
         private void RollDice()
         {
-            dice = random.Next(1, 7);
-            lbl_dice.Image = diceImages[dice];
-            pawn1.Left = pawnposition[dice, 0];
-            pawn1.Top = pawnposition[dice, 1];
+
+                dice = random.Next(1, 2);
+                lbl_dice.Image = diceImages[dice];
+
+            
         }
 
         private void lbl_sqr0_Click(object sender, EventArgs e)
@@ -62,7 +67,8 @@ namespace LudoWinForm
 
         private void pawn1_Click(object sender, EventArgs e)
         {
-
+            pawn1.Left = boardcoordinates[1, 0];
+            pawn1.Top = boardcoordinates[1, 1];
         }
     }
 }
