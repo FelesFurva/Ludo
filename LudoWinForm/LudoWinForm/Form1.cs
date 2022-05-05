@@ -80,10 +80,13 @@ namespace LudoWinForm
 
         private void pawn2_Click(object sender, EventArgs e)
         {
-            if (dice == 6 && pawn2.Left == nest2.Location.X && pawn2.Top == nest2.Location.Y)
+            if (pawn2.Left == nest2.Location.X && pawn2.Top == nest2.Location.Y)
             {
-                pawn2.Left = boardcoordinates[0, 0];
-                pawn2.Top = boardcoordinates[0, 1];
+                if (dice == 6)
+                {
+                    pawn2.Left = boardcoordinates[0, 0];
+                    pawn2.Top = boardcoordinates[0, 1];
+                }
                 
             }
             else if (boxnumber2 >= 0 && dice > 0)
@@ -95,6 +98,7 @@ namespace LudoWinForm
 
                 stepsmade2 += dice;
                 dice = 0;
+
                 if (stepsmade2 == 6)
                 {
                     pawn2.Left = nest2.Location.X;
