@@ -5,55 +5,49 @@ namespace LudoWinForm
         Image[] diceImages;
         int dice;
         Random random = new Random();
-        int[,] boardcoordinates;
+        Label[] boardtiles;
         int stepsmade1 = 0;
         int stepsmade2 = 0;
-        int boxnumber = 0;
+        int boxnumber1 = 0;
         int boxnumber2 = 0;
+
+        int playerIndex = 0;
+
+        const int startShift = 0;
+        const int sharedCellsCount = 6;
+
+        PictureBox[] pawns;
 
         public Form1()
         {
             InitializeComponent();
+            boardtiles = new Label[7] { lbl_sqr0, lbl_sqr1, lbl_sqr2, lbl_sqr3, lbl_sqr4, lbl_sqr5, lbl_sqr6 };
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            diceImages = new Image[7];
-            diceImages[0] = Properties.Resources.Dice_blank;
-            diceImages[1] = Properties.Resources.Dice_1;
-            diceImages[2] = Properties.Resources.Dice_2;
-            diceImages[3] = Properties.Resources.Dice_3;
-            diceImages[4] = Properties.Resources.Dice_4;
-            diceImages[5] = Properties.Resources.Dice_5;
-            diceImages[6] = Properties.Resources.Dice_6;
-
-            boardcoordinates = new int[7,2] { 
-                                        { lbl_sqr0.Location.X, lbl_sqr0.Location.Y },
-                                        { lbl_sqr1.Location.X, lbl_sqr1.Location.Y },
-                                        { lbl_sqr2.Location.X, lbl_sqr2.Location.Y },
-                                        { lbl_sqr3.Location.X, lbl_sqr3.Location.Y },
-                                        { lbl_sqr4.Location.X, lbl_sqr4.Location.Y },
-                                        { lbl_sqr5.Location.X, lbl_sqr5.Location.Y },
-                                        { lbl_sqr6.Location.X, lbl_sqr6.Location.Y },
+            diceImages = new Image[7]
+            {
+                Properties.Resources.Dice_blank,
+                Properties.Resources.Dice_1,
+                Properties.Resources.Dice_2,
+                Properties.Resources.Dice_3,
+                Properties.Resources.Dice_4,
+                Properties.Resources.Dice_5,
+                Properties.Resources.Dice_6
             };
         }
 
         private void btn_rollDice_Click(object sender, EventArgs e)
         {
-                RollDice();
-
-
-                //pawn1.Left = boardcoordinates[boxnumber, 0];
-                //pawn1.Top = boardcoordinates[boxnumber, 1];
-
+            RollDice();
         }
 
         private void RollDice()
         {
-
-                dice = random.Next(5, 7);
-                lbl_dice.Image = diceImages[dice];
-
+            dice = random.Next(1, 7);
+            lbl_dice.Image = diceImages[dice];
             
         }
 
@@ -69,43 +63,80 @@ namespace LudoWinForm
 
         private void pawn1_Click(object sender, EventArgs e)
         {
-            boxnumber += dice;
+            if (pawn1.Location == nest1.Location)
+            {   
+                if (dice == 6)
+                {
+                    pawn1.MoveTo(lbl_sqr0);
+                }
 
-            pawn1.Left = boardcoordinates[boxnumber, 0];
-            pawn1.Top = boardcoordinates[boxnumber, 1];
+            }
+            else if (boxnumber1 >= 0 && dice > 0)
+            {
+                var individualT = nextPosition(stepsmade1, dice);
 
-            stepsmade1 += dice;
-            dice = 0;
+                var individualPosition = individualT;
+
+                var globalT = globalPosition(0, individualPosition);
+
+                boxnumber1 = globalT;
+
+                pawn1.MoveTo(boardtiles[boxnumber1]);
+                stepsmade1 = individualT;
+
+                if (stepsmade1 == 6)
+                {
+                    pawn1.MoveTo(nest1);
+                    pawn1.Visible = false;
+                }
+            }
         }
 
         private void pawn2_Click(object sender, EventArgs e)
         {
-            if (pawn2.Left == nest2.Location.X && pawn2.Top == nest2.Location.Y)
+            if (pawn2.Location == nest2.Location)
             {
                 if (dice == 6)
                 {
-                    pawn2.Left = boardcoordinates[0, 0];
-                    pawn2.Top = boardcoordinates[0, 1];
+                    pawn2.MoveTo(boardtiles[0]);
                 }
-                
+
             }
             else if (boxnumber2 >= 0 && dice > 0)
             {
-                boxnumber2 += dice;
 
-                pawn2.Left = boardcoordinates[boxnumber2, 0];
-                pawn2.Top = boardcoordinates[boxnumber2, 1];
+                var individualT = nextPosition(stepsmade2, dice);
 
-                stepsmade2 += dice;
-                dice = 0;
+                var individualPosition = individualT;
+
+                var globalT = globalPosition(0, individualPosition);
+
+                boxnumber2 = globalT;
+
+                pawn2.MoveTo(boardtiles[boxnumber2]);
+                stepsmade2 = individualT;
 
                 if (stepsmade2 == 6)
                 {
-                    pawn2.Left = nest2.Location.X;
-                    pawn2.Top = nest2.Location.Y;
+                    pawn2.MoveTo(nest2);
                     pawn2.Visible = false;
                 }
             }
+        }
+
+        private static int nextPosition(int currentPosition, int diceRollValue)
+        {
+            return sharedCellsCount - Math.Abs(sharedCellsCount - (currentPosition + diceRollValue));
+        }
+
+        private static int globalPosition(int playerIndex, int currentIndividualPosition)
+        {
+            return ((playerIndex * startShift) + currentIndividualPosition) % sharedCellsCount;
+        }
+
+        private void lbl_sqr1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
