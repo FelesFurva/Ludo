@@ -70,10 +70,11 @@
             this.lbl_sqr1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_sqr1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_sqr1.Image = global::LudoWinForm.Properties.Resources.field;
-            this.lbl_sqr1.Location = new System.Drawing.Point(281, 264);
+            this.lbl_sqr1.Location = new System.Drawing.Point(281, 262);
             this.lbl_sqr1.Name = "lbl_sqr1";
             this.lbl_sqr1.Size = new System.Drawing.Size(50, 50);
             this.lbl_sqr1.TabIndex = 2;
+            this.lbl_sqr1.Click += new System.EventHandler(this.lbl_sqr1_Click);
             // 
             // lbl_sqr2
             // 
