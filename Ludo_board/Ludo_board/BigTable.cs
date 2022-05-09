@@ -112,85 +112,85 @@ namespace Ludo_board
 
         private void GP1_Click(object sender, EventArgs e)
         {
-            MovePawn(0,0);
+            MovePawn(0);
         }
 
         private void GP2_Click(object sender, EventArgs e)
         {
-            MovePawn(1,0);
+            MovePawn(1);
         }
 
         private void GP3_Click(object sender, EventArgs e)
         {
-            MovePawn(2,0);
+            MovePawn(2);
         }
 
         private void GP4_Click(object sender, EventArgs e)
         {
-            MovePawn(3,0);
+            MovePawn(3);
         }
 
         private void RP1_Click(object sender, EventArgs e)
         {
-            MovePawn(4,12);
+            MovePawn(4);
         }
 
         private void RP2_Click(object sender, EventArgs e)
         {
-            MovePawn(5,12);
+            MovePawn(5);
         }
 
         private void RP3_Click(object sender, EventArgs e)
         {
-            MovePawn(6,12);
+            MovePawn(6);
         }
 
         private void RP4_Click(object sender, EventArgs e)
         {
-            MovePawn(7, 12);
+            MovePawn(7);
         }
 
         private void YP1_Click(object sender, EventArgs e)
         {
-            MovePawn(8, 24);
+            MovePawn(8);
         }
 
         private void YP2_Click(object sender, EventArgs e)
         {
-            MovePawn(9,24);
+            MovePawn(9);
         }
 
         private void YP3_Click(object sender, EventArgs e)
         {
-            MovePawn(10,24);
+            MovePawn(10);
         }
 
         private void YP4_Click(object sender, EventArgs e)
         {
-            MovePawn(11,24);
+            MovePawn(11);
         }
 
         private void BP1_Click(object sender, EventArgs e)
         {
-            MovePawn(12,36);
+            MovePawn(12);
         }
 
         private void BP2_Click(object sender, EventArgs e)
         {
-            MovePawn(13,36);
+            MovePawn(13);
         }
 
         private void BP3_Click(object sender, EventArgs e)
         {
-            MovePawn(14,36);
+            MovePawn(14);
         }
 
         private void BP4_Click(object sender, EventArgs e)
         {
-            MovePawn(15,36);
+            MovePawn(15);
         }
 
-       public void MovePawn(int i, int j)
+       public void MovePawn(int i)
         {
             if (allPawns[i].Location == allNests[i].Location)
             {
