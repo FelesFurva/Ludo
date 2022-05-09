@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj": {}
+    "C:\\Users\\doral\\Source\\Repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj": {}
   },
   "projects": {
-    "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj": {
+    "C:\\Users\\doral\\Source\\Repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
+        "projectUniqueName": "C:\\Users\\doral\\Source\\Repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
         "projectName": "Ludo_board",
-        "projectPath": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
+        "projectPath": "C:\\Users\\doral\\Source\\Repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
         "packagesPath": "C:\\Users\\doral\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\obj\\",
+        "outputPath": "C:\\Users\\doral\\Source\\Repos\\Ludo\\Ludo_board\\Ludo_board\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\doral\\AppData\\Roaming\\NuGet\\NuGet.Config",

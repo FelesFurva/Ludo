@@ -237,7 +237,7 @@
             this.Box1.TabIndex = 1;
             this.Box1.TabStop = false;
             this.Box1.Tag = "playground";
-            this.Box1.Click += new System.EventHandler(this.Box1_Click);
+            
             // 
             // Box9
             // 
@@ -249,7 +249,7 @@
             this.Box9.TabIndex = 3;
             this.Box9.TabStop = false;
             this.Box9.Tag = "playground";
-            this.Box9.Click += new System.EventHandler(this.Box9_Click);
+            
             // 
             // Box8
             // 
@@ -261,7 +261,7 @@
             this.Box8.TabIndex = 4;
             this.Box8.TabStop = false;
             this.Box8.Tag = "playground";
-            this.Box8.Click += new System.EventHandler(this.Box8_Click);
+            
             // 
             // Box7
             // 
@@ -273,7 +273,7 @@
             this.Box7.TabIndex = 5;
             this.Box7.TabStop = false;
             this.Box7.Tag = "playground";
-            this.Box7.Click += new System.EventHandler(this.Box7_Click);
+            
             // 
             // Box6
             // 
@@ -285,7 +285,7 @@
             this.Box6.TabIndex = 6;
             this.Box6.TabStop = false;
             this.Box6.Tag = "playground";
-            this.Box6.Click += new System.EventHandler(this.Box6_Click);
+            
             // 
             // Box5
             // 
@@ -297,7 +297,7 @@
             this.Box5.TabIndex = 7;
             this.Box5.TabStop = false;
             this.Box5.Tag = "playground";
-            this.Box5.Click += new System.EventHandler(this.Box5_Click);
+            
             // 
             // Box4
             // 
@@ -309,7 +309,7 @@
             this.Box4.TabIndex = 8;
             this.Box4.TabStop = false;
             this.Box4.Tag = "playground";
-            this.Box4.Click += new System.EventHandler(this.Box4_Click);
+            
             // 
             // BoxG4
             // 
@@ -321,7 +321,7 @@
             this.BoxG4.TabIndex = 9;
             this.BoxG4.TabStop = false;
             this.BoxG4.Tag = "greenfinal";
-            this.BoxG4.Click += new System.EventHandler(this.BoxG4_Click);
+            
             // 
             // BoxG3
             // 
@@ -333,7 +333,7 @@
             this.BoxG3.TabIndex = 10;
             this.BoxG3.TabStop = false;
             this.BoxG3.Tag = "greenfinal";
-            this.BoxG3.Click += new System.EventHandler(this.BoxG3_Click);
+            
             // 
             // BoxG2
             // 
@@ -345,7 +345,7 @@
             this.BoxG2.TabIndex = 11;
             this.BoxG2.TabStop = false;
             this.BoxG2.Tag = "greenfinal";
-            this.BoxG2.Click += new System.EventHandler(this.BoxG2_Click);
+            
             // 
             // BoxG1
             // 
@@ -357,7 +357,7 @@
             this.BoxG1.TabIndex = 12;
             this.BoxG1.TabStop = false;
             this.BoxG1.Tag = "greenfinal";
-            this.BoxG1.Click += new System.EventHandler(this.BoxG1_Click);
+            
             // 
             // Box41
             // 
@@ -369,7 +369,7 @@
             this.Box41.TabIndex = 13;
             this.Box41.TabStop = false;
             this.Box41.Tag = "playground";
-            this.Box41.Click += new System.EventHandler(this.Box41_Click);
+            
             // 
             // Box42
             // 
@@ -381,7 +381,7 @@
             this.Box42.TabIndex = 14;
             this.Box42.TabStop = false;
             this.Box42.Tag = "playground";
-            this.Box42.Click += new System.EventHandler(this.Box42_Click);
+            
             // 
             // Box43
             // 
@@ -393,7 +393,7 @@
             this.Box43.TabIndex = 15;
             this.Box43.TabStop = false;
             this.Box43.Tag = "playground";
-            this.Box43.Click += new System.EventHandler(this.Box43_Click);
+            
             // 
             // Box44
             // 
@@ -405,7 +405,7 @@
             this.Box44.TabIndex = 16;
             this.Box44.TabStop = false;
             this.Box44.Tag = "playground";
-            this.Box44.Click += new System.EventHandler(this.Box44_Click);
+            
             // 
             // Box45
             // 
@@ -417,7 +417,7 @@
             this.Box45.TabIndex = 17;
             this.Box45.TabStop = false;
             this.Box45.Tag = "playground";
-            this.Box45.Click += new System.EventHandler(this.Box45_Click);
+            
             // 
             // Box47
             // 
@@ -429,7 +429,7 @@
             this.Box47.TabIndex = 19;
             this.Box47.TabStop = false;
             this.Box47.Tag = "playground";
-            this.Box47.Click += new System.EventHandler(this.Box47_Click);
+            
             // 
             // Box3
             // 
@@ -441,7 +441,6 @@
             this.Box3.TabIndex = 20;
             this.Box3.TabStop = false;
             this.Box3.Tag = "playground";
-            this.Box3.Click += new System.EventHandler(this.Box3_Click);
             // 
             // Box2
             // 
@@ -453,7 +452,6 @@
             this.Box2.TabIndex = 21;
             this.Box2.TabStop = false;
             this.Box2.Tag = "playground";
-            this.Box2.Click += new System.EventHandler(this.Box2_Click);
             // 
             // BoxR4
             // 
@@ -465,7 +463,6 @@
             this.BoxR4.TabIndex = 25;
             this.BoxR4.TabStop = false;
             this.BoxR4.Tag = "redfinal";
-            this.BoxR4.Click += new System.EventHandler(this.BoxR4_Click);
             // 
             // BoxR3
             // 
@@ -477,7 +474,6 @@
             this.BoxR3.TabIndex = 24;
             this.BoxR3.TabStop = false;
             this.BoxR3.Tag = "redfinal";
-            this.BoxR3.Click += new System.EventHandler(this.BoxR3_Click);
             // 
             // BoxR2
             // 
@@ -489,7 +485,6 @@
             this.BoxR2.TabIndex = 23;
             this.BoxR2.TabStop = false;
             this.BoxR2.Tag = "redfinal";
-            this.BoxR2.Click += new System.EventHandler(this.BoxR2_Click);
             // 
             // BoxR1
             // 
@@ -501,7 +496,6 @@
             this.BoxR1.TabIndex = 22;
             this.BoxR1.TabStop = false;
             this.BoxR1.Tag = "redfinal";
-            this.BoxR1.Click += new System.EventHandler(this.BoxR1_Click);
             // 
             // Box15
             // 
@@ -513,7 +507,6 @@
             this.Box15.TabIndex = 30;
             this.Box15.TabStop = false;
             this.Box15.Tag = "playground";
-            this.Box15.Click += new System.EventHandler(this.Box15_Click);
             // 
             // Box14
             // 
@@ -525,7 +518,6 @@
             this.Box14.TabIndex = 29;
             this.Box14.TabStop = false;
             this.Box14.Tag = "playground";
-            this.Box14.Click += new System.EventHandler(this.Box14_Click);
             // 
             // Box13
             // 
@@ -537,7 +529,6 @@
             this.Box13.TabIndex = 28;
             this.Box13.TabStop = false;
             this.Box13.Tag = "playground";
-            this.Box13.Click += new System.EventHandler(this.Box13_Click);
             // 
             // Box11
             // 
@@ -549,7 +540,6 @@
             this.Box11.TabIndex = 26;
             this.Box11.TabStop = false;
             this.Box11.Tag = "playground";
-            this.Box11.Click += new System.EventHandler(this.Box11_Click);
             // 
             // Box20
             // 
@@ -561,7 +551,6 @@
             this.Box20.TabIndex = 47;
             this.Box20.TabStop = false;
             this.Box20.Tag = "playground";
-            this.Box20.Click += new System.EventHandler(this.Box20_Click);
             // 
             // Box21
             // 
@@ -573,7 +562,6 @@
             this.Box21.TabIndex = 46;
             this.Box21.TabStop = false;
             this.Box21.Tag = "playground";
-            this.Box21.Click += new System.EventHandler(this.Box21_Click);
             // 
             // Box17
             // 
@@ -585,7 +573,6 @@
             this.Box17.TabIndex = 45;
             this.Box17.TabStop = false;
             this.Box17.Tag = "playground";
-            this.Box17.Click += new System.EventHandler(this.Box17_Click);
             // 
             // BoxY4
             // 
@@ -597,7 +584,6 @@
             this.BoxY4.TabIndex = 44;
             this.BoxY4.TabStop = false;
             this.BoxY4.Tag = "yellowfinal";
-            this.BoxY4.Click += new System.EventHandler(this.BoxY4_Click);
             // 
             // Box27
             // 
@@ -609,7 +595,6 @@
             this.Box27.TabIndex = 43;
             this.Box27.TabStop = false;
             this.Box27.Tag = "playground";
-            this.Box27.Click += new System.EventHandler(this.Box27_Click);
             // 
             // Box26
             // 
@@ -621,7 +606,6 @@
             this.Box26.TabIndex = 42;
             this.Box26.TabStop = false;
             this.Box26.Tag = "playground";
-            this.Box26.Click += new System.EventHandler(this.Box26_Click);
             // 
             // Box25
             // 
@@ -633,7 +617,6 @@
             this.Box25.TabIndex = 41;
             this.Box25.TabStop = false;
             this.Box25.Tag = "playground";
-            this.Box25.Click += new System.EventHandler(this.Box25_Click);
             // 
             // Box23
             // 
@@ -645,7 +628,6 @@
             this.Box23.TabIndex = 39;
             this.Box23.TabStop = false;
             this.Box23.Tag = "playground";
-            this.Box23.Click += new System.EventHandler(this.Box23_Click);
             // 
             // BoxY3
             // 
@@ -657,7 +639,6 @@
             this.BoxY3.TabIndex = 38;
             this.BoxY3.TabStop = false;
             this.BoxY3.Tag = "yellowfinal";
-            this.BoxY3.Click += new System.EventHandler(this.BoxY3_Click);
             // 
             // BoxY2
             // 
@@ -669,7 +650,6 @@
             this.BoxY2.TabIndex = 37;
             this.BoxY2.TabStop = false;
             this.BoxY2.Tag = "yellowfinal";
-            this.BoxY2.Click += new System.EventHandler(this.BoxY2_Click);
             // 
             // BoxY1
             // 
@@ -681,7 +661,6 @@
             this.BoxY1.TabIndex = 36;
             this.BoxY1.TabStop = false;
             this.BoxY1.Tag = "yellowfinal";
-            this.BoxY1.Click += new System.EventHandler(this.BoxY1_Click);
             // 
             // Box16
             // 
@@ -693,7 +672,6 @@
             this.Box16.TabIndex = 33;
             this.Box16.TabStop = false;
             this.Box16.Tag = "playground";
-            this.Box16.Click += new System.EventHandler(this.Box16_Click);
             // 
             // Box19
             // 
@@ -705,7 +683,6 @@
             this.Box19.TabIndex = 32;
             this.Box19.TabStop = false;
             this.Box19.Tag = "playground";
-            this.Box19.Click += new System.EventHandler(this.Box19_Click);
             // 
             // Box18
             // 
@@ -717,7 +694,6 @@
             this.Box18.TabIndex = 31;
             this.Box18.TabStop = false;
             this.Box18.Tag = "playground";
-            this.Box18.Click += new System.EventHandler(this.Box18_Click);
             // 
             // Box33
             // 
@@ -729,7 +705,6 @@
             this.Box33.TabIndex = 62;
             this.Box33.TabStop = false;
             this.Box33.Tag = "playground";
-            this.Box33.Click += new System.EventHandler(this.Box33_Click);
             // 
             // Box32
             // 
@@ -741,7 +716,6 @@
             this.Box32.TabIndex = 61;
             this.Box32.TabStop = false;
             this.Box32.Tag = "playground";
-            this.Box32.Click += new System.EventHandler(this.Box32_Click);
             // 
             // Box31
             // 
@@ -753,7 +727,6 @@
             this.Box31.TabIndex = 60;
             this.Box31.TabStop = false;
             this.Box31.Tag = "playground";
-            this.Box31.Click += new System.EventHandler(this.Box31_Click);
             // 
             // Box30
             // 
@@ -765,7 +738,6 @@
             this.Box30.TabIndex = 59;
             this.Box30.TabStop = false;
             this.Box30.Tag = "playground";
-            this.Box30.Click += new System.EventHandler(this.Box30_Click);
             // 
             // Box29
             // 
@@ -777,7 +749,6 @@
             this.Box29.TabIndex = 58;
             this.Box29.TabStop = false;
             this.Box29.Tag = "playground";
-            this.Box29.Click += new System.EventHandler(this.Box29_Click);
             // 
             // BoxB1
             // 
@@ -789,7 +760,6 @@
             this.BoxB1.TabIndex = 56;
             this.BoxB1.TabStop = false;
             this.BoxB1.Tag = "bluefinal";
-            this.BoxB1.Click += new System.EventHandler(this.BoxB1_Click);
             // 
             // BoxB2
             // 
@@ -801,7 +771,6 @@
             this.BoxB2.TabIndex = 55;
             this.BoxB2.TabStop = false;
             this.BoxB2.Tag = "bluefinal";
-            this.BoxB2.Click += new System.EventHandler(this.BoxB2_Click);
             // 
             // BoxB3
             // 
@@ -813,7 +782,6 @@
             this.BoxB3.TabIndex = 54;
             this.BoxB3.TabStop = false;
             this.BoxB3.Tag = "bluefinal";
-            this.BoxB3.Click += new System.EventHandler(this.BoxB3_Click);
             // 
             // Box35
             // 
@@ -825,7 +793,6 @@
             this.Box35.TabIndex = 53;
             this.Box35.TabStop = false;
             this.Box35.Tag = "playground";
-            this.Box35.Click += new System.EventHandler(this.Box35_Click);
             // 
             // Box37
             // 
@@ -837,7 +804,6 @@
             this.Box37.TabIndex = 51;
             this.Box37.TabStop = false;
             this.Box37.Tag = "playground";
-            this.Box37.Click += new System.EventHandler(this.Box37_Click);
             // 
             // Box38
             // 
@@ -849,7 +815,6 @@
             this.Box38.TabIndex = 50;
             this.Box38.TabStop = false;
             this.Box38.Tag = "playground";
-            this.Box38.Click += new System.EventHandler(this.Box38_Click);
             // 
             // Box39
             // 
@@ -861,7 +826,6 @@
             this.Box39.TabIndex = 49;
             this.Box39.TabStop = false;
             this.Box39.Tag = "playground";
-            this.Box39.Click += new System.EventHandler(this.Box39_Click);
             // 
             // BoxB4
             // 
@@ -873,7 +837,7 @@
             this.BoxB4.TabIndex = 48;
             this.BoxB4.TabStop = false;
             this.BoxB4.Tag = "bluefinal";
-            this.BoxB4.Click += new System.EventHandler(this.BoxB4_Click);
+            
             // 
             // Box28
             // 
@@ -885,7 +849,7 @@
             this.Box28.TabIndex = 63;
             this.Box28.TabStop = false;
             this.Box28.Tag = "playground";
-            this.Box28.Click += new System.EventHandler(this.Box28_Click);
+            
             // 
             // Box40
             // 
@@ -897,7 +861,7 @@
             this.Box40.TabIndex = 64;
             this.Box40.TabStop = false;
             this.Box40.Tag = "playground";
-            this.Box40.Click += new System.EventHandler(this.Box40_Click);
+            
             // 
             // RN4
             // 
@@ -909,7 +873,7 @@
             this.RN4.TabIndex = 68;
             this.RN4.TabStop = false;
             this.RN4.Tag = "rednest4";
-            this.RN4.Click += new System.EventHandler(this.RN4_Click);
+           
             // 
             // RN2
             // 
@@ -921,7 +885,7 @@
             this.RN2.TabIndex = 67;
             this.RN2.TabStop = false;
             this.RN2.Tag = "rednest2";
-            this.RN2.Click += new System.EventHandler(this.RN2_Click);
+            
             // 
             // RN3
             // 
@@ -933,7 +897,7 @@
             this.RN3.TabIndex = 66;
             this.RN3.TabStop = false;
             this.RN3.Tag = "rednnest3";
-            this.RN3.Click += new System.EventHandler(this.RN3_Click);
+            
             // 
             // RN1
             // 
@@ -945,7 +909,7 @@
             this.RN1.TabIndex = 65;
             this.RN1.TabStop = false;
             this.RN1.Tag = "rednest1";
-            this.RN1.Click += new System.EventHandler(this.RN1_Click);
+            
             // 
             // YN1
             // 
@@ -957,7 +921,7 @@
             this.YN1.TabIndex = 70;
             this.YN1.TabStop = false;
             this.YN1.Tag = "yellownest1";
-            this.YN1.Click += new System.EventHandler(this.YN1_Click);
+            
             // 
             // YN2
             // 
@@ -969,7 +933,7 @@
             this.YN2.TabIndex = 69;
             this.YN2.TabStop = false;
             this.YN2.Tag = "yellownest2";
-            this.YN2.Click += new System.EventHandler(this.YN2_Click);
+            
             // 
             // YN3
             // 
@@ -981,7 +945,7 @@
             this.YN3.TabIndex = 72;
             this.YN3.TabStop = false;
             this.YN3.Tag = "yellownest3";
-            this.YN3.Click += new System.EventHandler(this.YN3_Click);
+            
             // 
             // YN4
             // 
@@ -993,7 +957,7 @@
             this.YN4.TabIndex = 71;
             this.YN4.TabStop = false;
             this.YN4.Tag = "yellownest4";
-            this.YN4.Click += new System.EventHandler(this.YN4_Click);
+            
             // 
             // BN4
             // 
@@ -1005,7 +969,7 @@
             this.BN4.TabIndex = 74;
             this.BN4.TabStop = false;
             this.BN4.Tag = "bluenest4";
-            this.BN4.Click += new System.EventHandler(this.BN4_Click);
+            
             // 
             // BN2
             // 
@@ -1017,7 +981,7 @@
             this.BN2.TabIndex = 73;
             this.BN2.TabStop = false;
             this.BN2.Tag = "bluenest2";
-            this.BN2.Click += new System.EventHandler(this.BN2_Click);
+            
             // 
             // BN3
             // 
@@ -1029,7 +993,7 @@
             this.BN3.TabIndex = 76;
             this.BN3.TabStop = false;
             this.BN3.Tag = "bluenest3";
-            this.BN3.Click += new System.EventHandler(this.BN3_Click);
+            
             // 
             // BN1
             // 
@@ -1041,7 +1005,7 @@
             this.BN1.TabIndex = 75;
             this.BN1.TabStop = false;
             this.BN1.Tag = "bluenest1";
-            this.BN1.Click += new System.EventHandler(this.BN1_Click);
+            
             // 
             // GN3
             // 
@@ -1053,7 +1017,7 @@
             this.GN3.TabIndex = 78;
             this.GN3.TabStop = false;
             this.GN3.Tag = "greennest3";
-            this.GN3.Click += new System.EventHandler(this.GN3_Click);
+            
             // 
             // GN4
             // 
@@ -1065,7 +1029,7 @@
             this.GN4.TabIndex = 77;
             this.GN4.TabStop = false;
             this.GN4.Tag = "greennest4";
-            this.GN4.Click += new System.EventHandler(this.GN4_Click);
+            
             // 
             // GN1
             // 
@@ -1077,7 +1041,7 @@
             this.GN1.TabIndex = 80;
             this.GN1.TabStop = false;
             this.GN1.Tag = "greennest1";
-            this.GN1.Click += new System.EventHandler(this.GN1_Click);
+            
             // 
             // GN2
             // 
@@ -1089,7 +1053,7 @@
             this.GN2.TabIndex = 79;
             this.GN2.TabStop = false;
             this.GN2.Tag = "greennest2";
-            this.GN2.Click += new System.EventHandler(this.GN2_Click);
+            
             // 
             // BP1
             // 
@@ -1295,7 +1259,6 @@
             this.Box12.TabIndex = 97;
             this.Box12.TabStop = false;
             this.Box12.Tag = "rstart";
-            this.Box12.Click += new System.EventHandler(this.Box12_Click);
             // 
             // Box0
             // 
@@ -1309,7 +1272,6 @@
             this.Box0.TabIndex = 98;
             this.Box0.TabStop = false;
             this.Box0.Tag = "gstart";
-            this.Box0.Click += new System.EventHandler(this.Box0_Click);
             // 
             // Box36
             // 
@@ -1323,7 +1285,6 @@
             this.Box36.TabIndex = 99;
             this.Box36.TabStop = false;
             this.Box36.Tag = "bstart";
-            this.Box36.Click += new System.EventHandler(this.Box36_Click);
             // 
             // Box24
             // 
@@ -1337,7 +1298,6 @@
             this.Box24.TabIndex = 100;
             this.Box24.TabStop = false;
             this.Box24.Tag = "ystart";
-            this.Box24.Click += new System.EventHandler(this.Box24_Click);
             // 
             // Box10
             // 
@@ -1351,7 +1311,6 @@
             this.Box10.TabIndex = 101;
             this.Box10.TabStop = false;
             this.Box10.Tag = "rtohome";
-            this.Box10.Click += new System.EventHandler(this.Box10_Click);
             // 
             // Box46
             // 
@@ -1365,7 +1324,6 @@
             this.Box46.TabIndex = 102;
             this.Box46.TabStop = false;
             this.Box46.Tag = "gtohome";
-            this.Box46.Click += new System.EventHandler(this.Box46_Click);
             // 
             // Box22
             // 
@@ -1379,7 +1337,6 @@
             this.Box22.TabIndex = 103;
             this.Box22.TabStop = false;
             this.Box22.Tag = "ytohome";
-            this.Box22.Click += new System.EventHandler(this.Box22_Click);
             // 
             // Box34
             // 
@@ -1393,7 +1350,6 @@
             this.Box34.TabIndex = 104;
             this.Box34.TabStop = false;
             this.Box34.Tag = "btohome";
-            this.Box34.Click += new System.EventHandler(this.Box34_Click);
             // 
             // Home
             // 
@@ -1406,7 +1362,6 @@
             this.Home.TabIndex = 105;
             this.Home.TabStop = false;
             this.Home.Tag = "home";
-            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // lbl_dice
             // 
@@ -1440,7 +1395,6 @@
             this.label1.Size = new System.Drawing.Size(528, 40);
             this.label1.TabIndex = 108;
             this.label1.Text = "GP1 steps made: 0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Ludoboard
             // 
