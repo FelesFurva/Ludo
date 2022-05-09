@@ -128,6 +128,7 @@
             this.lbl_dice = new System.Windows.Forms.Label();
             this.rollDice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -237,7 +238,6 @@
             this.Box1.TabIndex = 1;
             this.Box1.TabStop = false;
             this.Box1.Tag = "playground";
-            
             // 
             // Box9
             // 
@@ -249,7 +249,6 @@
             this.Box9.TabIndex = 3;
             this.Box9.TabStop = false;
             this.Box9.Tag = "playground";
-            
             // 
             // Box8
             // 
@@ -261,7 +260,6 @@
             this.Box8.TabIndex = 4;
             this.Box8.TabStop = false;
             this.Box8.Tag = "playground";
-            
             // 
             // Box7
             // 
@@ -273,7 +271,6 @@
             this.Box7.TabIndex = 5;
             this.Box7.TabStop = false;
             this.Box7.Tag = "playground";
-            
             // 
             // Box6
             // 
@@ -285,7 +282,6 @@
             this.Box6.TabIndex = 6;
             this.Box6.TabStop = false;
             this.Box6.Tag = "playground";
-            
             // 
             // Box5
             // 
@@ -297,7 +293,6 @@
             this.Box5.TabIndex = 7;
             this.Box5.TabStop = false;
             this.Box5.Tag = "playground";
-            
             // 
             // Box4
             // 
@@ -309,7 +304,6 @@
             this.Box4.TabIndex = 8;
             this.Box4.TabStop = false;
             this.Box4.Tag = "playground";
-            
             // 
             // BoxG4
             // 
@@ -321,7 +315,6 @@
             this.BoxG4.TabIndex = 9;
             this.BoxG4.TabStop = false;
             this.BoxG4.Tag = "greenfinal";
-            
             // 
             // BoxG3
             // 
@@ -333,7 +326,6 @@
             this.BoxG3.TabIndex = 10;
             this.BoxG3.TabStop = false;
             this.BoxG3.Tag = "greenfinal";
-            
             // 
             // BoxG2
             // 
@@ -345,7 +337,6 @@
             this.BoxG2.TabIndex = 11;
             this.BoxG2.TabStop = false;
             this.BoxG2.Tag = "greenfinal";
-            
             // 
             // BoxG1
             // 
@@ -357,7 +348,6 @@
             this.BoxG1.TabIndex = 12;
             this.BoxG1.TabStop = false;
             this.BoxG1.Tag = "greenfinal";
-            
             // 
             // Box41
             // 
@@ -369,7 +359,6 @@
             this.Box41.TabIndex = 13;
             this.Box41.TabStop = false;
             this.Box41.Tag = "playground";
-            
             // 
             // Box42
             // 
@@ -381,7 +370,6 @@
             this.Box42.TabIndex = 14;
             this.Box42.TabStop = false;
             this.Box42.Tag = "playground";
-            
             // 
             // Box43
             // 
@@ -393,7 +381,6 @@
             this.Box43.TabIndex = 15;
             this.Box43.TabStop = false;
             this.Box43.Tag = "playground";
-            
             // 
             // Box44
             // 
@@ -405,7 +392,6 @@
             this.Box44.TabIndex = 16;
             this.Box44.TabStop = false;
             this.Box44.Tag = "playground";
-            
             // 
             // Box45
             // 
@@ -417,7 +403,6 @@
             this.Box45.TabIndex = 17;
             this.Box45.TabStop = false;
             this.Box45.Tag = "playground";
-            
             // 
             // Box47
             // 
@@ -429,7 +414,6 @@
             this.Box47.TabIndex = 19;
             this.Box47.TabStop = false;
             this.Box47.Tag = "playground";
-            
             // 
             // Box3
             // 
@@ -837,7 +821,6 @@
             this.BoxB4.TabIndex = 48;
             this.BoxB4.TabStop = false;
             this.BoxB4.Tag = "bluefinal";
-            
             // 
             // Box28
             // 
@@ -849,7 +832,6 @@
             this.Box28.TabIndex = 63;
             this.Box28.TabStop = false;
             this.Box28.Tag = "playground";
-            
             // 
             // Box40
             // 
@@ -861,7 +843,6 @@
             this.Box40.TabIndex = 64;
             this.Box40.TabStop = false;
             this.Box40.Tag = "playground";
-            
             // 
             // RN4
             // 
@@ -873,7 +854,6 @@
             this.RN4.TabIndex = 68;
             this.RN4.TabStop = false;
             this.RN4.Tag = "rednest4";
-           
             // 
             // RN2
             // 
@@ -885,7 +865,6 @@
             this.RN2.TabIndex = 67;
             this.RN2.TabStop = false;
             this.RN2.Tag = "rednest2";
-            
             // 
             // RN3
             // 
@@ -897,7 +876,6 @@
             this.RN3.TabIndex = 66;
             this.RN3.TabStop = false;
             this.RN3.Tag = "rednnest3";
-            
             // 
             // RN1
             // 
@@ -909,7 +887,6 @@
             this.RN1.TabIndex = 65;
             this.RN1.TabStop = false;
             this.RN1.Tag = "rednest1";
-            
             // 
             // YN1
             // 
@@ -921,7 +898,6 @@
             this.YN1.TabIndex = 70;
             this.YN1.TabStop = false;
             this.YN1.Tag = "yellownest1";
-            
             // 
             // YN2
             // 
@@ -933,7 +909,6 @@
             this.YN2.TabIndex = 69;
             this.YN2.TabStop = false;
             this.YN2.Tag = "yellownest2";
-            
             // 
             // YN3
             // 
@@ -945,7 +920,6 @@
             this.YN3.TabIndex = 72;
             this.YN3.TabStop = false;
             this.YN3.Tag = "yellownest3";
-            
             // 
             // YN4
             // 
@@ -957,7 +931,6 @@
             this.YN4.TabIndex = 71;
             this.YN4.TabStop = false;
             this.YN4.Tag = "yellownest4";
-            
             // 
             // BN4
             // 
@@ -969,7 +942,6 @@
             this.BN4.TabIndex = 74;
             this.BN4.TabStop = false;
             this.BN4.Tag = "bluenest4";
-            
             // 
             // BN2
             // 
@@ -981,7 +953,6 @@
             this.BN2.TabIndex = 73;
             this.BN2.TabStop = false;
             this.BN2.Tag = "bluenest2";
-            
             // 
             // BN3
             // 
@@ -993,7 +964,6 @@
             this.BN3.TabIndex = 76;
             this.BN3.TabStop = false;
             this.BN3.Tag = "bluenest3";
-            
             // 
             // BN1
             // 
@@ -1005,7 +975,6 @@
             this.BN1.TabIndex = 75;
             this.BN1.TabStop = false;
             this.BN1.Tag = "bluenest1";
-            
             // 
             // GN3
             // 
@@ -1017,7 +986,6 @@
             this.GN3.TabIndex = 78;
             this.GN3.TabStop = false;
             this.GN3.Tag = "greennest3";
-            
             // 
             // GN4
             // 
@@ -1029,7 +997,6 @@
             this.GN4.TabIndex = 77;
             this.GN4.TabStop = false;
             this.GN4.Tag = "greennest4";
-            
             // 
             // GN1
             // 
@@ -1041,7 +1008,6 @@
             this.GN1.TabIndex = 80;
             this.GN1.TabStop = false;
             this.GN1.Tag = "greennest1";
-            
             // 
             // GN2
             // 
@@ -1053,7 +1019,6 @@
             this.GN2.TabIndex = 79;
             this.GN2.TabStop = false;
             this.GN2.Tag = "greennest2";
-            
             // 
             // BP1
             // 
@@ -1377,7 +1342,7 @@
             // 
             this.rollDice.BackColor = System.Drawing.Color.White;
             this.rollDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rollDice.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rollDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rollDice.Location = new System.Drawing.Point(543, 95);
             this.rollDice.Name = "rollDice";
             this.rollDice.Size = new System.Drawing.Size(87, 30);
@@ -1396,12 +1361,24 @@
             this.label1.TabIndex = 108;
             this.label1.Text = "GP1 steps made: 0";
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Snow;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(543, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 200);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "Current Player";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BP4);
             this.Controls.Add(this.BP3);
@@ -1709,5 +1686,6 @@
         public Label lbl_dice;
         private Button rollDice;
         private Label label1;
+        private Label label2;
     }
 }

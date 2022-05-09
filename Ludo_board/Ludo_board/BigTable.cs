@@ -77,6 +77,35 @@ namespace Ludo_board
             RollDice();
         }
 
+
+        private static int FirstRoll(List<Player> PlayerList, int dice)
+        {
+            foreach (Player player in PlayerList)
+            {
+                player.InitialDiceRoll = dice;
+            }
+
+            var HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
+            List<Player> temp = PlayerList.Where(x => x.InitialDiceRoll == HighestRoll.InitialDiceRoll).ToList();
+            if (temp.Count > 1)
+            {
+                foreach (Player player in temp)
+                {
+                    player.InitialDiceRoll = dice;
+                }
+                HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
+            }
+
+            int ActivePlayer = HighestRoll.Id;
+            return ActivePlayer;
+        }
+
+        private static int Nextplayer(int activePlayer, int maxplayers) //int activePlayer = player ID
+        {
+            return activePlayer % maxplayers + 1;
+        }
+
+
         private void RollDice()
         {
             dice = random.Next(1, 7);
@@ -94,6 +123,7 @@ namespace Ludo_board
         {
             return ((playerIndex * startShift) + currentIndividualPosition) % sharedCellsCount;
         }
+
 
         private void GP1_Click(object sender, EventArgs e)
         {
@@ -250,5 +280,10 @@ namespace Ludo_board
                 " steps";
            
        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

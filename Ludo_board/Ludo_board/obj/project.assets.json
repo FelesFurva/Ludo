@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\doral\\.nuget\\packages\\": {}
+    "C:\\Users\\Felis\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
+      "projectUniqueName": "C:\\Users\\Felis\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
       "projectName": "Ludo_board",
-      "projectPath": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
-      "packagesPath": "C:\\Users\\doral\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\doral\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\obj\\",
+      "projectPath": "C:\\Users\\Felis\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\Ludo_board.csproj",
+      "packagesPath": "C:\\Users\\Felis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Felis\\source\\repos\\Ludo\\Ludo_board\\Ludo_board\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\doral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Felis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +68,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
