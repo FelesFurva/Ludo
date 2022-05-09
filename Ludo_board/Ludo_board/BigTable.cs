@@ -243,18 +243,18 @@ namespace Ludo_board
                 pawnStepsMade[i] += dice;
                     //individualT;
 
-                if (pawnStepsMade[i]<=47)
+                if (pawnStepsMade[i]<=46)
                 {
                     allPawns[i].MoveTo(boardtiles[pawnBoxnumber[i]]);
                     
                 }
-                if (pawnStepsMade[i] > 47 && pawnStepsMade[i] <52)
+                if (pawnStepsMade[i] > 46 && pawnStepsMade[i] <51)
                 {
                     allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+(playerIndex*4)]);
                    
                 }
 
-                if (pawnStepsMade[i] >= 52) 
+                if (pawnStepsMade[i] >= 51) 
                 {
                     allPawns[i].MoveTo(Home);
                     allPawns[i].Visible = false;
