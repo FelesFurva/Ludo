@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LudoIeva"
+    "\\LudoWinForm",
+    "\\LudoWinForm\\LudoWinForm"
   ],
-  "SelectedNode": "\\LudoIeva\\Program.cs",
+  "SelectedNode": "\\LudoWinForm\\LudoWinForm.sln",
   "PreviewInSolutionExplorer": false
 }
