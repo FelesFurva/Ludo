@@ -6,23 +6,24 @@ namespace LudoWinForm
         int dice;
         Random random = new Random();
         Label[] boardtiles;
-        int stepsmade1 = 0;
-        int stepsmade2 = 0;
-        int boxnumber1 = 0;
-        int boxnumber2 = 0;
-
+        Label[] pawns;
+        Label[] nest;
+        int[] stepsmade;
+        int[] boxnumber;
+        
         int playerIndex = 0;
 
         const int startShift = 0;
         const int sharedCellsCount = 6;
 
-        PictureBox[] pawns;
-
         public Form1()
         {
             InitializeComponent();
             boardtiles = new Label[7] { lbl_sqr0, lbl_sqr1, lbl_sqr2, lbl_sqr3, lbl_sqr4, lbl_sqr5, lbl_sqr6 };
-
+            pawns = new Label[2] { pawn1, pawn2 };
+            nest = new Label[2] { nest1, nest2 };
+            boxnumber = new int[2];
+            stepsmade = new int[2];
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,63 +64,42 @@ namespace LudoWinForm
 
         private void pawn1_Click(object sender, EventArgs e)
         {
-            if (pawn1.Location == nest1.Location)
-            {   
-                if (dice == 6)
-                {
-                    pawn1.MoveTo(lbl_sqr0);
-                }
-
-            }
-            else if (boxnumber1 >= 0 && dice > 0)
-            {
-                var individualT = nextPosition(stepsmade1, dice);
-
-                var individualPosition = individualT;
-
-                var globalT = globalPosition(0, individualPosition);
-
-                boxnumber1 = globalT;
-
-                pawn1.MoveTo(boardtiles[boxnumber1]);
-                stepsmade1 = individualT;
-
-                if (stepsmade1 == 6)
-                {
-                    pawn1.MoveTo(nest1);
-                    pawn1.Visible = false;
-                }
-            }
+            pawnpath(0);
         }
 
         private void pawn2_Click(object sender, EventArgs e)
         {
-            if (pawn2.Location == nest2.Location)
+            pawnpath(1);
+        }
+
+        private void pawnpath(int pawnindex)
+        {
+            if (pawns[pawnindex].Location == nest[pawnindex].Location)
             {
                 if (dice == 6)
                 {
-                    pawn2.MoveTo(boardtiles[0]);
+                    pawns[pawnindex].MoveTo(boardtiles[0]);
                 }
 
             }
-            else if (boxnumber2 >= 0 && dice > 0)
+            else if (boxnumber[pawnindex] >= 0 && dice > 0)
             {
 
-                var individualT = nextPosition(stepsmade2, dice);
+                var individualT = nextPosition(stepsmade[pawnindex], dice);
 
                 var individualPosition = individualT;
 
                 var globalT = globalPosition(0, individualPosition);
 
-                boxnumber2 = globalT;
+                boxnumber[pawnindex] = globalT;
 
-                pawn2.MoveTo(boardtiles[boxnumber2]);
-                stepsmade2 = individualT;
+                pawns[pawnindex].MoveTo(boardtiles[boxnumber[pawnindex]]);
+                stepsmade[pawnindex] = individualT;
 
-                if (stepsmade2 == 6)
+                if (stepsmade[pawnindex] == 6)
                 {
-                    pawn2.MoveTo(nest2);
-                    pawn2.Visible = false;
+                    pawns[pawnindex].MoveTo(nest[pawnindex]);
+                    pawns[pawnindex].Visible = false;
                 }
             }
         }
