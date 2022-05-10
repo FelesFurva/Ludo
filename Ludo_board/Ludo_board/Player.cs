@@ -34,24 +34,24 @@ namespace Ludo_board
             InitialDiceRoll = dice1;
         }
 
-        public void FirstRoll(List<Player> PlayerList, int dice)
-        {
-            foreach (Player player in PlayerList)
-            {
-                player.InitialDiceRoll = dice;
-            }
+        //public void FirstRoll(List<Player> PlayerList, int dice)
+        //{
+        //    foreach (Player player in PlayerList)
+        //    {
+        //        player.InitialDiceRoll = dice;
+        //    }
 
-            var HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
-            List<Player> temp = PlayerList.Where(x => x.InitialDiceRoll == HighestRoll.InitialDiceRoll).ToList();
-            if (temp.Count > 1)
-            {
-                foreach (Player player in temp)
-                {
-                    player.InitialDiceRoll = dice;
-                }
-                HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
-            }
-        }
+        //    var HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
+        //    List<Player> temp = PlayerList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+        //    if (temp.Count > 1)
+        //    {
+        //        foreach (Player player in temp)
+        //        {
+        //            player.InitialDiceRoll = dice;
+        //        }
+        //        HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
+        //    }
+        //}
 
         private static int Nextplayer(int activePlayer, int maxplayers) //int activePlayer = player ID
         {

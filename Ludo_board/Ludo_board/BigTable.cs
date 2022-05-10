@@ -24,7 +24,6 @@ namespace Ludo_board
         PictureBox[] specialLanes;
         PictureBox[] allNests;
         PictureBox[] allPawns;
-        List<Player> PlayerList;
         public Ludoboard()
         {
             InitializeComponent();
@@ -41,7 +40,17 @@ namespace Ludo_board
             allNests = new PictureBox[16]
             { GN1, GN2, GN3, GN4, RN1, RN2, RN3, RN4, YN1, YN2, YN3, YN4, BN1, BN2, BN3, BN4 };
             allPawns = new PictureBox[16]
-            { GP1, GP2, GP3, GP4, RP1, RP2, RP3, RP4, YP1, YP2, YP3, YP4, BP1, BP2, BP3, BP4 };           
+            { GP1, GP2, GP3, GP4, RP1, RP2, RP3, RP4, YP1, YP2, YP3, YP4, BP1, BP2, BP3, BP4 };
+            diceImages = new Image[7]
+            {
+                Properties.Resources.Dice_blank,
+                Properties.Resources.Dice_1,
+                Properties.Resources.Dice_2,
+                Properties.Resources.Dice_3,
+                Properties.Resources.Dice_4,
+                Properties.Resources.Dice_5,
+                Properties.Resources.Dice_6
+            };
         }
 
         //Dice
@@ -54,19 +63,7 @@ namespace Ludo_board
         Random random = new Random();
         private void Ludoboard_Load(object sender, EventArgs e)
         {
-            diceImages = new Image[7]
-            {
-                Properties.Resources.Dice_blank,
-                Properties.Resources.Dice_1,
-                Properties.Resources.Dice_2,
-                Properties.Resources.Dice_3,
-                Properties.Resources.Dice_4,
-                Properties.Resources.Dice_5,
-                Properties.Resources.Dice_6
-            };
-
             rollDice.Visible = false;
-
         }
 
         private List<Player> CreatePlayerList()
@@ -96,7 +93,7 @@ namespace Ludo_board
             NewGameList[3].InitialDiceRoll = dice4;
 
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
-            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll.InitialDiceRoll).ToList();
+            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
             //if (temp.Count > 1)
             //{
             //    foreach (Player player in temp)
@@ -105,8 +102,8 @@ namespace Ludo_board
             //    }
             //    HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
             //}
-
-            int ActivePlayer = HighestRoll.Id;
+            if (HighestRoll == null) { throw new Exception("Player not found"); }
+            int ActivePlayer = HighestRoll.Id  ;
 
             label2.Text = NewGameList[0].colors.ToString() + " has rolled : " + NewGameList[0].InitialDiceRoll +
                 " \n " + NewGameList[1].colors.ToString() + " has rolled : " + NewGameList[1].InitialDiceRoll +

@@ -1690,7 +1690,6 @@
         private PictureBox Box37;
         private PictureBox Box38;
         private PictureBox Box39;
-        private PictureBox pictureBox63;
         private PictureBox Box28;
         private PictureBox Box40;
         private PictureBox RN4;
