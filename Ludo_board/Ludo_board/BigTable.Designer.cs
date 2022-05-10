@@ -1359,7 +1359,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(528, 40);
             this.label1.TabIndex = 108;
@@ -1369,19 +1369,19 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Snow;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(543, 185);
+            this.label2.Location = new System.Drawing.Point(519, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 200);
+            this.label2.Size = new System.Drawing.Size(147, 207);
             this.label2.TabIndex = 109;
             this.label2.Text = "Current Player";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Player1
             // 
-            this.Player1.AutoSize = true;
-            this.Player1.Location = new System.Drawing.Point(519, 429);
+            this.Player1.BackColor = System.Drawing.Color.White;
+            this.Player1.Location = new System.Drawing.Point(12, 59);
             this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(45, 15);
+            this.Player1.Size = new System.Drawing.Size(60, 25);
             this.Player1.TabIndex = 110;
             this.Player1.Text = "Player1";
             this.Player1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1389,32 +1389,35 @@
             // 
             // Player2
             // 
-            this.Player2.AutoSize = true;
-            this.Player2.Location = new System.Drawing.Point(519, 453);
+            this.Player2.BackColor = System.Drawing.Color.White;
+            this.Player2.Location = new System.Drawing.Point(438, 59);
             this.Player2.Name = "Player2";
-            this.Player2.Size = new System.Drawing.Size(45, 15);
+            this.Player2.Size = new System.Drawing.Size(60, 25);
             this.Player2.TabIndex = 111;
             this.Player2.Text = "Player2";
+            this.Player2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Player2.Click += new System.EventHandler(this.Player2_Click);
             // 
             // Player3
             // 
-            this.Player3.AutoSize = true;
-            this.Player3.Location = new System.Drawing.Point(519, 477);
+            this.Player3.BackColor = System.Drawing.Color.White;
+            this.Player3.Location = new System.Drawing.Point(421, 494);
             this.Player3.Name = "Player3";
-            this.Player3.Size = new System.Drawing.Size(45, 15);
+            this.Player3.Size = new System.Drawing.Size(60, 25);
             this.Player3.TabIndex = 112;
             this.Player3.Text = "Player3";
+            this.Player3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Player3.Click += new System.EventHandler(this.Player3_Click);
             // 
             // Player4
             // 
-            this.Player4.AutoSize = true;
-            this.Player4.Location = new System.Drawing.Point(519, 504);
+            this.Player4.BackColor = System.Drawing.Color.White;
+            this.Player4.Location = new System.Drawing.Point(12, 494);
             this.Player4.Name = "Player4";
-            this.Player4.Size = new System.Drawing.Size(45, 15);
+            this.Player4.Size = new System.Drawing.Size(60, 25);
             this.Player4.TabIndex = 113;
             this.Player4.Text = "Player4";
+            this.Player4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Player4.Click += new System.EventHandler(this.Player4_Click);
             // 
             // Ludoboard
@@ -1630,7 +1633,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

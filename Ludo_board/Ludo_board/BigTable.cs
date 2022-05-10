@@ -65,6 +65,8 @@ namespace Ludo_board
                 Properties.Resources.Dice_6
             };
 
+            rollDice.Visible = false;
+
         }
 
         private List<Player> CreatePlayerList()
@@ -86,6 +88,7 @@ namespace Ludo_board
 
         private List<Player> GameStart()
         {
+            
             List<Player> NewGameList = CreatePlayerList();
             NewGameList[0].InitialDiceRoll = dice1;
             NewGameList[1].InitialDiceRoll = dice2;
@@ -119,7 +122,7 @@ namespace Ludo_board
         private void label2_Click(object sender, EventArgs e)
         {
             GameStart();
-
+            rollDice.Visible = true;
         }
 
         private void rollDice_Click(object sender, EventArgs e)
@@ -304,23 +307,27 @@ namespace Ludo_board
 
         private void Player1_Click(object sender, EventArgs e)
         {
+            RollDice();
             dice1 = dice;
         }
 
         private void Player2_Click(object sender, EventArgs e)
         {
+            RollDice();
             dice2 = dice;
 
         }
 
         private void Player3_Click(object sender, EventArgs e)
         {
+            RollDice();
             dice3 = dice;
 
         }
 
         private void Player4_Click(object sender, EventArgs e)
         {
+            RollDice();
             dice4 = dice;
 
         }
