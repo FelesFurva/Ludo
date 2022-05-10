@@ -68,18 +68,14 @@ namespace Ludo_board
 
         private static List<Player> CreatePlayerList()
         {
-            Player player1 = new(1, "player 1", Player.Colors.Green, 0);
-            Player player2 = new(2, "player 2", Player.Colors.Red, 0);
-            Player player3 = new(3, "player 3", Player.Colors.Yellow, 0);
-            Player player4 = new(4, "player 4", Player.Colors.Blue, 0);
-
             List<Player> PlayerList = new()
             {
-                player1,
-                player2,
-                player3,
-                player4
-            };
+                new(1, "player 1", Player.Colors.Green, 0),
+                new(2, "player 2", Player.Colors.Red, 0),
+                new(3, "player 3", Player.Colors.Yellow, 0),
+                new(4, "player 4", Player.Colors.Blue, 0)
+
+        };
 
             return PlayerList;
         }
