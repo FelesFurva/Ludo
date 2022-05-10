@@ -129,6 +129,10 @@
             this.rollDice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Player1 = new System.Windows.Forms.Label();
+            this.Player2 = new System.Windows.Forms.Label();
+            this.Player3 = new System.Windows.Forms.Label();
+            this.Player4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -1372,12 +1376,57 @@
             this.label2.Text = "Current Player";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // Player1
+            // 
+            this.Player1.AutoSize = true;
+            this.Player1.Location = new System.Drawing.Point(519, 429);
+            this.Player1.Name = "Player1";
+            this.Player1.Size = new System.Drawing.Size(45, 15);
+            this.Player1.TabIndex = 110;
+            this.Player1.Text = "Player1";
+            this.Player1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Player1.Click += new System.EventHandler(this.Player1_Click);
+            // 
+            // Player2
+            // 
+            this.Player2.AutoSize = true;
+            this.Player2.Location = new System.Drawing.Point(519, 453);
+            this.Player2.Name = "Player2";
+            this.Player2.Size = new System.Drawing.Size(45, 15);
+            this.Player2.TabIndex = 111;
+            this.Player2.Text = "Player2";
+            this.Player2.Click += new System.EventHandler(this.Player2_Click);
+            // 
+            // Player3
+            // 
+            this.Player3.AutoSize = true;
+            this.Player3.Location = new System.Drawing.Point(519, 477);
+            this.Player3.Name = "Player3";
+            this.Player3.Size = new System.Drawing.Size(45, 15);
+            this.Player3.TabIndex = 112;
+            this.Player3.Text = "Player3";
+            this.Player3.Click += new System.EventHandler(this.Player3_Click);
+            // 
+            // Player4
+            // 
+            this.Player4.AutoSize = true;
+            this.Player4.Location = new System.Drawing.Point(519, 504);
+            this.Player4.Name = "Player4";
+            this.Player4.Size = new System.Drawing.Size(45, 15);
+            this.Player4.TabIndex = 113;
+            this.Player4.Text = "Player4";
+            this.Player4.Click += new System.EventHandler(this.Player4_Click);
+            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
+            this.Controls.Add(this.Player4);
+            this.Controls.Add(this.Player3);
+            this.Controls.Add(this.Player2);
+            this.Controls.Add(this.Player1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BP4);
@@ -1581,6 +1630,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1687,5 +1737,9 @@
         private Button rollDice;
         private Label label1;
         private Label label2;
+        private Label Player1;
+        private Label Player2;
+        private Label Player3;
+        private Label Player4;
     }
 }

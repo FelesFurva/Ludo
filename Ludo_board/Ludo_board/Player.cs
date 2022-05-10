@@ -28,7 +28,12 @@ namespace Ludo_board
             this.colors = colors;
             this.InitialDiceRoll = initialdiceroll;
         }
-        
+
+        public void SetInitialDiceRoll(int dice1)
+        {
+            InitialDiceRoll = dice1;
+        }
+
         public void FirstRoll(List<Player> PlayerList, int dice)
         {
             foreach (Player player in PlayerList)
