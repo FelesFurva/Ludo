@@ -60,26 +60,27 @@ namespace Ludo_board
         int dice2;
         int dice3;
         int dice4;
-        Random random = new Random();
+        Random random = new();
         private void Ludoboard_Load(object sender, EventArgs e)
         {
             rollDice.Visible = false;
         }
 
-        private List<Player> CreatePlayerList()
+        private static List<Player> CreatePlayerList()
         {
-            Player player1 = new Player(1, "player 1", Player.Colors.Green, 0);
-            Player player2 = new Player(2, "player 2", Player.Colors.Red, 0);
-            Player player3 = new Player(3, "player 3", Player.Colors.Yellow, 0);
-            Player player4 = new Player(4, "player 4", Player.Colors.Blue, 0);
-            
-            List<Player> PlayerList = new List<Player>();
-            
-            PlayerList.Add(player1);
-            PlayerList.Add(player2);
-            PlayerList.Add(player3);
-            PlayerList.Add(player4);
-            
+            Player player1 = new(1, "player 1", Player.Colors.Green, 0);
+            Player player2 = new(2, "player 2", Player.Colors.Red, 0);
+            Player player3 = new(3, "player 3", Player.Colors.Yellow, 0);
+            Player player4 = new(4, "player 4", Player.Colors.Blue, 0);
+
+            List<Player> PlayerList = new()
+            {
+                player1,
+                player2,
+                player3,
+                player4
+            };
+
             return PlayerList;
         }
 
