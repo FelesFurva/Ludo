@@ -2,5 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Ludo_board/.vs/Ludo_board/v17/.suo
-/Ludo_board/.vs/Ludo_board/v17/TestStore/0/testlog.manifest
+/Ludo_board/.vs/
+
