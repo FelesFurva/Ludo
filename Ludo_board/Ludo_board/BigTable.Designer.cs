@@ -1390,7 +1390,7 @@
             // Player2
             // 
             this.Player2.BackColor = System.Drawing.Color.White;
-            this.Player2.Location = new System.Drawing.Point(438, 59);
+            this.Player2.Location = new System.Drawing.Point(408, 59);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(60, 25);
             this.Player2.TabIndex = 111;
@@ -1401,7 +1401,7 @@
             // Player3
             // 
             this.Player3.BackColor = System.Drawing.Color.White;
-            this.Player3.Location = new System.Drawing.Point(421, 494);
+            this.Player3.Location = new System.Drawing.Point(408, 494);
             this.Player3.Name = "Player3";
             this.Player3.Size = new System.Drawing.Size(60, 25);
             this.Player3.TabIndex = 112;
