@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Felis\\source\\repos\\Ludo\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj": {}
+    "C:\\Users\\ievap\\OneDrive\\Desktop\\VISUAL STUDIO\\Ludo.GameScreen\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Felis\\source\\repos\\Ludo\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj": {
+    "C:\\Users\\ievap\\OneDrive\\Desktop\\VISUAL STUDIO\\Ludo.GameScreen\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Felis\\source\\repos\\Ludo\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj",
+        "projectUniqueName": "C:\\Users\\ievap\\OneDrive\\Desktop\\VISUAL STUDIO\\Ludo.GameScreen\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj",
         "projectName": "LudoWinForm",
-        "projectPath": "C:\\Users\\Felis\\source\\repos\\Ludo\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj",
-        "packagesPath": "C:\\Users\\Felis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Felis\\source\\repos\\Ludo\\LudoWinForm\\LudoWinForm\\obj\\",
+        "projectPath": "C:\\Users\\ievap\\OneDrive\\Desktop\\VISUAL STUDIO\\Ludo.GameScreen\\LudoWinForm\\LudoWinForm\\LudoWinForm.csproj",
+        "packagesPath": "C:\\Users\\ievap\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ievap\\OneDrive\\Desktop\\VISUAL STUDIO\\Ludo.GameScreen\\LudoWinForm\\LudoWinForm\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Felis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ievap\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
