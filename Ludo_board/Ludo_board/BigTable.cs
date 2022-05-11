@@ -327,12 +327,14 @@ namespace Ludo_board
         {
             RollDice();
             dice1 = dice;
+            Player1.Enabled = false;
         }
 
         private void Player2_Click(object sender, EventArgs e)
         {
             RollDice();
             dice2 = dice;
+            Player2.Enabled = false;
 
         }
 
@@ -340,14 +342,14 @@ namespace Ludo_board
         {
             RollDice();
             dice3 = dice;
-
+            Player3.Enabled = false;
         }
 
         private void Player4_Click(object sender, EventArgs e)
         {
             RollDice();
             dice4 = dice;
-
+            Player4.Enabled = false;
         }
 
         public void Nextplayer(int activePlayerID, int maxplayers) //int activePlayer = player ID
