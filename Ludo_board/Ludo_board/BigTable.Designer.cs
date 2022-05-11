@@ -133,6 +133,7 @@
             this.Player2 = new System.Windows.Forms.Label();
             this.Player3 = new System.Windows.Forms.Label();
             this.Player4 = new System.Windows.Forms.Label();
+            this.LogInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -1026,6 +1027,7 @@
             // 
             // BP1
             // 
+            this.BP1.Enabled = false;
             this.BP1.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP1.Location = new System.Drawing.Point(42, 381);
             this.BP1.Name = "BP1";
@@ -1037,6 +1039,7 @@
             // 
             // BP2
             // 
+            this.BP2.Enabled = false;
             this.BP2.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP2.Location = new System.Drawing.Point(114, 381);
             this.BP2.Name = "BP2";
@@ -1049,6 +1052,7 @@
             // 
             // BP3
             // 
+            this.BP3.Enabled = false;
             this.BP3.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP3.Location = new System.Drawing.Point(42, 453);
             this.BP3.Name = "BP3";
@@ -1061,6 +1065,7 @@
             // 
             // BP4
             // 
+            this.BP4.Enabled = false;
             this.BP4.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP4.Location = new System.Drawing.Point(114, 453);
             this.BP4.Name = "BP4";
@@ -1074,6 +1079,7 @@
             // GP1
             // 
             this.GP1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.GP1.Enabled = false;
             this.GP1.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP1.Location = new System.Drawing.Point(42, 95);
             this.GP1.Name = "GP1";
@@ -1086,6 +1092,7 @@
             // 
             // GP4
             // 
+            this.GP4.Enabled = false;
             this.GP4.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP4.Location = new System.Drawing.Point(114, 167);
             this.GP4.Name = "GP4";
@@ -1098,6 +1105,7 @@
             // 
             // GP3
             // 
+            this.GP3.Enabled = false;
             this.GP3.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP3.Location = new System.Drawing.Point(42, 167);
             this.GP3.Name = "GP3";
@@ -1110,6 +1118,7 @@
             // 
             // GP2
             // 
+            this.GP2.Enabled = false;
             this.GP2.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP2.Location = new System.Drawing.Point(114, 95);
             this.GP2.Name = "GP2";
@@ -1122,6 +1131,7 @@
             // 
             // YP1
             // 
+            this.YP1.Enabled = false;
             this.YP1.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP1.Location = new System.Drawing.Point(330, 381);
             this.YP1.Name = "YP1";
@@ -1134,6 +1144,7 @@
             // 
             // YP2
             // 
+            this.YP2.Enabled = false;
             this.YP2.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP2.Location = new System.Drawing.Point(402, 381);
             this.YP2.Name = "YP2";
@@ -1146,6 +1157,7 @@
             // 
             // YP3
             // 
+            this.YP3.Enabled = false;
             this.YP3.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP3.Location = new System.Drawing.Point(330, 453);
             this.YP3.Name = "YP3";
@@ -1158,6 +1170,7 @@
             // 
             // YP4
             // 
+            this.YP4.Enabled = false;
             this.YP4.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP4.Location = new System.Drawing.Point(402, 453);
             this.YP4.Name = "YP4";
@@ -1170,6 +1183,7 @@
             // 
             // RP1
             // 
+            this.RP1.Enabled = false;
             this.RP1.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP1.Location = new System.Drawing.Point(330, 95);
             this.RP1.Name = "RP1";
@@ -1182,6 +1196,7 @@
             // 
             // RP2
             // 
+            this.RP2.Enabled = false;
             this.RP2.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP2.Location = new System.Drawing.Point(402, 95);
             this.RP2.Name = "RP2";
@@ -1194,6 +1209,7 @@
             // 
             // RP3
             // 
+            this.RP3.Enabled = false;
             this.RP3.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP3.Location = new System.Drawing.Point(330, 167);
             this.RP3.Name = "RP3";
@@ -1206,6 +1222,7 @@
             // 
             // RP4
             // 
+            this.RP4.Enabled = false;
             this.RP4.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP4.Location = new System.Drawing.Point(402, 167);
             this.RP4.Name = "RP4";
@@ -1337,7 +1354,7 @@
             this.lbl_dice.AccessibleName = "Dice";
             this.lbl_dice.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_dice.Image = global::Ludo_board.Properties.Resources.Dice_1;
-            this.lbl_dice.Location = new System.Drawing.Point(566, 39);
+            this.lbl_dice.Location = new System.Drawing.Point(563, 39);
             this.lbl_dice.Name = "lbl_dice";
             this.lbl_dice.Size = new System.Drawing.Size(50, 50);
             this.lbl_dice.TabIndex = 106;
@@ -1359,9 +1376,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 40);
+            this.label1.Size = new System.Drawing.Size(513, 40);
             this.label1.TabIndex = 108;
             this.label1.Text = "GP1 steps made: 0";
             // 
@@ -1371,7 +1388,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Location = new System.Drawing.Point(519, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 207);
+            this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
             this.label2.Text = "Current Player";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -1420,12 +1437,24 @@
             this.Player4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Player4.Click += new System.EventHandler(this.Player4_Click);
             // 
+            // LogInfo
+            // 
+            this.LogInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInfo.Location = new System.Drawing.Point(543, 517);
+            this.LogInfo.Name = "LogInfo";
+            this.LogInfo.Size = new System.Drawing.Size(123, 32);
+            this.LogInfo.TabIndex = 114;
+            this.LogInfo.Text = "See Move History";
+            this.LogInfo.UseVisualStyleBackColor = true;
+            this.LogInfo.Click += new System.EventHandler(this.LogInfo_Click);
+            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
+            this.Controls.Add(this.LogInfo);
             this.Controls.Add(this.Player4);
             this.Controls.Add(this.Player3);
             this.Controls.Add(this.Player2);
@@ -1742,5 +1771,6 @@
         private Label Player2;
         private Label Player3;
         private Label Player4;
+        private Button LogInfo;
     }
 }

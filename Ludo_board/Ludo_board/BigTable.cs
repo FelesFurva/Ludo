@@ -1,5 +1,8 @@
+using System.Data.Common;
+using System.Data.SqlClient;
 namespace Ludo_board
 {
+
     public partial class Ludoboard : Form
     {
               
@@ -15,15 +18,20 @@ namespace Ludo_board
 
         //Start field shift determination initial components
         int playerIndex = 0;  //player index: 0=green, 1=red, 2=yellow, 3=blue
-
+        int ActivePlayerID;
         const int startShift = 12;
         const int sharedCellsCount = 48;
+        const int maxplayers = 4;
 
         //coordinates for all board spaces to walk on [0-3 = green, 4-7 = red, 8-11 = yellow, 12-15 = blue]
         PictureBox[] boardtiles;
         PictureBox[] specialLanes;
         PictureBox[] allNests;
         PictureBox[] allPawns;
+
+        // Log Manager
+        LogManager logManager;
+
         public Ludoboard()
         {
             InitializeComponent();
@@ -51,6 +59,9 @@ namespace Ludo_board
                 Properties.Resources.Dice_5,
                 Properties.Resources.Dice_6
             };
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            logManager = new LogManager(databaseConnection);
+            logManager.CleanLog();
         }
 
         //Dice
@@ -60,68 +71,58 @@ namespace Ludo_board
         int dice2;
         int dice3;
         int dice4;
-        Random random = new();
+        Random random = new Random();
+        List<Player> PlayerList;
+
         private void Ludoboard_Load(object sender, EventArgs e)
         {
             rollDice.Visible = false;
         }
 
-        private static List<Player> CreatePlayerList()
+        public void GameStart()
         {
-            List<Player> PlayerList = new()
-            {
-                new(1, "player 1", Player.Colors.Green, 0),
-                new(2, "player 2", Player.Colors.Red, 0),
-                new(3, "player 3", Player.Colors.Yellow, 0),
-                new(4, "player 4", Player.Colors.Blue, 0)
-
-        };
-
-            return PlayerList;
-        }
-
-        private List<Player> GameStart()
-        {
-            
-            List<Player> NewGameList = CreatePlayerList();
-            NewGameList[0].InitialDiceRoll = dice1;
-            NewGameList[1].InitialDiceRoll = dice2;
-            NewGameList[2].InitialDiceRoll = dice3;
-            NewGameList[3].InitialDiceRoll = dice4;
-
-            var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
-            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
-            //if (temp.Count > 1)
-            //{
-            //    foreach (Player player in temp)
-            //    {
-            //        player.InitialDiceRoll = dice;
-            //    }
-            //    HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
-            //}
+            PlayerList = CreatePlayerList();
+            FirstRoll(PlayerList);
+            var HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
             if (HighestRoll == null) { throw new Exception("Player not found"); }
-            int ActivePlayer = HighestRoll.Id  ;
+            List<Player> temp = PlayerList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+            if (temp.Count > 1)
+            {
+                ReRoll(temp);
+                HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
+                if (HighestRoll == null) { throw new Exception("Player not found"); }
+                int NewActivePlayer = HighestRoll.Id;
+                string ReRollsLog = "These players got the same high roll! \nHere's the re-roll:\n" + string.Join("\n", temp.Select(T => $"{T.Color} has rolled : {T.InitialDiceRoll}")) +
+                                              "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                label2.Text = ReRollsLog;
 
-            label2.Text = NewGameList[0].colors.ToString() + " has rolled : " + NewGameList[0].InitialDiceRoll +
-                " \n " + NewGameList[1].colors.ToString() + " has rolled : " + NewGameList[1].InitialDiceRoll +
-                " \n " + NewGameList[2].colors.ToString() + " has rolled : " + NewGameList[2].InitialDiceRoll +
-                " \n " + NewGameList[3].colors.ToString() + " has rolled : " + NewGameList[3].InitialDiceRoll +
-            "\n \n The player : " + HighestRoll.colors.ToString() + " starts the game";
+                ActivePlayerID = HighestRoll.Id;
+                PlayerList[ActivePlayerID - 1].IsActive = true;
+            }
+            else
+            {
+                ActivePlayerID = HighestRoll.Id;
 
+                string rollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
+                                              "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                label2.Text = rollsLog;
 
-
-            return NewGameList;
+                PlayerList[ActivePlayerID - 1].IsActive = true;
+            }
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             GameStart();
             rollDice.Visible = true;
+            label2.Enabled = false;
         }
 
         private void rollDice_Click(object sender, EventArgs e)
         {
             RollDice();
+            rollDice.Visible = false;
         }
 
         private void RollDice()
@@ -146,81 +147,97 @@ namespace Ludo_board
         private void GP1_Click(object sender, EventArgs e)
         {
             MovePawn(0);
+            Nextplayer();
         }
 
         private void GP2_Click(object sender, EventArgs e)
         {
             MovePawn(1);
+            Nextplayer();
         }
 
         private void GP3_Click(object sender, EventArgs e)
         {
             MovePawn(2);
+            Nextplayer();
         }
 
         private void GP4_Click(object sender, EventArgs e)
         {
             MovePawn(3);
+            Nextplayer();
         }
 
         private void RP1_Click(object sender, EventArgs e)
         {
             MovePawn(4);
+            Nextplayer();
         }
 
         private void RP2_Click(object sender, EventArgs e)
         {
             MovePawn(5);
+            Nextplayer();
         }
 
         private void RP3_Click(object sender, EventArgs e)
         {
             MovePawn(6);
+            Nextplayer();
         }
 
         private void RP4_Click(object sender, EventArgs e)
         {
             MovePawn(7);
+            Nextplayer();
         }
 
         private void YP1_Click(object sender, EventArgs e)
         {
             MovePawn(8);
+            Nextplayer();
         }
 
         private void YP2_Click(object sender, EventArgs e)
         {
             MovePawn(9);
+            Nextplayer();
         }
 
         private void YP3_Click(object sender, EventArgs e)
         {
             MovePawn(10);
+            Nextplayer();
         }
 
         private void YP4_Click(object sender, EventArgs e)
         {
             MovePawn(11);
+            Nextplayer();
         }
 
         private void BP1_Click(object sender, EventArgs e)
         {
             MovePawn(12);
+            Nextplayer();
         }
 
         private void BP2_Click(object sender, EventArgs e)
         {
             MovePawn(13);
+            Nextplayer();
         }
 
         private void BP3_Click(object sender, EventArgs e)
         {
             MovePawn(14);
+            Nextplayer();
         }
 
         private void BP4_Click(object sender, EventArgs e)
         {
             MovePawn(15);
+            Nextplayer();
         }
 
        public void MovePawn(int i)
@@ -274,7 +291,6 @@ namespace Ludo_board
 
                 pawnBoxnumber[i] = globalT;
                 pawnStepsMade[i] += dice;
-                    //individualT;
 
                 if (pawnStepsMade[i]<=46)
                 {
@@ -294,21 +310,25 @@ namespace Ludo_board
                 }
                 dice = 0;
             }
-            label1.Text = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() + 
-                " steps";
-           
-       }
+
+            string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
+                               " steps";
+            label1.Text = LableText;
+            logManager.InsertIntoMovementLog(LableText);
+        }
 
         private void Player1_Click(object sender, EventArgs e)
         {
             RollDice();
             dice1 = dice;
+            Player1.Enabled = false;
         }
 
         private void Player2_Click(object sender, EventArgs e)
         {
             RollDice();
             dice2 = dice;
+            Player2.Enabled = false;
 
         }
 
@@ -316,20 +336,80 @@ namespace Ludo_board
         {
             RollDice();
             dice3 = dice;
-
+            Player3.Enabled = false;
         }
 
         private void Player4_Click(object sender, EventArgs e)
         {
             RollDice();
             dice4 = dice;
-
+            Player4.Enabled = false;
         }
 
-        private static int Nextplayer(int activePlayer, int maxplayers) //int activePlayer = player ID
+        public void Nextplayer() //int activePlayer = player ID
         {
-            return activePlayer % maxplayers + 1;
+            rollDice.Visible = true;
+
+            PlayerList[ActivePlayerID - 1].IsActive = false; // de-activating previous player
+            ActivePlayerID = ActivePlayerID % maxplayers + 1; // getting id for next player
+            
+            PlayerList[ActivePlayerID - 1].IsActive = true; // activating next player
+
+            foreach (Player player in PlayerList)
+            {
+                if (player.IsAllPawnsHidden())
+                {
+                    label2.Text = "Game Over! \n" + player.Color.ToString() + " has won!";   //make it as messagebox?
+                }
+            }
+            label2.Text = "It is " + PlayerList[ActivePlayerID - 1].Color.ToString() + "'s time to move.";
         }
 
+        public List<Player> CreatePlayerList() //creates player list at the start of the game
+        {
+            Player player1 = new Player(1, "player 1", Player.PlayerColor.Green, 0, GP1, GP2, GP3, GP4);
+            Player player2 = new Player(2, "player 2", Player.PlayerColor.Red, 0, RP1, RP2, RP3, RP4);
+            Player player3 = new Player(3, "player 3", Player.PlayerColor.Yellow, 0, YP1, YP2, YP3, YP4);
+            Player player4 = new Player(4, "player 4", Player.PlayerColor.Blue, 0, BP1, BP2, BP3, BP4);
+
+            List<Player> PlayerList = new List<Player>();
+
+            PlayerList.Add(player1);
+            PlayerList.Add(player2);
+            PlayerList.Add(player3);
+            PlayerList.Add(player4);
+
+            return PlayerList;
+        }
+
+        private List<Player> FirstRoll(List<Player> NewGameList)
+        {
+            int[] DiceRoll = new[] { dice1, dice2, dice3, dice4 };
+
+            NewGameList[0].InitialDiceRoll = DiceRoll[0];
+            NewGameList[1].InitialDiceRoll = DiceRoll[1];
+            NewGameList[2].InitialDiceRoll = DiceRoll[2];
+            NewGameList[3].InitialDiceRoll = DiceRoll[3];
+
+            return NewGameList;
+        }
+
+        private List<Player> ReRoll(List<Player> NewGameList)
+        {
+            var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
+            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+            foreach (Player player in temp)
+            {
+                RollDice();
+                player.InitialDiceRoll = dice;
+            }
+            return NewGameList;
+        }
+
+        private void LogInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Join("\n",logManager.GetAllRecords()), 
+                                        "Confirmation", MessageBoxButtons.OK);
+        }
     }
 }

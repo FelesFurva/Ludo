@@ -4,10 +4,7 @@
     <Compile Update="BigTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1GameScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GameScreen.cs">
+    <Compile Update="StartGameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="HelpScreen.cs">

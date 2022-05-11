@@ -35,19 +35,19 @@
             // help
             // 
             this.help.BackColor = System.Drawing.SystemColors.Control;
-            this.help.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.help.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.help.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.help.Location = new System.Drawing.Point(12, 19);
+            this.help.Location = new System.Drawing.Point(10, 18);
             this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(537, 563);
+            this.help.Size = new System.Drawing.Size(470, 528);
             this.help.TabIndex = 0;
             this.help.Text = resources.GetString("help.Text");
             // 
             // HelpScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 591);
+            this.ClientSize = new System.Drawing.Size(491, 554);
             this.Controls.Add(this.help);
             this.Name = "HelpScreen";
             this.Text = "HelpScreen";
