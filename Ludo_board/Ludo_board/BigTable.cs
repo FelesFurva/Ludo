@@ -354,12 +354,13 @@ namespace Ludo_board
             ActivePlayerID = ActivePlayerID % maxplayers + 1; // getting id for next player
             
             PlayerList[ActivePlayerID - 1].IsActive = true; // activating next player
-
+            
             foreach (Player player in PlayerList)
             {
                 if (player.IsAllPawnsHidden())
                 {
                     label2.Text = "Game Over! \n" + player.Color.ToString() + " has won!";   //make it as messagebox?
+                    return;
                 }
             }
             label2.Text = "It is " + PlayerList[ActivePlayerID - 1].Color.ToString() + "'s time to move.";
