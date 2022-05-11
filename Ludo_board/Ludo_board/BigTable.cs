@@ -66,54 +66,32 @@ namespace Ludo_board
             rollDice.Visible = false;
         }
 
-        private List<Player> CreatePlayerList()
+        public void GameStart()
         {
-            Player player1 = new Player(1, "player 1", Player.Colors.Green, 0);
-            Player player2 = new Player(2, "player 2", Player.Colors.Red, 0);
-            Player player3 = new Player(3, "player 3", Player.Colors.Yellow, 0);
-            Player player4 = new Player(4, "player 4", Player.Colors.Blue, 0);
-            
-            List<Player> PlayerList = new List<Player>();
-            
-            PlayerList.Add(player1);
-            PlayerList.Add(player2);
-            PlayerList.Add(player3);
-            PlayerList.Add(player4);
-            
-            return PlayerList;
-        }
-
-        private List<Player> GameStart()
-        {
-            
             List<Player> NewGameList = CreatePlayerList();
-            NewGameList[0].InitialDiceRoll = dice1;
-            NewGameList[1].InitialDiceRoll = dice2;
-            NewGameList[2].InitialDiceRoll = dice3;
-            NewGameList[3].InitialDiceRoll = dice4;
-
+            FirstRoll(NewGameList);
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
-            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
-            //if (temp.Count > 1)
-            //{
-            //    foreach (Player player in temp)
-            //    {
-            //        player.InitialDiceRoll = dice;
-            //    }
-            //    HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
-            //}
             if (HighestRoll == null) { throw new Exception("Player not found"); }
-            int ActivePlayer = HighestRoll.Id  ;
+            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+            if (temp.Count > 1)
+            {
+                ReRoll(temp);
+                HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
+                if (HighestRoll == null) { throw new Exception("Player not found"); }
+                int NewActivePlayer = HighestRoll.Id;
+                label2.Text = "Oh-uh, some rolled the same! There was a re-roll \n \n The player : " 
+                               + HighestRoll.colors.ToString() + " starts the game";
 
-            label2.Text = NewGameList[0].colors.ToString() + " has rolled : " + NewGameList[0].InitialDiceRoll +
+            }
+            else
+            {
+                int ActivePlayer = HighestRoll.Id;
+                label2.Text = NewGameList[0].colors.ToString() + " has rolled : " + NewGameList[0].InitialDiceRoll +
                 " \n " + NewGameList[1].colors.ToString() + " has rolled : " + NewGameList[1].InitialDiceRoll +
                 " \n " + NewGameList[2].colors.ToString() + " has rolled : " + NewGameList[2].InitialDiceRoll +
                 " \n " + NewGameList[3].colors.ToString() + " has rolled : " + NewGameList[3].InitialDiceRoll +
-            "\n \n The player : " + HighestRoll.colors.ToString() + " starts the game";
-
-
-
-            return NewGameList;
+                "\n \n The player : " + HighestRoll.colors.ToString() + " starts the game";
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -332,6 +310,47 @@ namespace Ludo_board
         private static int Nextplayer(int activePlayer, int maxplayers) //int activePlayer = player ID
         {
             return activePlayer % maxplayers + 1;
+        }
+
+        private List<Player> CreatePlayerList() //creates player list at the start of the game
+        {
+            Player player1 = new Player(1, "player 1", Player.Colors.Green, 0);
+            Player player2 = new Player(2, "player 2", Player.Colors.Red, 0);
+            Player player3 = new Player(3, "player 3", Player.Colors.Yellow, 0);
+            Player player4 = new Player(4, "player 4", Player.Colors.Blue, 0);
+
+            List<Player> PlayerList = new List<Player>();
+
+            PlayerList.Add(player1);
+            PlayerList.Add(player2);
+            PlayerList.Add(player3);
+            PlayerList.Add(player4);
+
+            return PlayerList;
+        }
+
+        private List<Player> FirstRoll(List<Player> NewGameList)
+        {
+            int[] DiceRoll = new[] { dice1, dice2, dice3, dice4 };
+
+            NewGameList[0].InitialDiceRoll = DiceRoll[0];
+            NewGameList[1].InitialDiceRoll = DiceRoll[1];
+            NewGameList[2].InitialDiceRoll = DiceRoll[2];
+            NewGameList[3].InitialDiceRoll = DiceRoll[3];
+
+            return NewGameList;
+        }
+
+        private List<Player> ReRoll(List<Player> NewGameList)
+        {
+            var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
+            List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+            foreach (Player player in temp)
+            {
+                RollDice();
+                player.InitialDiceRoll = dice;
+            }
+            return NewGameList;
         }
 
     }

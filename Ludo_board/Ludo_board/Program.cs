@@ -1,3 +1,5 @@
+using StartMenu;
+
 namespace Ludo_board
 {
     internal static class Program
@@ -10,8 +12,7 @@ namespace Ludo_board
         {
 
             ApplicationConfiguration.Initialize();
-            //Application.Run(new Ludoboard());
-            Application.Run(new StartMenu.StartGameScreen());
+            Application.Run(new StartGameScreen());
         }
     }
 }

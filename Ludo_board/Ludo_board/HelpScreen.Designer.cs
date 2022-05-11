@@ -42,7 +42,6 @@
             this.help.Size = new System.Drawing.Size(470, 528);
             this.help.TabIndex = 0;
             this.help.Text = resources.GetString("help.Text");
-            this.help.Click += new System.EventHandler(this.help_Click);
             // 
             // HelpScreen
             // 

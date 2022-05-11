@@ -16,10 +16,5 @@ namespace StartMenu
         {
             InitializeComponent();
         }
-
-        private void help_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
