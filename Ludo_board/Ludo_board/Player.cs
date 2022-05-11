@@ -20,13 +20,21 @@ namespace Ludo_board
         public int Id { get; set; }
         public Colors colors { get; set; }
         public int InitialDiceRoll { get; set; }
+        public bool IsActive { get; set; }
+        public PictureBox[] PlayerPawns = new PictureBox[4];
 
-        public Player(int id, string name, Colors colors, int initialdiceroll)
+        public Player(int id, string name, Colors colors, int initialdiceroll, bool isActive, PictureBox pb1, PictureBox pb2, PictureBox pb3, PictureBox pb4)
         {
             this.Id = id;
             this.Name = name;
             this.colors = colors;
             this.InitialDiceRoll = initialdiceroll;
+            this.IsActive = isActive;
+            this.PlayerPawns[0] = pb1;
+            this.PlayerPawns[1] = pb2;
+            this.PlayerPawns[2] = pb3;
+            this.PlayerPawns[3] = pb4;
+
         }
 
         //public void FirstRoll(List<Player> PlayerList, int dice)

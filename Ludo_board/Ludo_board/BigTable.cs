@@ -68,6 +68,7 @@ namespace Ludo_board
 
         public void GameStart()
         {
+            int ActivePlayerID = 0;
             List<Player> NewGameList = CreatePlayerList();
             FirstRoll(NewGameList);
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
@@ -81,23 +82,48 @@ namespace Ludo_board
                 int NewActivePlayer = HighestRoll.Id;
                 label2.Text = "Oh-uh, some rolled the same! There was a re-roll \n \n The player : " 
                                + HighestRoll.colors.ToString() + " starts the game";
-
+                
+                NewGameList[ActivePlayerID - 1].IsActive = true;
+                foreach (Player player in NewGameList)
+                {
+                    if (player.IsActive == true)
+                    {
+                        player.PlayerPawns[0].Enabled = true;
+                        player.PlayerPawns[1].Enabled = true;
+                        player.PlayerPawns[2].Enabled = true;
+                        player.PlayerPawns[3].Enabled = true;
+                    }
+                }
             }
             else
             {
-                int ActivePlayer = HighestRoll.Id;
+                ActivePlayerID = HighestRoll.Id;
                 label2.Text = NewGameList[0].colors.ToString() + " has rolled : " + NewGameList[0].InitialDiceRoll +
                 " \n " + NewGameList[1].colors.ToString() + " has rolled : " + NewGameList[1].InitialDiceRoll +
                 " \n " + NewGameList[2].colors.ToString() + " has rolled : " + NewGameList[2].InitialDiceRoll +
                 " \n " + NewGameList[3].colors.ToString() + " has rolled : " + NewGameList[3].InitialDiceRoll +
                 "\n \n The player : " + HighestRoll.colors.ToString() + " starts the game";
+                
+                NewGameList[ActivePlayerID - 1].IsActive = true;
+                foreach (Player player in NewGameList)
+                {
+                    if (player.IsActive == true)
+                    {
+                        player.PlayerPawns[0].Enabled = true;
+                        player.PlayerPawns[1].Enabled = true;
+                        player.PlayerPawns[2].Enabled = true;
+                        player.PlayerPawns[3].Enabled = true;
+                    }
+                }
             }
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             GameStart();
             rollDice.Visible = true;
+            label2.Enabled = false;
         }
 
         private void rollDice_Click(object sender, EventArgs e)
@@ -127,81 +153,97 @@ namespace Ludo_board
         private void GP1_Click(object sender, EventArgs e)
         {
             MovePawn(0);
+            Nextplayer(1, 4);
         }
 
         private void GP2_Click(object sender, EventArgs e)
         {
             MovePawn(1);
+            Nextplayer(1, 4);
         }
 
         private void GP3_Click(object sender, EventArgs e)
         {
             MovePawn(2);
+            Nextplayer(1, 4);
         }
 
         private void GP4_Click(object sender, EventArgs e)
         {
             MovePawn(3);
+            Nextplayer(1, 4);
         }
 
         private void RP1_Click(object sender, EventArgs e)
         {
             MovePawn(4);
+            Nextplayer(2, 4);
         }
 
         private void RP2_Click(object sender, EventArgs e)
         {
             MovePawn(5);
+            Nextplayer(2, 4);
         }
 
         private void RP3_Click(object sender, EventArgs e)
         {
             MovePawn(6);
+            Nextplayer(2, 4);
         }
 
         private void RP4_Click(object sender, EventArgs e)
         {
             MovePawn(7);
+            Nextplayer(2, 4);
         }
 
         private void YP1_Click(object sender, EventArgs e)
         {
             MovePawn(8);
+            Nextplayer(3, 4);
         }
 
         private void YP2_Click(object sender, EventArgs e)
         {
             MovePawn(9);
+            Nextplayer(3, 4);
         }
 
         private void YP3_Click(object sender, EventArgs e)
         {
             MovePawn(10);
+            Nextplayer(3, 4);
         }
 
         private void YP4_Click(object sender, EventArgs e)
         {
             MovePawn(11);
+            Nextplayer(3, 4);
         }
 
         private void BP1_Click(object sender, EventArgs e)
         {
             MovePawn(12);
+            Nextplayer(4, 4);
         }
 
         private void BP2_Click(object sender, EventArgs e)
         {
             MovePawn(13);
+            Nextplayer(4, 4);
         }
 
         private void BP3_Click(object sender, EventArgs e)
         {
             MovePawn(14);
+            Nextplayer(4, 4);
         }
 
         private void BP4_Click(object sender, EventArgs e)
         {
             MovePawn(15);
+            Nextplayer(4, 4);
         }
 
        public void MovePawn(int i)
@@ -307,17 +349,38 @@ namespace Ludo_board
 
         }
 
-        private static int Nextplayer(int activePlayer, int maxplayers) //int activePlayer = player ID
+        public void Nextplayer(int activePlayerID, int maxplayers) //int activePlayer = player ID
         {
-            return activePlayer % maxplayers + 1;
+            List<Player> PlayerList = CreatePlayerList();
+            PlayerList[activePlayerID - 1].IsActive = false;
+            int NewActivePlayerID = activePlayerID % maxplayers + 1;
+            PlayerList[NewActivePlayerID - 1].IsActive = true;
+            foreach (Player player in PlayerList)
+            {
+                if (player.IsActive == true)
+                {
+                    player.PlayerPawns[0].Enabled = true;
+                    player.PlayerPawns[1].Enabled = true;
+                    player.PlayerPawns[2].Enabled = true;
+                    player.PlayerPawns[3].Enabled = true;
+                }
+                else
+                {
+                    player.PlayerPawns[0].Enabled = false;
+                    player.PlayerPawns[1].Enabled = false;
+                    player.PlayerPawns[2].Enabled = false;
+                    player.PlayerPawns[3].Enabled = false;
+                }
+            }
+            label2.Text = PlayerList[NewActivePlayerID - 1].colors.ToString() + " : rolls next";
         }
 
         private List<Player> CreatePlayerList() //creates player list at the start of the game
         {
-            Player player1 = new Player(1, "player 1", Player.Colors.Green, 0);
-            Player player2 = new Player(2, "player 2", Player.Colors.Red, 0);
-            Player player3 = new Player(3, "player 3", Player.Colors.Yellow, 0);
-            Player player4 = new Player(4, "player 4", Player.Colors.Blue, 0);
+            Player player1 = new Player(1, "player 1", Player.Colors.Green, 0, false, GP1, GP2, GP3, GP4);
+            Player player2 = new Player(2, "player 2", Player.Colors.Red, 0, false, RP1, RP2, RP3, RP4);
+            Player player3 = new Player(3, "player 3", Player.Colors.Yellow, 0, false, YP1, YP2, YP3, YP4);
+            Player player4 = new Player(4, "player 4", Player.Colors.Blue, 0, false, BP1, BP2, BP3, BP4);
 
             List<Player> PlayerList = new List<Player>();
 
