@@ -82,7 +82,8 @@ namespace Ludo_board
                 int NewActivePlayer = HighestRoll.Id;
                 label2.Text = "Oh-uh, some rolled the same! There was a re-roll \n \n The player : " 
                                + HighestRoll.colors.ToString() + " starts the game";
-                
+
+                ActivePlayerID = HighestRoll.Id;
                 NewGameList[ActivePlayerID - 1].IsActive = true;
                 foreach (Player player in NewGameList)
                 {
