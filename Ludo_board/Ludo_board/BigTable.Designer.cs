@@ -1354,7 +1354,7 @@
             this.lbl_dice.AccessibleName = "Dice";
             this.lbl_dice.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lbl_dice.Image = global::Ludo_board.Properties.Resources.Dice_1;
-            this.lbl_dice.Location = new System.Drawing.Point(566, 39);
+            this.lbl_dice.Location = new System.Drawing.Point(563, 39);
             this.lbl_dice.Name = "lbl_dice";
             this.lbl_dice.Size = new System.Drawing.Size(50, 50);
             this.lbl_dice.TabIndex = 106;
@@ -1376,9 +1376,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 40);
+            this.label1.Size = new System.Drawing.Size(513, 40);
             this.label1.TabIndex = 108;
             this.label1.Text = "GP1 steps made: 0";
             // 
