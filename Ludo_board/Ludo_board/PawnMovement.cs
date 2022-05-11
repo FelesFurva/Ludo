@@ -18,8 +18,5 @@ namespace Ludo_board
             source.Location = target.Location;
             return source;
         }
-
-       
-
     }
 }

@@ -133,6 +133,7 @@
             this.Player2 = new System.Windows.Forms.Label();
             this.Player3 = new System.Windows.Forms.Label();
             this.Player4 = new System.Windows.Forms.Label();
+            this.LogInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -1387,7 +1388,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Location = new System.Drawing.Point(519, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 207);
+            this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
             this.label2.Text = "Current Player";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -1436,12 +1437,24 @@
             this.Player4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Player4.Click += new System.EventHandler(this.Player4_Click);
             // 
+            // LogInfo
+            // 
+            this.LogInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInfo.Location = new System.Drawing.Point(543, 517);
+            this.LogInfo.Name = "LogInfo";
+            this.LogInfo.Size = new System.Drawing.Size(123, 32);
+            this.LogInfo.TabIndex = 114;
+            this.LogInfo.Text = "See Move History";
+            this.LogInfo.UseVisualStyleBackColor = true;
+            this.LogInfo.Click += new System.EventHandler(this.LogInfo_Click);
+            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
+            this.Controls.Add(this.LogInfo);
             this.Controls.Add(this.Player4);
             this.Controls.Add(this.Player3);
             this.Controls.Add(this.Player2);
@@ -1758,5 +1771,6 @@
         private Label Player2;
         private Label Player3;
         private Label Player4;
+        private Button LogInfo;
     }
 }

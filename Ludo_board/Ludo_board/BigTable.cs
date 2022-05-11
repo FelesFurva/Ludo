@@ -1,5 +1,8 @@
+using System.Data.Common;
+using System.Data.SqlClient;
 namespace Ludo_board
 {
+
     public partial class Ludoboard : Form
     {
               
@@ -24,6 +27,10 @@ namespace Ludo_board
         PictureBox[] specialLanes;
         PictureBox[] allNests;
         PictureBox[] allPawns;
+
+        // Log Manager
+        LogManager logManager;
+
         public Ludoboard()
         {
             InitializeComponent();
@@ -51,6 +58,9 @@ namespace Ludo_board
                 Properties.Resources.Dice_5,
                 Properties.Resources.Dice_6
             };
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            logManager = new LogManager(databaseConnection);
+            logManager.CleanLog();
         }
 
         //Dice
@@ -130,6 +140,7 @@ namespace Ludo_board
         private void rollDice_Click(object sender, EventArgs e)
         {
             RollDice();
+            rollDice.Visible = false;
         }
 
         private void RollDice()
@@ -318,10 +329,12 @@ namespace Ludo_board
                 }
                 dice = 0;
             }
-            label1.Text = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() + 
-                " steps";
-           
-       }
+
+            string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
+                               " steps";
+            label1.Text = LableText;
+            logManager.InsertIntoMovementLog(LableText);
+        }
 
         private void Player1_Click(object sender, EventArgs e)
         {
@@ -354,10 +367,19 @@ namespace Ludo_board
 
         public void Nextplayer(int activePlayerID, int maxplayers) //int activePlayer = player ID
         {
+            rollDice.Visible = true;
             List<Player> PlayerList = CreatePlayerList();
             PlayerList[activePlayerID - 1].IsActive = false;
             int NewActivePlayerID = activePlayerID % maxplayers + 1;
             PlayerList[NewActivePlayerID - 1].IsActive = true;
+            foreach (Player player in PlayerList)
+            {
+                if (player.PlayerPawns[0].Visible == false && player.PlayerPawns[1].Visible == false
+                        && player.PlayerPawns[2].Visible == false && player.PlayerPawns[3].Visible == false)
+                {
+                    label2.Text = "Game Over! \n" + player.colors.ToString() + " has won!";   //make it as messagebox?
+                }
+            }
             foreach (Player player in PlayerList)
             {
                 if (player.IsActive == true)
@@ -375,10 +397,10 @@ namespace Ludo_board
                     player.PlayerPawns[3].Enabled = false;
                 }
             }
-            label2.Text = PlayerList[NewActivePlayerID - 1].colors.ToString() + " : rolls next";
+            label2.Text = "It is " + PlayerList[NewActivePlayerID - 1].colors.ToString() + "'s time to move.";
         }
 
-        private List<Player> CreatePlayerList() //creates player list at the start of the game
+        public List<Player> CreatePlayerList() //creates player list at the start of the game
         {
             Player player1 = new Player(1, "player 1", Player.Colors.Green, 0, false, GP1, GP2, GP3, GP4);
             Player player2 = new Player(2, "player 2", Player.Colors.Red, 0, false, RP1, RP2, RP3, RP4);
@@ -419,5 +441,10 @@ namespace Ludo_board
             return NewGameList;
         }
 
+        private void LogInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(string.Join("\n",logManager.GetAllRecords()), 
+                                        "Confirmation", MessageBoxButtons.OK);
+        }
     }
 }
