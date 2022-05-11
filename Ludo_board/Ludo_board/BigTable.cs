@@ -190,7 +190,7 @@ namespace Ludo_board
             Nextplayer();
         }
 
-        private void RP3_Click (object sender, EventArgs e) => PwnClick( sender, e);
+        private void RP3_Click  (object sender, EventArgs e) => PwnClick( sender, e);
 
 
         private void RP4_Click(object sender, EventArgs e)
