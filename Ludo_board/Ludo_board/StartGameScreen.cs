@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ludo_board;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,16 @@ using System.Windows.Forms;
 
 namespace StartMenu
 {
-    public partial class Form1 : Form
+    public partial class StartGameScreen : Form
     {
-        public Form1()
+        public StartGameScreen()
         {
             InitializeComponent();
         }
 
         private void LoadGame(object sender, EventArgs e)
         {
-            GameScreen gameWindow = new GameScreen();
+            Ludoboard gameWindow = new();
             gameWindow.Show();
         }
 
