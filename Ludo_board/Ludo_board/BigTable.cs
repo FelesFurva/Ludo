@@ -79,6 +79,16 @@ namespace Ludo_board
             rollDice.Visible = false;
         }
 
+        private void PwnClick(object sender, EventArgs e)
+        {
+            var pwnImageBox = sender as PictureBox;
+            int i = 0;
+            for (; allPawns[i] != pwnImageBox && i < allPawns.Length; i++);
+
+            MovePawn(i);
+            Nextplayer();
+        }
+
         public void GameStart()
         {
             PlayerList = CreatePlayerList();
@@ -180,11 +190,8 @@ namespace Ludo_board
             Nextplayer();
         }
 
-        private void RP3_Click(object sender, EventArgs e)
-        {
-            MovePawn(6);
-            Nextplayer();
-        }
+        private void RP3_Click (object sender, EventArgs e) => PwnClick( sender, e);
+
 
         private void RP4_Click(object sender, EventArgs e)
         {
