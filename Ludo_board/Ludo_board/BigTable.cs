@@ -120,8 +120,9 @@ namespace Ludo_board
             {
                 ActivePlayerID = HighestRoll.Id;
 
-                string rollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
+                string RollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
                                               "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                label1.Text = RollsLog;
                 label1.ForeColor = PlayerLabelList[ActivePlayerID - 1].ForeColor;
 
                 PlayerList[ActivePlayerID - 1].IsActive = true;

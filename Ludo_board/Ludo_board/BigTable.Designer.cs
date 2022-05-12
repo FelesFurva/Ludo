@@ -1366,7 +1366,7 @@
             // 
             this.rollDice.BackColor = System.Drawing.Color.White;
             this.rollDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rollDice.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rollDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rollDice.Location = new System.Drawing.Point(543, 95);
             this.rollDice.Name = "rollDice";
             this.rollDice.Size = new System.Drawing.Size(87, 30);
@@ -1451,13 +1451,13 @@
             this.LogInfo.Name = "LogInfo";
             this.LogInfo.Size = new System.Drawing.Size(123, 32);
             this.LogInfo.TabIndex = 114;
-            this.LogInfo.Text = "See Move History";
+            this.LogInfo.Text = "See step count";
             this.LogInfo.UseVisualStyleBackColor = true;
             this.LogInfo.Click += new System.EventHandler(this.LogInfo_Click);
             // 
             // Exit
             // 
-            this.Exit.Font = new System.Drawing.Font("Ravie", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Exit.Location = new System.Drawing.Point(538, 364);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(114, 29);
@@ -1468,7 +1468,7 @@
             // 
             // NewGame
             // 
-            this.NewGame.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NewGame.Location = new System.Drawing.Point(527, 326);
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(133, 32);
@@ -1481,7 +1481,7 @@
             // 
             this.Gameover.BackColor = System.Drawing.Color.BurlyWood;
             this.Gameover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Gameover.Font = new System.Drawing.Font("Ravie", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Gameover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Gameover.Location = new System.Drawing.Point(519, 185);
             this.Gameover.Name = "Gameover";
             this.Gameover.Size = new System.Drawing.Size(147, 226);
