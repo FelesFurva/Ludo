@@ -1,3 +1,5 @@
+using StartMenu;
+using Ludo_board;
 using System.Data.Common;
 using System.Data.SqlClient;
 namespace Ludo_board
@@ -5,7 +7,7 @@ namespace Ludo_board
 
     public partial class Ludoboard : Form
     {
-              
+
         //step counter for each pawn, to compare to the whole number of steps to make [0-3 = green, 4-7 = red, 8-11 = yellow, 12-15 = blue]:
         int[] pawnStepsMade = new int[16]
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -28,6 +30,7 @@ namespace Ludo_board
         PictureBox[] specialLanes;
         PictureBox[] allNests;
         PictureBox[] allPawns;
+        Label[] PlayerLabelList;
 
         // Log Manager
         LogManager logManager;
@@ -59,6 +62,9 @@ namespace Ludo_board
                 Properties.Resources.Dice_5,
                 Properties.Resources.Dice_6
             };
+            PlayerLabelList = new Label[4]
+            { Player1,Player2,Player3,Player4};
+
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
             logManager.CleanLog();
@@ -94,7 +100,8 @@ namespace Ludo_board
                 int NewActivePlayer = HighestRoll.Id;
                 string ReRollsLog = "These players got the same high roll! \nHere's the re-roll:\n" + string.Join("\n", temp.Select(T => $"{T.Color} has rolled : {T.InitialDiceRoll}")) +
                                               "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
-                label2.Text = ReRollsLog;
+                label1.ForeColor = PlayerLabelList[HighestRoll.Id - 1].ForeColor;
+                label1.Text = ReRollsLog;
 
                 ActivePlayerID = HighestRoll.Id;
                 PlayerList[ActivePlayerID - 1].IsActive = true;
@@ -105,18 +112,18 @@ namespace Ludo_board
 
                 string rollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
                                               "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
-                label2.Text = rollsLog;
+                label1.ForeColor = PlayerLabelList[ActivePlayerID - 1].ForeColor;
 
                 PlayerList[ActivePlayerID - 1].IsActive = true;
             }
-            
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             GameStart();
+            dice=0;
             rollDice.Visible = true;
-            label2.Enabled = false;
+            label2.Visible = false;
         }
 
         private void rollDice_Click(object sender, EventArgs e)
@@ -129,7 +136,6 @@ namespace Ludo_board
         {
             dice = random.Next(1, 7);
             lbl_dice.Image = diceImages[dice];
-
         }
 
         //Pawn movements
@@ -146,98 +152,210 @@ namespace Ludo_board
 
         private void GP1_Click(object sender, EventArgs e)
         {
-            MovePawn(0);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(0);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void GP2_Click(object sender, EventArgs e)
         {
-            MovePawn(1);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(1);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void GP3_Click(object sender, EventArgs e)
         {
-            MovePawn(2);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(2);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void GP4_Click(object sender, EventArgs e)
         {
-            MovePawn(3);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(3);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void RP1_Click(object sender, EventArgs e)
         {
-            MovePawn(4);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(4);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void RP2_Click(object sender, EventArgs e)
         {
-            MovePawn(5);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(5);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void RP3_Click(object sender, EventArgs e)
         {
-            MovePawn(6);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(6);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void RP4_Click(object sender, EventArgs e)
         {
-            MovePawn(7);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(7);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void YP1_Click(object sender, EventArgs e)
         {
-            MovePawn(8);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(8);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void YP2_Click(object sender, EventArgs e)
         {
-            MovePawn(9);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(9);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void YP3_Click(object sender, EventArgs e)
         {
-            MovePawn(10);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(10);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void YP4_Click(object sender, EventArgs e)
         {
-            MovePawn(11);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(11);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void BP1_Click(object sender, EventArgs e)
         {
-            MovePawn(12);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(12);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void BP2_Click(object sender, EventArgs e)
         {
-            MovePawn(13);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(13);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void BP3_Click(object sender, EventArgs e)
         {
-            MovePawn(14);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(14);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
         private void BP4_Click(object sender, EventArgs e)
         {
-            MovePawn(15);
-            Nextplayer();
+            if (dice!=0)
+            {
+                MovePawn(15);
+                Nextplayer();
+            }
+            else
+            {
+                label1.Text = "Roll the dice first!";
+            }
         }
 
        public void MovePawn(int i)
@@ -313,7 +431,7 @@ namespace Ludo_board
 
             string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
                                " steps";
-            label1.Text = LableText;
+            
             logManager.InsertIntoMovementLog(LableText);
         }
 
@@ -322,6 +440,10 @@ namespace Ludo_board
             RollDice();
             dice1 = dice;
             Player1.Enabled = false;
+            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            {
+                label2.Enabled = true;
+            }
         }
 
         private void Player2_Click(object sender, EventArgs e)
@@ -329,6 +451,10 @@ namespace Ludo_board
             RollDice();
             dice2 = dice;
             Player2.Enabled = false;
+            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            {
+                label2.Enabled = true;
+            }
 
         }
 
@@ -337,6 +463,10 @@ namespace Ludo_board
             RollDice();
             dice3 = dice;
             Player3.Enabled = false;
+            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            {
+                label2.Enabled = true;
+            }
         }
 
         private void Player4_Click(object sender, EventArgs e)
@@ -344,6 +474,10 @@ namespace Ludo_board
             RollDice();
             dice4 = dice;
             Player4.Enabled = false;
+            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            {
+                label2.Enabled = true;
+            }
         }
 
         public void Nextplayer() //int activePlayer = player ID
@@ -359,11 +493,18 @@ namespace Ludo_board
             {
                 if (player.IsAllPawnsHidden())
                 {
-                    label2.Text = "Game Over! \n" + player.Color.ToString() + " has won!";   //make it as messagebox?
+                    foreach (PictureBox pawn in allPawns)
+                    {
+                        pawn.Enabled = false;
+                    }
+                    rollDice.Enabled = false;
+                    label1.Visible = false;
+                    Gameover.Text = "Game Over! \n" + player.Color.ToString() + " has won!";   //make it as messagebox?
                     return;
                 }
             }
-            label2.Text = "It is " + PlayerList[ActivePlayerID - 1].Color.ToString() + "'s time to move.";
+            label1.ForeColor = PlayerLabelList[ActivePlayerID-1].ForeColor;
+            label1.Text = "It is " + PlayerList[ActivePlayerID - 1].Color.ToString() + "'s time to move.";
         }
 
         public List<Player> CreatePlayerList() //creates player list at the start of the game
@@ -412,5 +553,18 @@ namespace Ludo_board
             MessageBox.Show(string.Join("\n",logManager.GetAllRecords()), 
                                         "Confirmation", MessageBoxButtons.OK);
         }
+
+       
+
+        private void NewGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }          
     }
 }

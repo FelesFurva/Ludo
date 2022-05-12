@@ -13,6 +13,8 @@ namespace Ludo_board
 
             ApplicationConfiguration.Initialize();
             Application.Run(new StartGameScreen());
+
+           
         }
     }
 }
