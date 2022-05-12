@@ -127,13 +127,16 @@
             this.Home = new System.Windows.Forms.PictureBox();
             this.lbl_dice = new System.Windows.Forms.Label();
             this.rollDice = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Player1 = new System.Windows.Forms.Label();
             this.Player2 = new System.Windows.Forms.Label();
             this.Player3 = new System.Windows.Forms.Label();
             this.Player4 = new System.Windows.Forms.Label();
             this.LogInfo = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
+            this.NewGame = new System.Windows.Forms.Button();
+            this.Gameover = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -1363,7 +1366,7 @@
             // 
             this.rollDice.BackColor = System.Drawing.Color.White;
             this.rollDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rollDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rollDice.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rollDice.Location = new System.Drawing.Point(543, 95);
             this.rollDice.Name = "rollDice";
             this.rollDice.Size = new System.Drawing.Size(87, 30);
@@ -1372,30 +1375,27 @@
             this.rollDice.UseVisualStyleBackColor = false;
             this.rollDice.Click += new System.EventHandler(this.rollDice_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(6, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 40);
-            this.label1.TabIndex = 108;
-            this.label1.Text = "GP1 steps made: 0";
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Snow;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Enabled = false;
+            this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(519, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
-            this.label2.Text = "Current Player";
+            this.label2.Text = "Click on the player name for the initial dice roll! \nThen click here to find out " +
+    "who starts first!";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Player1
             // 
             this.Player1.BackColor = System.Drawing.Color.White;
+            this.Player1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Player1.ForeColor = System.Drawing.Color.Green;
             this.Player1.Location = new System.Drawing.Point(12, 59);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(60, 25);
@@ -1407,6 +1407,8 @@
             // Player2
             // 
             this.Player2.BackColor = System.Drawing.Color.White;
+            this.Player2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Player2.ForeColor = System.Drawing.Color.Red;
             this.Player2.Location = new System.Drawing.Point(408, 59);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(60, 25);
@@ -1418,6 +1420,8 @@
             // Player3
             // 
             this.Player3.BackColor = System.Drawing.Color.White;
+            this.Player3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Player3.ForeColor = System.Drawing.Color.Goldenrod;
             this.Player3.Location = new System.Drawing.Point(408, 494);
             this.Player3.Name = "Player3";
             this.Player3.Size = new System.Drawing.Size(60, 25);
@@ -1429,6 +1433,8 @@
             // Player4
             // 
             this.Player4.BackColor = System.Drawing.Color.White;
+            this.Player4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Player4.ForeColor = System.Drawing.Color.Blue;
             this.Player4.Location = new System.Drawing.Point(12, 494);
             this.Player4.Name = "Player4";
             this.Player4.Size = new System.Drawing.Size(60, 25);
@@ -1440,6 +1446,7 @@
             // LogInfo
             // 
             this.LogInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInfo.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LogInfo.Location = new System.Drawing.Point(543, 517);
             this.LogInfo.Name = "LogInfo";
             this.LogInfo.Size = new System.Drawing.Size(123, 32);
@@ -1448,19 +1455,70 @@
             this.LogInfo.UseVisualStyleBackColor = true;
             this.LogInfo.Click += new System.EventHandler(this.LogInfo_Click);
             // 
+            // Exit
+            // 
+            this.Exit.Font = new System.Drawing.Font("Ravie", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Exit.Location = new System.Drawing.Point(538, 364);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(114, 29);
+            this.Exit.TabIndex = 117;
+            this.Exit.Text = "Exit";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // NewGame
+            // 
+            this.NewGame.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NewGame.Location = new System.Drawing.Point(527, 326);
+            this.NewGame.Name = "NewGame";
+            this.NewGame.Size = new System.Drawing.Size(133, 32);
+            this.NewGame.TabIndex = 116;
+            this.NewGame.Text = "Back to menu";
+            this.NewGame.UseVisualStyleBackColor = false;
+            this.NewGame.Click += new System.EventHandler(this.NewGame_Click);
+            // 
+            // Gameover
+            // 
+            this.Gameover.BackColor = System.Drawing.Color.BurlyWood;
+            this.Gameover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Gameover.Font = new System.Drawing.Font("Ravie", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Gameover.Location = new System.Drawing.Point(519, 185);
+            this.Gameover.Name = "Gameover";
+            this.Gameover.Size = new System.Drawing.Size(147, 226);
+            this.Gameover.TabIndex = 115;
+            this.Gameover.Text = "Game Over!";
+            this.Gameover.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Snow;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(519, 185);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.label1.Size = new System.Drawing.Size(147, 226);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "Click on the player name to roll the dice to determine who starts first!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.UseCompatibleTextRendering = true;
+            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.NewGame);
+            this.Controls.Add(this.Gameover);
             this.Controls.Add(this.LogInfo);
             this.Controls.Add(this.Player4);
             this.Controls.Add(this.Player3);
             this.Controls.Add(this.Player2);
             this.Controls.Add(this.Player1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BP4);
             this.Controls.Add(this.BP3);
             this.Controls.Add(this.BP2);
@@ -1561,7 +1619,7 @@
             this.Controls.Add(this.BoxG4);
             this.Controls.Add(this.BoxY4);
             this.Name = "Ludoboard";
-            this.Tag = "bp1";
+            this.Tag = "";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Ludoboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).EndInit();
@@ -1765,12 +1823,15 @@
         private PictureBox BoxB4;
         public Label lbl_dice;
         private Button rollDice;
-        private Label label1;
         private Label label2;
         private Label Player1;
         private Label Player2;
         private Label Player3;
         private Label Player4;
         private Button LogInfo;
+        private Button Exit;
+        private Button NewGame;
+        private Label Gameover;
+        private Label label1;
     }
 }
