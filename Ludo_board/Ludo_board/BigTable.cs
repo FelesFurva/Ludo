@@ -65,9 +65,10 @@ namespace Ludo_board
             PlayerLabelList = new Label[4]
             { Player1,Player2,Player3,Player4};
 
+            PlayerList = CreatePlayerList();
+
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
-            //logManager.CleanLog();
         }
 
         //Dice
@@ -85,56 +86,57 @@ namespace Ludo_board
             rollDice.Visible = false;
         }
 
-        private void PwnClick(object sender, EventArgs e)
-        {
-            var pwnImageBox = sender as PictureBox;
-            int i = 0;
-            for (; allPawns[i] != pwnImageBox && i < allPawns.Length; i++);
+        //private void PwnClick(object sender, EventArgs e)
+        //{
+        //    var pwnImageBox = sender as PictureBox;
+        //    int i = 0;
+        //    for (; allPawns[i] != pwnImageBox && i < allPawns.Length; i++); 
 
-            MovePawn(i);
-            Nextplayer();
-        }
+        //    MovePawn(i);
+        //    Nextplayer();
+        //}
 
         public void GameStart()
         {
-            PlayerList = CreatePlayerList();
             FirstRoll(PlayerList);
             var HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
             if (HighestRoll == null) { throw new Exception("Player not found"); }
+
             List<Player> temp = PlayerList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
             if (temp.Count > 1)
-            {
+            {         
                 ReRoll(temp);
-                HighestRoll = PlayerList.MaxBy(x => x.InitialDiceRoll);
-                if (HighestRoll == null) { throw new Exception("Player not found"); }
                 int NewActivePlayer = HighestRoll.Id;
-                string ReRollsLog = "These players got the same high roll! \nHere's the re-roll:\n" + string.Join("\n", temp.Select(T => $"{T.Color} has rolled : {T.InitialDiceRoll}")) +
-                                              "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                string ReRollsLog = "These players got the same high roll! \nHere's the re-roll:\n" +
+                                    string.Join("\n", temp.Select(T => $"{T.Color} has rolled : {T.InitialDiceRoll}")) +
+                                              $"\n \n The player :{HighestRoll.Color} starts the game";
                 label1.ForeColor = PlayerLabelList[HighestRoll.Id - 1].ForeColor;
                 label1.Text = ReRollsLog;
 
                 ActivePlayerID = HighestRoll.Id;
-                PlayerList[ActivePlayerID - 1].IsActive = true;
+                dice1 = 0;
+                dice2 = 0;
+                dice3 = 0;
+                dice4 = 0;
             }
             else
             {
                 ActivePlayerID = HighestRoll.Id;
 
                 string RollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
-                                              "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                                              $"\n \n The player : {HighestRoll.Color} starts the game";
                 label1.Text = RollsLog;
                 label1.ForeColor = PlayerLabelList[ActivePlayerID - 1].ForeColor;
-
-                PlayerList[ActivePlayerID - 1].IsActive = true;
+                label2.Visible = false;
+                rollDice.Visible = true;
             }
+            PlayerList[ActivePlayerID - 1].IsActive = true;
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             GameStart();
             dice=0;
-            rollDice.Visible = true;
-            label2.Visible = false;
         }
 
         private void rollDice_Click(object sender, EventArgs e)
@@ -145,7 +147,7 @@ namespace Ludo_board
 
         private void RollDice()
         {
-            dice = random.Next(1, 7);
+            dice = random.Next(5, 7);
             lbl_dice.Image = diceImages[dice];
         }
 
@@ -369,7 +371,7 @@ namespace Ludo_board
             }
         }
 
-       public void MovePawn(int i)
+        public void MovePawn(int i)
         {
             if (allPawns[i].Location == allNests[i].Location)
             {
@@ -440,19 +442,20 @@ namespace Ludo_board
                 dice = 0;
             }
             int id = i + 1;
-            string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
-                               " steps";
+            string LableText = $"{allPawns[i].Name} has made {pawnStepsMade[i]} steps";
             label1.Text = LableText;
             logManager.UpdateMovementLog(id, LableText);
         }
+
+        public bool IsPlayerLableStatus => Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false;
 
         private void Player1_Click(object sender, EventArgs e)
         {
             RollDice();
             dice1 = dice;
             Player1.Enabled = false;
-            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
-            {
+            if (IsPlayerLableStatus)
+            { 
                 label2.Enabled = true;
             }
         }
@@ -462,11 +465,10 @@ namespace Ludo_board
             RollDice();
             dice2 = dice;
             Player2.Enabled = false;
-            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            if (IsPlayerLableStatus)
             {
                 label2.Enabled = true;
             }
-
         }
 
         private void Player3_Click(object sender, EventArgs e)
@@ -474,7 +476,7 @@ namespace Ludo_board
             RollDice();
             dice3 = dice;
             Player3.Enabled = false;
-            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            if (IsPlayerLableStatus)
             {
                 label2.Enabled = true;
             }
@@ -485,7 +487,7 @@ namespace Ludo_board
             RollDice();
             dice4 = dice;
             Player4.Enabled = false;
-            if (Player1.Enabled == false && Player2.Enabled == false && Player3.Enabled == false && Player4.Enabled == false)
+            if (IsPlayerLableStatus)
             {
                 label2.Enabled = true;
             }
@@ -510,12 +512,12 @@ namespace Ludo_board
                     }
                     rollDice.Enabled = false;
                     label1.Visible = false;
-                    Gameover.Text = "Game Over! \n" + player.Color.ToString() + " has won!";   //make it as messagebox?
+                    Gameover.Text = $"Game Over! \n {player.Color} has won!";   //make it as messagebox?
                     return;
                 }
             }
             label1.ForeColor = PlayerLabelList[ActivePlayerID-1].ForeColor;
-            label1.Text = "It is " + PlayerList[ActivePlayerID - 1].Color.ToString() + "'s time to move.";
+            label1.Text = $"It is {PlayerList[ActivePlayerID - 1].Color}'s time to move.";
         }
 
         public List<Player> CreatePlayerList() //creates player list at the start of the game
@@ -539,23 +541,26 @@ namespace Ludo_board
         {
             int[] DiceRoll = new[] { dice1, dice2, dice3, dice4 };
 
-            NewGameList[0].InitialDiceRoll = DiceRoll[0];
-            NewGameList[1].InitialDiceRoll = DiceRoll[1];
-            NewGameList[2].InitialDiceRoll = DiceRoll[2];
-            NewGameList[3].InitialDiceRoll = DiceRoll[3];
-
+            foreach (Player player in NewGameList)
+            {
+                player.InitialDiceRoll = DiceRoll[player.Id-1];
+            }
             return NewGameList;
         }
 
         private List<Player> ReRoll(List<Player> NewGameList)
         {
+            rollDice.Visible = false;
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
             List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
+            Label[] PlayerLables = { Player1, Player2, Player3, Player4 };            
             foreach (Player player in temp)
             {
-                RollDice();
-                player.InitialDiceRoll = dice;
+                PlayerLables[player.Id - 1].Enabled = true;
             }
+            label2.Visible = true;
+            string ReRolls = "These players got the same high roll! :\n" + string.Join("\n", temp.Select(T => $"{T.Color}")) + "\nPlease roll again!";
+            label2.Text = ReRolls;
             return NewGameList;
         }
 
@@ -564,8 +569,6 @@ namespace Ludo_board
             MessageBox.Show(string.Join("\n",logManager.GetAllRecords()), 
                                         "Confirmation", MessageBoxButtons.OK);
         }
-
-       
 
         private void NewGame_Click(object sender, EventArgs e)
         {
