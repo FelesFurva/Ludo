@@ -32,6 +32,29 @@ namespace Ludo_board
 
         }
 
+        public bool UpdateMovementLog(int id, string PawnMovements)
+        {
+            string query3 = $"UPDATE ActionLog SET PawnMovements = '{PawnMovements}' WHERE Id={id}";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query3, Connection?.Conn);
+                var number = cmd.ExecuteNonQuery();
+                if (number > 0)
+                {
+                    string pawnMovements = PawnMovements;
+                    return true;
+                }
+                Console.WriteLine("InsertIntoDistrict command executed");
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("Error: " + e.Message);
+            }
+            return false;
+        }
+   
+
         public List<string> GetAllRecords()
         {
             string query1 = "SELECT * FROM ActionLog";

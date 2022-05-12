@@ -32,7 +32,7 @@ namespace Ludo_board
         PictureBox[] allPawns;
         Label[] PlayerLabelList;
 
-        // Log Manager
+        //Log Manager
         LogManager logManager;
 
         public Ludoboard()
@@ -67,7 +67,7 @@ namespace Ludo_board
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
-            logManager.CleanLog();
+            //logManager.CleanLog();
         }
 
         //Dice
@@ -83,6 +83,16 @@ namespace Ludo_board
         private void Ludoboard_Load(object sender, EventArgs e)
         {
             rollDice.Visible = false;
+        }
+
+        private void PwnClick(object sender, EventArgs e)
+        {
+            var pwnImageBox = sender as PictureBox;
+            int i = 0;
+            for (; allPawns[i] != pwnImageBox && i < allPawns.Length; i++);
+
+            MovePawn(i);
+            Nextplayer();
         }
 
         public void GameStart()
@@ -110,8 +120,9 @@ namespace Ludo_board
             {
                 ActivePlayerID = HighestRoll.Id;
 
-                string rollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
+                string RollsLog = string.Join("\n", PlayerList.Select(ngl => $"{ngl.Color} has rolled : {ngl.InitialDiceRoll}")) +
                                               "\n \n The player : " + HighestRoll.Color.ToString() + " starts the game";
+                label1.Text = RollsLog;
                 label1.ForeColor = PlayerLabelList[ActivePlayerID - 1].ForeColor;
 
                 PlayerList[ActivePlayerID - 1].IsActive = true;
@@ -428,11 +439,11 @@ namespace Ludo_board
                 }
                 dice = 0;
             }
-
+            int id = i + 1;
             string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
                                " steps";
-            
-            logManager.InsertIntoMovementLog(LableText);
+            label1.Text = LableText;
+            logManager.UpdateMovementLog(id, LableText);
         }
 
         private void Player1_Click(object sender, EventArgs e)
