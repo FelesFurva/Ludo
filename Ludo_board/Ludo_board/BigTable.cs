@@ -29,7 +29,7 @@ namespace Ludo_board
         PictureBox[] allNests;
         PictureBox[] allPawns;
 
-        // Log Manager
+        //Log Manager
         LogManager logManager;
 
         public Ludoboard()
@@ -61,7 +61,7 @@ namespace Ludo_board
             };
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
-            logManager.CleanLog();
+            //logManager.CleanLog();
         }
 
         //Dice
@@ -317,11 +317,11 @@ namespace Ludo_board
                 }
                 dice = 0;
             }
-
+            int id = i + 1;
             string LableText = allPawns[i].Name.ToString() + " has made " + pawnStepsMade[i].ToString() +
                                " steps";
             label1.Text = LableText;
-            logManager.InsertIntoMovementLog(LableText);
+            logManager.UpdateMovementLog(id, LableText);
         }
 
         private void Player1_Click(object sender, EventArgs e)
@@ -417,6 +417,11 @@ namespace Ludo_board
         {
             MessageBox.Show(string.Join("\n",logManager.GetAllRecords()), 
                                         "Confirmation", MessageBoxButtons.OK);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1376,11 +1376,13 @@
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(513, 40);
             this.label1.TabIndex = 108;
             this.label1.Text = "GP1 steps made: 0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
