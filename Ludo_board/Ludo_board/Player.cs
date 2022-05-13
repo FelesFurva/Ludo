@@ -9,7 +9,6 @@
             Yellow,
             Blue,
         }
-
         public string Name { get; set; }
         public int Id { get; set; }
         public PlayerColor Color { get; set; }
@@ -38,7 +37,6 @@
                 PawnStateReset();
             }
         }
-
         public Player(int id,
                       string name,
                       PlayerColor color,
