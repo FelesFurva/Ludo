@@ -147,7 +147,7 @@ namespace Ludo_board
 
         private void RollDice()
         {
-            dice = random.Next(5, 7);
+            dice = random.Next(1, 7);
             lbl_dice.Image = diceImages[dice];
         }
 
@@ -161,7 +161,38 @@ namespace Ludo_board
         {
             return ((playerIndex * startShift) + currentIndividualPosition) % sharedCellsCount;
         }
-
+        private void GPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 1;
+                allPawns[i].Top +=1;
+            }
+        }
+        private void RPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 19;
+                allPawns[i].Top +=1;
+            }
+        }
+        private void YPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 19;
+                allPawns[i].Top +=19;
+            }
+        }
+        private void BPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 1;
+                allPawns[i].Top +=19;
+            }
+        }
 
         private void GP1_Click(object sender, EventArgs e)
         {
@@ -169,6 +200,7 @@ namespace Ludo_board
             {
                 MovePawn(0);
                 Nextplayer();
+                GPoffset(0);
             }
             else
             {
@@ -182,6 +214,7 @@ namespace Ludo_board
             {
                 MovePawn(1);
                 Nextplayer();
+                GPoffset(1);
             }
             else
             {
@@ -195,6 +228,7 @@ namespace Ludo_board
             {
                 MovePawn(2);
                 Nextplayer();
+                GPoffset(2);
             }
             else
             {
@@ -208,6 +242,7 @@ namespace Ludo_board
             {
                 MovePawn(3);
                 Nextplayer();
+                GPoffset(3);
             }
             else
             {
@@ -221,6 +256,7 @@ namespace Ludo_board
             {
                 MovePawn(4);
                 Nextplayer();
+                RPoffset(4);
             }
             else
             {
@@ -234,6 +270,7 @@ namespace Ludo_board
             {
                 MovePawn(5);
                 Nextplayer();
+                RPoffset(5);
             }
             else
             {
@@ -247,6 +284,7 @@ namespace Ludo_board
             {
                 MovePawn(6);
                 Nextplayer();
+                RPoffset(6);
             }
             else
             {
@@ -260,6 +298,7 @@ namespace Ludo_board
             {
                 MovePawn(7);
                 Nextplayer();
+                RPoffset(7);
             }
             else
             {
@@ -273,6 +312,7 @@ namespace Ludo_board
             {
                 MovePawn(8);
                 Nextplayer();
+                YPoffset(8);
             }
             else
             {
@@ -286,6 +326,7 @@ namespace Ludo_board
             {
                 MovePawn(9);
                 Nextplayer();
+                YPoffset(9);
             }
             else
             {
@@ -299,6 +340,7 @@ namespace Ludo_board
             {
                 MovePawn(10);
                 Nextplayer();
+                YPoffset(10);
             }
             else
             {
@@ -310,8 +352,9 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(11);
+                MovePawn(11); 
                 Nextplayer();
+                YPoffset(11);
             }
             else
             {
@@ -325,6 +368,7 @@ namespace Ludo_board
             {
                 MovePawn(12);
                 Nextplayer();
+                BPoffset(12);
             }
             else
             {
@@ -338,6 +382,7 @@ namespace Ludo_board
             {
                 MovePawn(13);
                 Nextplayer();
+                BPoffset(13);
             }
             else
             {
@@ -351,6 +396,7 @@ namespace Ludo_board
             {
                 MovePawn(14);
                 Nextplayer();
+                BPoffset(14);
             }
             else
             {
@@ -364,6 +410,7 @@ namespace Ludo_board
             {
                 MovePawn(15);
                 Nextplayer();
+                BPoffset(15);
             }
             else
             {
@@ -375,23 +422,28 @@ namespace Ludo_board
         {
             if (allPawns[i].Location == allNests[i].Location)
             {
+                
                 if (dice == 6)
                 {
                     if (i<=3)
                     {
                         allPawns[i].MoveTo(Box0);
+                        allPawns[i].BackColor = Box0.BackColor;                       
                     }
                     if (i>3 && i<=7)
                     {
                         allPawns[i].MoveTo(Box12);
+                        allPawns[i].BackColor = Box12.BackColor;
                     }
                     if (i>7 && i<=11)
                     {
                         allPawns[i].MoveTo(Box24);
+                        allPawns[i].BackColor = Box24.BackColor;
                     }
                     if (i>11 && i<=15)
                     {
                         allPawns[i].MoveTo(Box36);
+                        allPawns[i].BackColor = Box36.BackColor;
                     }
                 }
                 dice=0;
@@ -426,12 +478,12 @@ namespace Ludo_board
                 if (pawnStepsMade[i]<=46)
                 {
                     allPawns[i].MoveTo(boardtiles[pawnBoxnumber[i]]);
-                    
+                    allPawns[i].BackColor = boardtiles[pawnBoxnumber[i]].BackColor;
                 }
                 if (pawnStepsMade[i] > 46 && pawnStepsMade[i] <51)
                 {
                     allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+(playerIndex*4)]);
-                   
+                    allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+(playerIndex*4)].BackColor;
                 }
 
                 if (pawnStepsMade[i] >= 51) 
