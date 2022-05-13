@@ -79,6 +79,7 @@ namespace Ludo_board
         int dice4;
         Random random = new Random();
         List<Player> PlayerList;
+        int playerCount;
 
         private void Ludoboard_Load(object sender, EventArgs e)
         {
@@ -525,12 +526,19 @@ namespace Ludo_board
             Player player3 = new Player(3, "player 3", Player.PlayerColor.Yellow, 0, YP1, YP2, YP3, YP4);
             Player player4 = new Player(4, "player 4", Player.PlayerColor.Blue, 0, BP1, BP2, BP3, BP4);
 
+            List<Player> AllPlayers = new List<Player>();
+
+            AllPlayers.Add(player1);
+            AllPlayers.Add(player2);
+            AllPlayers.Add(player3);
+            AllPlayers.Add(player4);
+
             List<Player> PlayerList = new List<Player>();
 
-            PlayerList.Add(player1);
-            PlayerList.Add(player2);
-            PlayerList.Add(player3);
-            PlayerList.Add(player4);
+            for(int i = 0; i <= playerCount; i++)
+            {
+                PlayerList.Add(AllPlayers[i]);
+            }
 
             return PlayerList;
         }
@@ -576,6 +584,16 @@ namespace Ludo_board
         {
             this.Close();
             Application.Exit();
-        }          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            playerCount = 2;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            playerCount = 3;
+        }
     }
 }
