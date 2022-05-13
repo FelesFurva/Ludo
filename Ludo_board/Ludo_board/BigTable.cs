@@ -23,7 +23,7 @@ namespace Ludo_board
         int ActivePlayerID;
         const int startShift = 12;
         const int sharedCellsCount = 48;
-        const int maxplayers = 4;
+        int playerCount = 4;
 
         //coordinates for all board spaces to walk on [0-3 = green, 4-7 = red, 8-11 = yellow, 12-15 = blue]
         PictureBox[] boardtiles;
@@ -35,7 +35,7 @@ namespace Ludo_board
         //Log Manager
         LogManager logManager;
 
-        public Ludoboard()
+        public Ludoboard(int PlayerCount)
         {
             InitializeComponent();
             boardtiles = new PictureBox[48]
@@ -65,10 +65,22 @@ namespace Ludo_board
             PlayerLabelList = new Label[4]
             { Player1,Player2,Player3,Player4};
 
-            PlayerList = CreatePlayerList();
+            playerCount = PlayerCount;
+
+            AllPlayers = CreatePlayerList();
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
+            
+            PlayerList = new List<Player>();
+
+            for (int i = 0; i < playerCount; i++)
+            {
+                PlayerList.Add(AllPlayers[i]);
+            }
+            TurnPlayerButtonsOn();
+            label2.Text = "Click on the player name for the initial dice roll!" +
+              "\nThen click here to find out who starts first!";
         }
 
         //Dice
@@ -79,8 +91,8 @@ namespace Ludo_board
         int dice3;
         int dice4;
         Random random = new Random();
+        List<Player> AllPlayers;
         List<Player> PlayerList;
-        int playerCount;
 
         private void Ludoboard_Load(object sender, EventArgs e)
         {
@@ -499,7 +511,7 @@ namespace Ludo_board
             rollDice.Visible = true;
 
             PlayerList[ActivePlayerID - 1].IsActive = false; // de-activating previous player
-            ActivePlayerID = ActivePlayerID % maxplayers + 1; // getting id for next player
+            ActivePlayerID = ActivePlayerID % playerCount + 1; // getting id for next player
             
             PlayerList[ActivePlayerID - 1].IsActive = true; // activating next player
             
@@ -534,15 +546,15 @@ namespace Ludo_board
             AllPlayers.Add(player2);
             AllPlayers.Add(player3);
             AllPlayers.Add(player4);
+            return AllPlayers;
+        }
 
-            List<Player> PlayerList = new List<Player>();
-
-            for(int i = 0; i <= playerCount; i++)
+        private void TurnPlayerButtonsOn()
+        {
+            foreach (Player player in PlayerList)
             {
-                PlayerList.Add(AllPlayers[i]);
+                PlayerLabelList[player.Id - 1].Enabled = true;
             }
-
-            return PlayerList;
         }
 
         private List<Player> FirstRoll(List<Player> NewGameList)
@@ -561,10 +573,10 @@ namespace Ludo_board
             rollDice.Visible = false;
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
             List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
-            Label[] PlayerLables = { Player1, Player2, Player3, Player4 };            
+    
             foreach (Player player in temp)
             {
-                PlayerLables[player.Id - 1].Enabled = true;
+                PlayerLabelList[player.Id - 1].Enabled = true;
             }
             label2.Visible = true;
             string ReRolls = "These players got the same high roll! :\n" + string.Join("\n", temp.Select(T => $"{T.Color}")) + "\nPlease roll again!";
@@ -587,16 +599,6 @@ namespace Ludo_board
         {
             this.Close();
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            playerCount = 2;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            playerCount = 3;
         }
     }
 }

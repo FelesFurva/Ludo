@@ -137,9 +137,6 @@
             this.NewGame = new System.Windows.Forms.Button();
             this.Gameover = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Box1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box8)).BeginInit();
@@ -1098,6 +1095,7 @@
             // 
             // GP4
             // 
+            this.GP4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.GP4.Enabled = false;
             this.GP4.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP4.Location = new System.Drawing.Point(114, 167);
@@ -1388,8 +1386,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
-            this.label2.Text = "Click on the player name for the initial dice roll! \nThen click here to find out " +
-    "who starts first!";
+            this.label2.Text = "Press the buttons above to select how many players are in the game!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseCompatibleTextRendering = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -1397,6 +1394,7 @@
             // Player1
             // 
             this.Player1.BackColor = System.Drawing.Color.White;
+            this.Player1.Enabled = false;
             this.Player1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player1.ForeColor = System.Drawing.Color.Green;
             this.Player1.Location = new System.Drawing.Point(12, 59);
@@ -1410,6 +1408,7 @@
             // Player2
             // 
             this.Player2.BackColor = System.Drawing.Color.White;
+            this.Player2.Enabled = false;
             this.Player2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player2.ForeColor = System.Drawing.Color.Red;
             this.Player2.Location = new System.Drawing.Point(408, 59);
@@ -1418,11 +1417,13 @@
             this.Player2.TabIndex = 111;
             this.Player2.Text = "Player2";
             this.Player2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Player2.UseCompatibleTextRendering = true;
             this.Player2.Click += new System.EventHandler(this.Player2_Click);
             // 
             // Player3
             // 
             this.Player3.BackColor = System.Drawing.Color.White;
+            this.Player3.Enabled = false;
             this.Player3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player3.ForeColor = System.Drawing.Color.Goldenrod;
             this.Player3.Location = new System.Drawing.Point(408, 494);
@@ -1436,6 +1437,7 @@
             // Player4
             // 
             this.Player4.BackColor = System.Drawing.Color.White;
+            this.Player4.Enabled = false;
             this.Player4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player4.ForeColor = System.Drawing.Color.Blue;
             this.Player4.Location = new System.Drawing.Point(12, 494);
@@ -1506,44 +1508,12 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.UseCompatibleTextRendering = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 26);
-            this.button1.TabIndex = 119;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(186, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 26);
-            this.button2.TabIndex = 120;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(336, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 26);
-            this.button3.TabIndex = 121;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Ludoboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(687, 561);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
@@ -1868,8 +1838,5 @@
         private Button NewGame;
         private Label Gameover;
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
     }
 }
