@@ -131,6 +131,8 @@ namespace Ludo_board
                 dice2 = 0;
                 dice3 = 0;
                 dice4 = 0;
+                label2.Visible = false;
+                rollDice.Visible = true;
             }
             else
             {
@@ -160,7 +162,7 @@ namespace Ludo_board
 
         private void RollDice()
         {
-            dice = random.Next(5, 7);
+            dice = random.Next(4, 7);
             lbl_dice.Image = diceImages[dice];
         }
 
@@ -175,13 +177,69 @@ namespace Ludo_board
             return ((playerIndex * startShift) + currentIndividualPosition) % sharedCellsCount;
         }
 
+        //pawn location offsets on the white squares
+        private void GPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 1;
+                allPawns[i].Top +=1;
+            }
+        }
+        private void RPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 19;
+                allPawns[i].Top +=1;
+            }
+        }
+        private void YPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 19;
+                allPawns[i].Top +=19;
+            }
+        }
+        private void BPoffset(int i)
+        {
+            if (allPawns[i].Location != allNests[i].Location)
+            {
+                allPawns[i].Left += 1;
+                allPawns[i].Top +=19;
+            }
+        }
+
+        //option to choose which pawn to move by clicking on them
+        //can't accidentally skip a turn by clicking a pawn in nest if there are active pawns
 
         private void GP1_Click(object sender, EventArgs e)
         {
+                       
             if (dice!=0)
             {
-                MovePawn(0);
-                Nextplayer();
+                if (GP1.Location == GN1.Location && dice!=6)
+                {
+                    if((GP2.Location != GN2.Location && GP2.Visible == true) ||
+                        (GP3.Location != GN3.Location && GP3.Visible == true) ||
+                        (GP4.Location != GN4.Location && GP4.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(0);
+                        Nextplayer();
+                        GPoffset(0);
+                    }
+                }
+                else 
+                {
+                    MovePawn(0);
+                    Nextplayer();
+                    GPoffset(0);
+                }
             }
             else
             {
@@ -191,10 +249,30 @@ namespace Ludo_board
 
         private void GP2_Click(object sender, EventArgs e)
         {
+
             if (dice!=0)
             {
-                MovePawn(1);
-                Nextplayer();
+                if (GP2.Location == GN2.Location && dice!=6) 
+                {
+                    if((GP1.Location != GN1.Location && GP1.Visible == true) ||
+                        (GP3.Location != GN3.Location && GP3.Visible == true) ||
+                        (GP4.Location != GN4.Location && GP4.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(1);
+                        Nextplayer();
+                        GPoffset(1);
+                    }
+                }
+                else
+                {
+                    MovePawn(1);
+                    Nextplayer();
+                    GPoffset(1);
+                }
             }
             else
             {
@@ -204,10 +282,30 @@ namespace Ludo_board
 
         private void GP3_Click(object sender, EventArgs e)
         {
+
             if (dice!=0)
             {
-                MovePawn(2);
-                Nextplayer();
+                if (GP3.Location == GN3.Location && dice!=6)
+                {
+                    if ((GP1.Location != GN1.Location && GP1.Visible == true) ||
+                        (GP2.Location != GN2.Location && GP2.Visible == true) ||
+                        (GP4.Location != GN4.Location && GP4.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(2);
+                        Nextplayer();
+                        GPoffset(2);
+                    }
+                }
+                else
+                {
+                    MovePawn(2);
+                    Nextplayer();
+                    GPoffset(2);
+                }
             }
             else
             {
@@ -217,10 +315,30 @@ namespace Ludo_board
 
         private void GP4_Click(object sender, EventArgs e)
         {
+            
             if (dice!=0)
             {
-                MovePawn(3);
-                Nextplayer();
+                if (GP4.Location == GN4.Location && dice!=6)
+                {
+                    if ((GP1.Location != GN1.Location && GP1.Visible == true) ||
+                         (GP3.Location != GN3.Location && GP3.Visible == true) ||
+                         (GP4.Location != GN4.Location && GP4.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(3);
+                        Nextplayer();
+                        GPoffset(3);
+                    }
+                }
+                else
+                {
+                    MovePawn(3);
+                    Nextplayer();
+                    GPoffset(3);
+                }
             }
             else
             {
@@ -232,8 +350,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(4);
-                Nextplayer();
+                if (RP1.Location == RN1.Location && dice!=6)
+                {
+                    if((RP4.Location != RN4.Location && RP4.Visible ==true) ||
+                        (RP2.Location != RN2.Location && RP2.Visible == true) ||
+                        (RP3.Location != RN3.Location && RP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(4);
+                        Nextplayer();
+                        RPoffset(4);
+                    }
+                }
+                else
+                {
+                    MovePawn(4);
+                    Nextplayer();
+                    RPoffset(4);
+                }
             }
             else
             {
@@ -245,8 +382,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(5);
-                Nextplayer();
+                if (RP2.Location == RN2.Location && dice!=6)
+                {
+                    if((RP4.Location != RN4.Location && RP4.Visible ==true) ||
+                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
+                        (RP3.Location != RN3.Location && RP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(5);
+                        Nextplayer();
+                        RPoffset(5);
+                    }
+                }
+                else
+                {
+                    MovePawn(5);
+                    Nextplayer();
+                    RPoffset(5);
+                }
             }
             else
             {
@@ -258,8 +414,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(6);
-                Nextplayer();
+                if (RP3.Location == RN3.Location && dice!=6)
+                {
+                    if ((RP4.Location != RN4.Location && RP4.Visible ==true) ||
+                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
+                        (RP2.Location != RN2.Location && RP2.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(6);
+                        Nextplayer();
+                        RPoffset(6);
+                    }
+                }
+                else
+                {
+                    MovePawn(6);
+                    Nextplayer();
+                    RPoffset(6);
+                }
             }
             else
             {
@@ -271,8 +446,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(7);
-                Nextplayer();
+                if(RP4.Location == RN4.Location && dice!=6)
+                {
+                    if ((RP3.Location != RN3.Location && RP3.Visible ==true) ||
+                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
+                        (RP2.Location != RN2.Location && RP2.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(7);
+                        Nextplayer();
+                        RPoffset(7);
+                    }
+                }
+                else
+                {
+                    MovePawn(7);
+                    Nextplayer();
+                    RPoffset(7);
+                }
             }
             else
             {
@@ -284,8 +478,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(8);
-                Nextplayer();
+                if (YP1.Location == YN1.Location && dice!=6)
+                {
+                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
+                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
+                        (YP3.Location != YN3.Location && YP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(8);
+                        Nextplayer();
+                        RPoffset(8);
+                    }
+                }
+                else
+                {
+                    MovePawn(8);
+                    Nextplayer();
+                    YPoffset(8);
+                }
             }
             else
             {
@@ -297,8 +510,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(9);
-                Nextplayer();
+                if (YP2.Location == YN2.Location && dice!=6)
+                {
+                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
+                        (YP1.Location != YN1.Location && YP1.Visible == true) ||
+                        (YP3.Location != YN3.Location && YP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(9);
+                        Nextplayer();
+                        RPoffset(9);
+                    }
+                }
+                else
+                {
+                    MovePawn(9);
+                    Nextplayer();
+                    YPoffset(9);
+                }
             }
             else
             {
@@ -310,8 +542,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(10);
-                Nextplayer();
+                if (YP3.Location == YN3.Location && dice!=6)
+                {
+                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
+                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
+                        (YP1.Location != YN1.Location && YP1.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(10);
+                        Nextplayer();
+                        RPoffset(10);
+                    }
+                }
+                else
+                {
+                    MovePawn(10);
+                    Nextplayer();
+                    YPoffset(10);
+                }
             }
             else
             {
@@ -323,8 +574,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(11);
-                Nextplayer();
+                if (YP4.Location == YN4.Location && dice!=6)
+                {
+                    if ((YP1.Location != YN1.Location && YP1.Visible ==true) ||
+                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
+                        (YP3.Location != YN3.Location && YP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(11);
+                        Nextplayer();
+                        RPoffset(11);
+                    }
+                }
+                else
+                {
+                    MovePawn(11);
+                    Nextplayer();
+                    YPoffset(11);
+                }
             }
             else
             {
@@ -336,8 +606,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(12);
-                Nextplayer();
+                if (BP1.Location == BN1.Location && dice!=6)
+                {
+                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
+                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
+                        (BP3.Location != BN3.Location && BP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(12);
+                        Nextplayer();
+                        RPoffset(12);
+                    }
+                }
+                else
+                {
+                    MovePawn(12);
+                    Nextplayer();
+                    BPoffset(12);
+                }
             }
             else
             {
@@ -349,8 +638,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(13);
-                Nextplayer();
+                if (BP2.Location == BN2.Location && dice!=6)
+                {
+                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
+                        (BP1.Location != BN1.Location && BP1.Visible == true) ||
+                        (BP3.Location != BN3.Location && BP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(13);
+                        Nextplayer();
+                        RPoffset(13);
+                    }
+                }
+                else
+                {
+                    MovePawn(13);
+                    Nextplayer();
+                    BPoffset(13);
+                }
             }
             else
             {
@@ -362,8 +670,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(14);
-                Nextplayer();
+                if (BP3.Location == BN3.Location && dice!=6)
+                {
+                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
+                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
+                        (BP1.Location != BN1.Location && BP1.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(14);
+                        Nextplayer();
+                        RPoffset(14);
+                    }
+                }
+                else
+                {
+                    MovePawn(14);
+                    Nextplayer();
+                    BPoffset(14);
+                }
             }
             else
             {
@@ -375,8 +702,27 @@ namespace Ludo_board
         {
             if (dice!=0)
             {
-                MovePawn(15);
-                Nextplayer();
+                if (BP4.Location == BN4.Location && dice!=6)
+                {
+                    if ((BP1.Location != BN1.Location && BP1.Visible ==true) ||
+                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
+                        (BP3.Location != BN3.Location && BP3.Visible == true))
+                    {
+                        label1.Text = "Click on an active pawn!";
+                    }
+                    else
+                    {
+                        MovePawn(15);
+                        Nextplayer();
+                        RPoffset(15);
+                    }
+                }
+                else
+                {
+                    MovePawn(15);
+                    Nextplayer();
+                    BPoffset(15);
+                }
             }
             else
             {
@@ -388,23 +734,28 @@ namespace Ludo_board
         {
             if (allPawns[i].Location == allNests[i].Location)
             {
+                
                 if (dice == 6)
                 {
                     if (i<=3)
                     {
                         allPawns[i].MoveTo(Box0);
+                        allPawns[i].BackColor = Box0.BackColor;                       
                     }
                     if (i>3 && i<=7)
                     {
                         allPawns[i].MoveTo(Box12);
+                        allPawns[i].BackColor = Box12.BackColor;
                     }
                     if (i>7 && i<=11)
                     {
                         allPawns[i].MoveTo(Box24);
+                        allPawns[i].BackColor = Box24.BackColor;
                     }
                     if (i>11 && i<=15)
                     {
                         allPawns[i].MoveTo(Box36);
+                        allPawns[i].BackColor = Box36.BackColor;
                     }
                 }
                 dice=0;
@@ -439,12 +790,12 @@ namespace Ludo_board
                 if (pawnStepsMade[i]<=46)
                 {
                     allPawns[i].MoveTo(boardtiles[pawnBoxnumber[i]]);
-                    
+                    allPawns[i].BackColor = boardtiles[pawnBoxnumber[i]].BackColor;
                 }
                 if (pawnStepsMade[i] > 46 && pawnStepsMade[i] <51)
                 {
                     allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+(playerIndex*4)]);
-                   
+                    allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+(playerIndex*4)].BackColor;
                 }
 
                 if (pawnStepsMade[i] >= 51) 
