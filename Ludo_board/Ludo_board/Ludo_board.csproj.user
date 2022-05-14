@@ -4,6 +4,9 @@
     <Compile Update="BigTable.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PlayerNumberSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="StartGameScreen.cs">
       <SubType>Form</SubType>
     </Compile>

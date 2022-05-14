@@ -23,7 +23,7 @@ namespace Ludo_board
         int ActivePlayerID;
         const int startShift = 12;
         const int sharedCellsCount = 48;
-        const int maxplayers = 4;
+        int playerCount = 4;
 
         //coordinates for all board spaces to walk on [0-3 = green, 4-7 = red, 8-11 = yellow, 12-15 = blue]
         PictureBox[] boardtiles;
@@ -35,7 +35,7 @@ namespace Ludo_board
         //Log Manager
         LogManager logManager;
 
-        public Ludoboard()
+        public Ludoboard(int PlayerCount)
         {
             InitializeComponent();
             boardtiles = new PictureBox[48]
@@ -65,10 +65,22 @@ namespace Ludo_board
             PlayerLabelList = new Label[4]
             { Player1,Player2,Player3,Player4};
 
-            PlayerList = CreatePlayerList();
+            playerCount = PlayerCount;
+
+            AllPlayers = CreatePlayerList();
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
+            
+            PlayerList = new List<Player>();
+
+            for (int i = 0; i < playerCount; i++)
+            {
+                PlayerList.Add(AllPlayers[i]);
+            }
+            TurnPlayerButtonsOn();
+            label2.Text = "Click on the player name for the initial dice roll!" +
+              "\nThen click here to find out who starts first!";
         }
 
         //Dice
@@ -79,6 +91,7 @@ namespace Ludo_board
         int dice3;
         int dice4;
         Random random = new Random();
+        List<Player> AllPlayers;
         List<Player> PlayerList;
 
         private void Ludoboard_Load(object sender, EventArgs e)
@@ -118,8 +131,6 @@ namespace Ludo_board
                 dice2 = 0;
                 dice3 = 0;
                 dice4 = 0;
-                label2.Visible = false;
-                rollDice.Visible = true;
             }
             else
             {
@@ -203,512 +214,135 @@ namespace Ludo_board
 
         private void GP1_Click(object sender, EventArgs e)
         {
-                       
-            if (dice!=0)
-            {
-                if (GP1.Location == GN1.Location && dice!=6)
-                {
-                    if((GP2.Location != GN2.Location && GP2.Visible == true) ||
-                        (GP3.Location != GN3.Location && GP3.Visible == true) ||
-                        (GP4.Location != GN4.Location && GP4.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(0);
-                        Nextplayer();
-                        GPoffset(0);
-                    }
-                }
-                else 
-                {
-                    MovePawn(0);
-                    Nextplayer();
-                    GPoffset(0);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(0, 0);
         }
 
         private void GP2_Click(object sender, EventArgs e)
         {
-
-            if (dice!=0)
-            {
-                if (GP2.Location == GN2.Location && dice!=6) 
-                {
-                    if((GP1.Location != GN1.Location && GP1.Visible == true) ||
-                        (GP3.Location != GN3.Location && GP3.Visible == true) ||
-                        (GP4.Location != GN4.Location && GP4.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(1);
-                        Nextplayer();
-                        GPoffset(1);
-                    }
-                }
-                else
-                {
-                    MovePawn(1);
-                    Nextplayer();
-                    GPoffset(1);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(1, 0);
         }
 
         private void GP3_Click(object sender, EventArgs e)
         {
-
-            if (dice!=0)
-            {
-                if (GP3.Location == GN3.Location && dice!=6)
-                {
-                    if ((GP1.Location != GN1.Location && GP1.Visible == true) ||
-                        (GP2.Location != GN2.Location && GP2.Visible == true) ||
-                        (GP4.Location != GN4.Location && GP4.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(2);
-                        Nextplayer();
-                        GPoffset(2);
-                    }
-                }
-                else
-                {
-                    MovePawn(2);
-                    Nextplayer();
-                    GPoffset(2);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(2, 0);
         }
 
         private void GP4_Click(object sender, EventArgs e)
         {
-            
-            if (dice!=0)
-            {
-                if (GP4.Location == GN4.Location && dice!=6)
-                {
-                    if ((GP1.Location != GN1.Location && GP1.Visible == true) ||
-                         (GP3.Location != GN3.Location && GP3.Visible == true) ||
-                         (GP4.Location != GN4.Location && GP4.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(3);
-                        Nextplayer();
-                        GPoffset(3);
-                    }
-                }
-                else
-                {
-                    MovePawn(3);
-                    Nextplayer();
-                    GPoffset(3);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(3, 0);
         }
 
         private void RP1_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (RP1.Location == RN1.Location && dice!=6)
-                {
-                    if((RP4.Location != RN4.Location && RP4.Visible ==true) ||
-                        (RP2.Location != RN2.Location && RP2.Visible == true) ||
-                        (RP3.Location != RN3.Location && RP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(4);
-                        Nextplayer();
-                        RPoffset(4);
-                    }
-                }
-                else
-                {
-                    MovePawn(4);
-                    Nextplayer();
-                    RPoffset(4);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(4, 1);
         }
 
         private void RP2_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (RP2.Location == RN2.Location && dice!=6)
-                {
-                    if((RP4.Location != RN4.Location && RP4.Visible ==true) ||
-                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
-                        (RP3.Location != RN3.Location && RP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(5);
-                        Nextplayer();
-                        RPoffset(5);
-                    }
-                }
-                else
-                {
-                    MovePawn(5);
-                    Nextplayer();
-                    RPoffset(5);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(5, 1);
         }
 
         private void RP3_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (RP3.Location == RN3.Location && dice!=6)
-                {
-                    if ((RP4.Location != RN4.Location && RP4.Visible ==true) ||
-                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
-                        (RP2.Location != RN2.Location && RP2.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(6);
-                        Nextplayer();
-                        RPoffset(6);
-                    }
-                }
-                else
-                {
-                    MovePawn(6);
-                    Nextplayer();
-                    RPoffset(6);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(6, 1);
         }
 
         private void RP4_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if(RP4.Location == RN4.Location && dice!=6)
-                {
-                    if ((RP3.Location != RN3.Location && RP3.Visible ==true) ||
-                        (RP1.Location != RN1.Location && RP1.Visible == true) ||
-                        (RP2.Location != RN2.Location && RP2.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(7);
-                        Nextplayer();
-                        RPoffset(7);
-                    }
-                }
-                else
-                {
-                    MovePawn(7);
-                    Nextplayer();
-                    RPoffset(7);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(7, 1);          
         }
 
         private void YP1_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (YP1.Location == YN1.Location && dice!=6)
-                {
-                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
-                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
-                        (YP3.Location != YN3.Location && YP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(8);
-                        Nextplayer();
-                        RPoffset(8);
-                    }
-                }
-                else
-                {
-                    MovePawn(8);
-                    Nextplayer();
-                    YPoffset(8);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(8, 2);
         }
 
         private void YP2_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (YP2.Location == YN2.Location && dice!=6)
-                {
-                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
-                        (YP1.Location != YN1.Location && YP1.Visible == true) ||
-                        (YP3.Location != YN3.Location && YP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(9);
-                        Nextplayer();
-                        RPoffset(9);
-                    }
-                }
-                else
-                {
-                    MovePawn(9);
-                    Nextplayer();
-                    YPoffset(9);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(9, 2);
         }
 
         private void YP3_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (YP3.Location == YN3.Location && dice!=6)
-                {
-                    if ((YP4.Location != YN4.Location && YP4.Visible ==true) ||
-                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
-                        (YP1.Location != YN1.Location && YP1.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(10);
-                        Nextplayer();
-                        RPoffset(10);
-                    }
-                }
-                else
-                {
-                    MovePawn(10);
-                    Nextplayer();
-                    YPoffset(10);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(10, 2);
         }
 
         private void YP4_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (YP4.Location == YN4.Location && dice!=6)
-                {
-                    if ((YP1.Location != YN1.Location && YP1.Visible ==true) ||
-                        (YP2.Location != YN2.Location && YP2.Visible == true) ||
-                        (YP3.Location != YN3.Location && YP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(11);
-                        Nextplayer();
-                        RPoffset(11);
-                    }
-                }
-                else
-                {
-                    MovePawn(11);
-                    Nextplayer();
-                    YPoffset(11);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(11, 2);
         }
 
         private void BP1_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (BP1.Location == BN1.Location && dice!=6)
-                {
-                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
-                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
-                        (BP3.Location != BN3.Location && BP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(12);
-                        Nextplayer();
-                        RPoffset(12);
-                    }
-                }
-                else
-                {
-                    MovePawn(12);
-                    Nextplayer();
-                    BPoffset(12);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(12, 3);
         }
 
         private void BP2_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (BP2.Location == BN2.Location && dice!=6)
-                {
-                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
-                        (BP1.Location != BN1.Location && BP1.Visible == true) ||
-                        (BP3.Location != BN3.Location && BP3.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(13);
-                        Nextplayer();
-                        RPoffset(13);
-                    }
-                }
-                else
-                {
-                    MovePawn(13);
-                    Nextplayer();
-                    BPoffset(13);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(13, 3);
         }
 
         private void BP3_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
-            {
-                if (BP3.Location == BN3.Location && dice!=6)
-                {
-                    if ((BP4.Location != BN4.Location && BP4.Visible ==true) ||
-                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
-                        (BP1.Location != BN1.Location && BP1.Visible == true))
-                    {
-                        label1.Text = "Click on an active pawn!";
-                    }
-                    else
-                    {
-                        MovePawn(14);
-                        Nextplayer();
-                        RPoffset(14);
-                    }
-                }
-                else
-                {
-                    MovePawn(14);
-                    Nextplayer();
-                    BPoffset(14);
-                }
-            }
-            else
-            {
-                label1.Text = "Roll the dice first!";
-            }
+            PawnMovementLogic(14, 3);
         }
 
         private void BP4_Click(object sender, EventArgs e)
         {
-            if (dice!=0)
+            PawnMovementLogic(15, 3);
+        }
+
+        private void PawnMovementLogic(int i, int j)
+        {
+            if (dice != 0)
             {
-                if (BP4.Location == BN4.Location && dice!=6)
+                if (allPawns[i].Location == allNests[i].Location && dice != 6)
                 {
-                    if ((BP1.Location != BN1.Location && BP1.Visible ==true) ||
-                        (BP2.Location != BN2.Location && BP2.Visible == true) ||
-                        (BP3.Location != BN3.Location && BP3.Visible == true))
+                    if (PlayerList[j].HasPawnsInGame())
                     {
                         label1.Text = "Click on an active pawn!";
+
                     }
                     else
                     {
-                        MovePawn(15);
+                        MovePawn(i);
                         Nextplayer();
-                        RPoffset(15);
+                        switch (j)
+                        {
+                            case 0:
+                                GPoffset(i);
+                                break;
+                            case 1:
+                                RPoffset(i);
+                                break;
+                            case 2:
+                                YPoffset(i);
+                                break;
+                            case 3:
+                                BPoffset(i);
+                                break;
+                        }
                     }
                 }
                 else
                 {
-                    MovePawn(15);
+                    MovePawn(i);
                     Nextplayer();
-                    BPoffset(15);
+                    switch (j)
+                    {
+                        case 0:
+                            GPoffset(i);
+                            break;
+                        case 1:
+                            RPoffset(i);
+                            break;
+                        case 2:
+                            YPoffset(i);
+                            break;
+                        case 3:
+                            BPoffset(i);
+                            break;
+                    }
                 }
             }
             else
@@ -849,7 +483,7 @@ namespace Ludo_board
             rollDice.Visible = true;
 
             PlayerList[ActivePlayerID - 1].IsActive = false; // de-activating previous player
-            ActivePlayerID = ActivePlayerID % maxplayers + 1; // getting id for next player
+            ActivePlayerID = ActivePlayerID % playerCount + 1; // getting id for next player
             
             PlayerList[ActivePlayerID - 1].IsActive = true; // activating next player
             
@@ -873,19 +507,26 @@ namespace Ludo_board
 
         public List<Player> CreatePlayerList() //creates player list at the start of the game
         {
-            Player player1 = new Player(1, "player 1", Player.PlayerColor.Green, 0, GP1, GP2, GP3, GP4);
-            Player player2 = new Player(2, "player 2", Player.PlayerColor.Red, 0, RP1, RP2, RP3, RP4);
-            Player player3 = new Player(3, "player 3", Player.PlayerColor.Yellow, 0, YP1, YP2, YP3, YP4);
-            Player player4 = new Player(4, "player 4", Player.PlayerColor.Blue, 0, BP1, BP2, BP3, BP4);
+            Player player1 = new Player(1, "player 1", Player.PlayerColor.Green, 0, GP1, GP2, GP3, GP4, GN1, GN2, GN3, GN4);
+            Player player2 = new Player(2, "player 2", Player.PlayerColor.Red, 0, RP1, RP2, RP3, RP4, RN1, RN2, RN3, RN4);
+            Player player3 = new Player(3, "player 3", Player.PlayerColor.Yellow, 0, YP1, YP2, YP3, YP4, YN1, YN2, YN3, YN4);
+            Player player4 = new Player(4, "player 4", Player.PlayerColor.Blue, 0, BP1, BP2, BP3, BP4, BN1, BN2, BN3, BN4);
 
-            List<Player> PlayerList = new List<Player>();
+            List<Player> AllPlayers = new List<Player>();
 
-            PlayerList.Add(player1);
-            PlayerList.Add(player2);
-            PlayerList.Add(player3);
-            PlayerList.Add(player4);
+            AllPlayers.Add(player1);
+            AllPlayers.Add(player2);
+            AllPlayers.Add(player3);
+            AllPlayers.Add(player4);
+            return AllPlayers;
+        }
 
-            return PlayerList;
+        private void TurnPlayerButtonsOn()
+        {
+            foreach (Player player in PlayerList)
+            {
+                PlayerLabelList[player.Id - 1].Enabled = true;
+            }
         }
 
         private List<Player> FirstRoll(List<Player> NewGameList)
@@ -904,10 +545,10 @@ namespace Ludo_board
             rollDice.Visible = false;
             var HighestRoll = NewGameList.MaxBy(x => x.InitialDiceRoll);
             List<Player> temp = NewGameList.Where(x => x.InitialDiceRoll == HighestRoll?.InitialDiceRoll).ToList();
-            Label[] PlayerLables = { Player1, Player2, Player3, Player4 };            
+            Label[] PlayerLables = { Player1, Player2, Player3, Player4 };
             foreach (Player player in temp)
             {
-                PlayerLables[player.Id - 1].Enabled = true;
+                PlayerLabelList[player.Id - 1].Enabled = true;
             }
             label2.Visible = true;
             string ReRolls = "These players got the same high roll! :\n" + string.Join("\n", temp.Select(T => $"{T.Color}")) + "\nPlease roll again!";
@@ -930,6 +571,6 @@ namespace Ludo_board
         {
             this.Close();
             Application.Exit();
-        }          
+        }
     }
 }

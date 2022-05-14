@@ -20,8 +20,8 @@ namespace StartMenu
 
         private void LoadGame(object sender, EventArgs e)
         {
-            Ludoboard gameWindow = new();
-            gameWindow.Show();
+            PlayerNumberSelect selectWindow = new();
+            selectWindow.Show();
         }
 
         private void LoadHelp(object sender, EventArgs e)

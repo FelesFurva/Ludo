@@ -913,7 +913,7 @@
             this.RN4.BackColor = System.Drawing.Color.Red;
             this.RN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN4.Location = new System.Drawing.Point(507, 219);
+            this.RN4.Location = new System.Drawing.Point(613, 219);
             this.RN4.Name = "RN4";
             this.RN4.Size = new System.Drawing.Size(20, 20);
             this.RN4.TabIndex = 68;
@@ -925,7 +925,7 @@
             this.RN2.BackColor = System.Drawing.Color.Red;
             this.RN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN2.Location = new System.Drawing.Point(507, 147);
+            this.RN2.Location = new System.Drawing.Point(613, 147);
             this.RN2.Name = "RN2";
             this.RN2.Size = new System.Drawing.Size(20, 20);
             this.RN2.TabIndex = 67;
@@ -937,7 +937,7 @@
             this.RN3.BackColor = System.Drawing.Color.Red;
             this.RN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN3.Location = new System.Drawing.Point(435, 219);
+            this.RN3.Location = new System.Drawing.Point(541, 219);
             this.RN3.Name = "RN3";
             this.RN3.Size = new System.Drawing.Size(20, 20);
             this.RN3.TabIndex = 66;
@@ -949,7 +949,7 @@
             this.RN1.BackColor = System.Drawing.Color.Red;
             this.RN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN1.Location = new System.Drawing.Point(435, 147);
+            this.RN1.Location = new System.Drawing.Point(541, 147);
             this.RN1.Name = "RN1";
             this.RN1.Size = new System.Drawing.Size(20, 20);
             this.RN1.TabIndex = 65;
@@ -961,7 +961,7 @@
             this.YN1.BackColor = System.Drawing.Color.Yellow;
             this.YN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN1.Location = new System.Drawing.Point(501, 487);
+            this.YN1.Location = new System.Drawing.Point(547, 548);
             this.YN1.Name = "YN1";
             this.YN1.Size = new System.Drawing.Size(20, 20);
             this.YN1.TabIndex = 70;
@@ -973,7 +973,7 @@
             this.YN2.BackColor = System.Drawing.Color.Yellow;
             this.YN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN2.Location = new System.Drawing.Point(573, 487);
+            this.YN2.Location = new System.Drawing.Point(619, 548);
             this.YN2.Name = "YN2";
             this.YN2.Size = new System.Drawing.Size(20, 20);
             this.YN2.TabIndex = 69;
@@ -985,7 +985,7 @@
             this.YN3.BackColor = System.Drawing.Color.Yellow;
             this.YN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN3.Location = new System.Drawing.Point(501, 559);
+            this.YN3.Location = new System.Drawing.Point(547, 620);
             this.YN3.Name = "YN3";
             this.YN3.Size = new System.Drawing.Size(20, 20);
             this.YN3.TabIndex = 72;
@@ -997,7 +997,7 @@
             this.YN4.BackColor = System.Drawing.Color.Yellow;
             this.YN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN4.Location = new System.Drawing.Point(573, 559);
+            this.YN4.Location = new System.Drawing.Point(619, 620);
             this.YN4.Name = "YN4";
             this.YN4.Size = new System.Drawing.Size(20, 20);
             this.YN4.TabIndex = 71;
@@ -1009,7 +1009,7 @@
             this.BN4.BackColor = System.Drawing.Color.Blue;
             this.BN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN4.Location = new System.Drawing.Point(231, 625);
+            this.BN4.Location = new System.Drawing.Point(119, 625);
             this.BN4.Name = "BN4";
             this.BN4.Size = new System.Drawing.Size(20, 20);
             this.BN4.TabIndex = 74;
@@ -1021,7 +1021,7 @@
             this.BN2.BackColor = System.Drawing.Color.Blue;
             this.BN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN2.Location = new System.Drawing.Point(231, 553);
+            this.BN2.Location = new System.Drawing.Point(119, 553);
             this.BN2.Name = "BN2";
             this.BN2.Size = new System.Drawing.Size(20, 20);
             this.BN2.TabIndex = 73;
@@ -1033,7 +1033,7 @@
             this.BN3.BackColor = System.Drawing.Color.Blue;
             this.BN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN3.Location = new System.Drawing.Point(159, 625);
+            this.BN3.Location = new System.Drawing.Point(47, 625);
             this.BN3.Name = "BN3";
             this.BN3.Size = new System.Drawing.Size(20, 20);
             this.BN3.TabIndex = 76;
@@ -1045,7 +1045,7 @@
             this.BN1.BackColor = System.Drawing.Color.Blue;
             this.BN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN1.Location = new System.Drawing.Point(159, 553);
+            this.BN1.Location = new System.Drawing.Point(47, 553);
             this.BN1.Name = "BN1";
             this.BN1.Size = new System.Drawing.Size(20, 20);
             this.BN1.TabIndex = 75;
@@ -1057,7 +1057,7 @@
             this.GN3.BackColor = System.Drawing.Color.Green;
             this.GN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN3.Location = new System.Drawing.Point(93, 283);
+            this.GN3.Location = new System.Drawing.Point(47, 224);
             this.GN3.Name = "GN3";
             this.GN3.Size = new System.Drawing.Size(20, 20);
             this.GN3.TabIndex = 78;
@@ -1069,7 +1069,7 @@
             this.GN4.BackColor = System.Drawing.Color.Green;
             this.GN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN4.Location = new System.Drawing.Point(165, 283);
+            this.GN4.Location = new System.Drawing.Point(119, 224);
             this.GN4.Name = "GN4";
             this.GN4.Size = new System.Drawing.Size(20, 20);
             this.GN4.TabIndex = 77;
@@ -1081,7 +1081,7 @@
             this.GN1.BackColor = System.Drawing.Color.Green;
             this.GN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN1.Location = new System.Drawing.Point(93, 211);
+            this.GN1.Location = new System.Drawing.Point(47, 152);
             this.GN1.Name = "GN1";
             this.GN1.Size = new System.Drawing.Size(20, 20);
             this.GN1.TabIndex = 80;
@@ -1093,7 +1093,7 @@
             this.GN2.BackColor = System.Drawing.Color.Green;
             this.GN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN2.Location = new System.Drawing.Point(165, 211);
+            this.GN2.Location = new System.Drawing.Point(119, 152);
             this.GN2.Name = "GN2";
             this.GN2.Size = new System.Drawing.Size(20, 20);
             this.GN2.TabIndex = 79;
@@ -1105,7 +1105,7 @@
             this.BP1.Enabled = false;
             this.BP1.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP1.Location = new System.Drawing.Point(159, 553);
+            this.BP1.Location = new System.Drawing.Point(47, 553);
             this.BP1.Name = "BP1";
             this.BP1.Size = new System.Drawing.Size(20, 20);
             this.BP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1118,7 +1118,7 @@
             this.BP2.Enabled = false;
             this.BP2.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP2.Location = new System.Drawing.Point(231, 553);
+            this.BP2.Location = new System.Drawing.Point(119, 553);
             this.BP2.Name = "BP2";
             this.BP2.Size = new System.Drawing.Size(20, 20);
             this.BP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1132,7 +1132,7 @@
             this.BP3.Enabled = false;
             this.BP3.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP3.Location = new System.Drawing.Point(159, 625);
+            this.BP3.Location = new System.Drawing.Point(47, 625);
             this.BP3.Name = "BP3";
             this.BP3.Size = new System.Drawing.Size(20, 20);
             this.BP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1146,7 +1146,7 @@
             this.BP4.Enabled = false;
             this.BP4.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP4.Location = new System.Drawing.Point(231, 625);
+            this.BP4.Location = new System.Drawing.Point(119, 625);
             this.BP4.Name = "BP4";
             this.BP4.Size = new System.Drawing.Size(20, 20);
             this.BP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1161,7 +1161,7 @@
             this.GP1.Enabled = false;
             this.GP1.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP1.Location = new System.Drawing.Point(93, 211);
+            this.GP1.Location = new System.Drawing.Point(47, 152);
             this.GP1.Name = "GP1";
             this.GP1.Size = new System.Drawing.Size(20, 20);
             this.GP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1172,10 +1172,11 @@
             // 
             // GP4
             // 
+            this.GP4.BackColor = System.Drawing.Color.AntiqueWhite;
             this.GP4.Enabled = false;
             this.GP4.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP4.Location = new System.Drawing.Point(165, 283);
+            this.GP4.Location = new System.Drawing.Point(119, 224);
             this.GP4.Name = "GP4";
             this.GP4.Size = new System.Drawing.Size(20, 20);
             this.GP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1189,7 +1190,7 @@
             this.GP3.Enabled = false;
             this.GP3.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP3.Location = new System.Drawing.Point(93, 283);
+            this.GP3.Location = new System.Drawing.Point(47, 224);
             this.GP3.Name = "GP3";
             this.GP3.Size = new System.Drawing.Size(20, 20);
             this.GP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1203,7 +1204,7 @@
             this.GP2.Enabled = false;
             this.GP2.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP2.Location = new System.Drawing.Point(165, 211);
+            this.GP2.Location = new System.Drawing.Point(119, 152);
             this.GP2.Name = "GP2";
             this.GP2.Size = new System.Drawing.Size(20, 20);
             this.GP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1217,7 +1218,7 @@
             this.YP1.Enabled = false;
             this.YP1.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP1.Location = new System.Drawing.Point(501, 487);
+            this.YP1.Location = new System.Drawing.Point(547, 548);
             this.YP1.Name = "YP1";
             this.YP1.Size = new System.Drawing.Size(20, 20);
             this.YP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1231,7 +1232,7 @@
             this.YP2.Enabled = false;
             this.YP2.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP2.Location = new System.Drawing.Point(573, 487);
+            this.YP2.Location = new System.Drawing.Point(619, 548);
             this.YP2.Name = "YP2";
             this.YP2.Size = new System.Drawing.Size(20, 20);
             this.YP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1245,7 +1246,7 @@
             this.YP3.Enabled = false;
             this.YP3.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP3.Location = new System.Drawing.Point(501, 559);
+            this.YP3.Location = new System.Drawing.Point(547, 620);
             this.YP3.Name = "YP3";
             this.YP3.Size = new System.Drawing.Size(20, 20);
             this.YP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1259,7 +1260,7 @@
             this.YP4.Enabled = false;
             this.YP4.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP4.Location = new System.Drawing.Point(573, 559);
+            this.YP4.Location = new System.Drawing.Point(619, 620);
             this.YP4.Name = "YP4";
             this.YP4.Size = new System.Drawing.Size(20, 20);
             this.YP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1273,7 +1274,7 @@
             this.RP1.Enabled = false;
             this.RP1.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP1.Location = new System.Drawing.Point(435, 147);
+            this.RP1.Location = new System.Drawing.Point(541, 147);
             this.RP1.Name = "RP1";
             this.RP1.Size = new System.Drawing.Size(20, 20);
             this.RP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1287,7 +1288,7 @@
             this.RP2.Enabled = false;
             this.RP2.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP2.Location = new System.Drawing.Point(507, 147);
+            this.RP2.Location = new System.Drawing.Point(613, 147);
             this.RP2.Name = "RP2";
             this.RP2.Size = new System.Drawing.Size(20, 20);
             this.RP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1301,7 +1302,7 @@
             this.RP3.Enabled = false;
             this.RP3.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP3.Location = new System.Drawing.Point(435, 219);
+            this.RP3.Location = new System.Drawing.Point(541, 219);
             this.RP3.Name = "RP3";
             this.RP3.Size = new System.Drawing.Size(20, 20);
             this.RP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1315,7 +1316,7 @@
             this.RP4.Enabled = false;
             this.RP4.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP4.Location = new System.Drawing.Point(507, 219);
+            this.RP4.Location = new System.Drawing.Point(613, 219);
             this.RP4.Name = "RP4";
             this.RP4.Size = new System.Drawing.Size(20, 20);
             this.RP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1480,8 +1481,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
-            this.label2.Text = "Click on the player name for the initial dice roll! \nThen click here to find out " +
-    "who starts first!";
+            this.label2.Text = "Press the buttons above to select how many players are in the game!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.UseCompatibleTextRendering = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -1489,10 +1489,11 @@
             // Player1
             // 
             this.Player1.BackColor = System.Drawing.Color.White;
+            this.Player1.Enabled = false;
             this.Player1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player1.ForeColor = System.Drawing.Color.Green;
             this.Player1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Player1.Location = new System.Drawing.Point(93, 160);
+            this.Player1.Location = new System.Drawing.Point(47, 101);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(60, 25);
             this.Player1.TabIndex = 110;
@@ -1503,24 +1504,27 @@
             // Player2
             // 
             this.Player2.BackColor = System.Drawing.Color.White;
+            this.Player2.Enabled = false;
             this.Player2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player2.ForeColor = System.Drawing.Color.Red;
             this.Player2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Player2.Location = new System.Drawing.Point(467, 101);
+            this.Player2.Location = new System.Drawing.Point(573, 101);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(60, 25);
             this.Player2.TabIndex = 111;
             this.Player2.Text = "Player2";
             this.Player2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Player2.UseCompatibleTextRendering = true;
             this.Player2.Click += new System.EventHandler(this.Player2_Click);
             // 
             // Player3
             // 
             this.Player3.BackColor = System.Drawing.Color.White;
+            this.Player3.Enabled = false;
             this.Player3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player3.ForeColor = System.Drawing.Color.Goldenrod;
             this.Player3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Player3.Location = new System.Drawing.Point(533, 605);
+            this.Player3.Location = new System.Drawing.Point(579, 666);
             this.Player3.Name = "Player3";
             this.Player3.Size = new System.Drawing.Size(60, 25);
             this.Player3.TabIndex = 112;
@@ -1531,10 +1535,11 @@
             // Player4
             // 
             this.Player4.BackColor = System.Drawing.Color.White;
+            this.Player4.Enabled = false;
             this.Player4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player4.ForeColor = System.Drawing.Color.Blue;
             this.Player4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Player4.Location = new System.Drawing.Point(159, 666);
+            this.Player4.Location = new System.Drawing.Point(47, 666);
             this.Player4.Name = "Player4";
             this.Player4.Size = new System.Drawing.Size(60, 25);
             this.Player4.TabIndex = 113;
