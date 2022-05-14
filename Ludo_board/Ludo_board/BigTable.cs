@@ -19,7 +19,6 @@ namespace Ludo_board
 
 
         //Start field shift determination initial components
-        int playerIndex = 0;  //player index: 0=green, 1=red, 2=yellow, 3=blue
         int ActivePlayerID;
         const int startShift = 12;
         const int sharedCellsCount = 48;
@@ -98,16 +97,6 @@ namespace Ludo_board
         {
             rollDice.Visible = false;
         }
-
-        //private void PwnClick(object sender, EventArgs e)
-        //{
-        //    var pwnImageBox = sender as PictureBox;
-        //    int i = 0;
-        //    for (; allPawns[i] != pwnImageBox && i < allPawns.Length; i++); 
-
-        //    MovePawn(i);
-        //    Nextplayer();
-        //}
 
         public void GameStart()
         {
@@ -209,8 +198,8 @@ namespace Ludo_board
             }
         }
 
-        //option to choose which pawn to move by clicking on them
-        //can't accidentally skip a turn by clicking a pawn in nest if there are active pawns
+        // Option to choose which pawn to move by clicking on them
+        // Can't accidentally skip a turn by clicking a pawn in nest if there are active pawns
 
         private void GP1_Click(object sender, EventArgs e)
         {
@@ -296,33 +285,10 @@ namespace Ludo_board
         {
             if (dice != 0)
             {
-                if (allPawns[i].Location == allNests[i].Location && dice != 6)
+                if ((allPawns[i].Location == allNests[i].Location && dice != 6)
+                    && PlayerList[j].HasPawnsInGame())
                 {
-                    if (PlayerList[j].HasPawnsInGame())
-                    {
-                        label1.Text = "Click on an active pawn!";
-
-                    }
-                    else
-                    {
-                        MovePawn(i);
-                        Nextplayer();
-                        switch (j)
-                        {
-                            case 0:
-                                GPoffset(i);
-                                break;
-                            case 1:
-                                RPoffset(i);
-                                break;
-                            case 2:
-                                YPoffset(i);
-                                break;
-                            case 3:
-                                BPoffset(i);
-                                break;
-                        }
-                    }
+                    label1.Text = "Click on an active pawn!";
                 }
                 else
                 {
@@ -383,27 +349,11 @@ namespace Ludo_board
             }
             else if (pawnBoxnumber[i] >= 0 && dice > 0)
             {
-                if (i<=3)
-                {
-                    playerIndex=0;
-                }
-                if (i>3 && i<=7)
-                {
-                    playerIndex=1;
-                }
-                if (i>7 && i<=11)
-                {
-                    playerIndex=2;
-                }
-                if (i>11 && i<=15)
-                {
-                    playerIndex=3;
-                }
                 var individualT = nextPosition(pawnStepsMade[i], dice);
 
                 var individualPosition = individualT;
 
-                var globalT = globalPosition(playerIndex, individualPosition);  //0=playerindex have to figure how to define
+                var globalT = globalPosition(ActivePlayerID-1, individualPosition);  //0=playerindex have to figure how to define
 
                 pawnBoxnumber[i] = globalT;
                 pawnStepsMade[i] += dice;
@@ -415,8 +365,8 @@ namespace Ludo_board
                 }
                 if (pawnStepsMade[i] > 46 && pawnStepsMade[i] <51)
                 {
-                    allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+(playerIndex*4)]);
-                    allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+(playerIndex*4)].BackColor;
+                    allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+((ActivePlayerID - 1) * 4)]);
+                    allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+((ActivePlayerID - 1) * 4)].BackColor;
                 }
 
                 if (pawnStepsMade[i] >= 51) 
@@ -478,14 +428,14 @@ namespace Ludo_board
             }
         }
 
-        public void Nextplayer() //int activePlayer = player ID
+        public void Nextplayer() // Int activePlayer = player ID
         {
             rollDice.Visible = true;
 
-            PlayerList[ActivePlayerID - 1].IsActive = false; // de-activating previous player
-            ActivePlayerID = ActivePlayerID % playerCount + 1; // getting id for next player
+            PlayerList[ActivePlayerID - 1].IsActive = false; // De-activating previous player
+            ActivePlayerID = ActivePlayerID % playerCount + 1; // Getting id for next player
             
-            PlayerList[ActivePlayerID - 1].IsActive = true; // activating next player
+            PlayerList[ActivePlayerID - 1].IsActive = true; // Activating next player
             
             foreach (Player player in PlayerList)
             {
@@ -497,7 +447,7 @@ namespace Ludo_board
                     }
                     rollDice.Enabled = false;
                     label1.Visible = false;
-                    Gameover.Text = $"Game Over! \n {player.Color} has won!";   //make it as messagebox?
+                    Gameover.Text = $"Game Over! \n {player.Color} has won!";   // Make it as messagebox?
                     return;
                 }
             }
@@ -505,7 +455,7 @@ namespace Ludo_board
             label1.Text = $"It is {PlayerList[ActivePlayerID - 1].Color}'s time to move.";
         }
 
-        public List<Player> CreatePlayerList() //creates player list at the start of the game
+        public List<Player> CreatePlayerList() // Creates player list at the start of the game
         {
             Player player1 = new Player(1, "player 1", Player.PlayerColor.Green, 0, GP1, GP2, GP3, GP4, GN1, GN2, GN3, GN4);
             Player player2 = new Player(2, "player 2", Player.PlayerColor.Red, 0, RP1, RP2, RP3, RP4, RN1, RN2, RN3, RN4);
