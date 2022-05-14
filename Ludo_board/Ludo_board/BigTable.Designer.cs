@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -240,9 +240,10 @@
             // 
             this.Box1.BackColor = System.Drawing.Color.White;
             this.Box1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box1.Location = new System.Drawing.Point(78, 239);
+            this.Box1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box1.Location = new System.Drawing.Point(139, 329);
             this.Box1.Name = "Box1";
-            this.Box1.Size = new System.Drawing.Size(30, 30);
+            this.Box1.Size = new System.Drawing.Size(40, 40);
             this.Box1.TabIndex = 1;
             this.Box1.TabStop = false;
             this.Box1.Tag = "playground";
@@ -251,9 +252,10 @@
             // 
             this.Box9.BackColor = System.Drawing.Color.White;
             this.Box9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box9.Location = new System.Drawing.Point(186, 59);
+            this.Box9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box9.Location = new System.Drawing.Point(277, 101);
             this.Box9.Name = "Box9";
-            this.Box9.Size = new System.Drawing.Size(30, 30);
+            this.Box9.Size = new System.Drawing.Size(40, 40);
             this.Box9.TabIndex = 3;
             this.Box9.TabStop = false;
             this.Box9.Tag = "playground";
@@ -262,9 +264,10 @@
             // 
             this.Box8.BackColor = System.Drawing.Color.White;
             this.Box8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box8.Location = new System.Drawing.Point(186, 95);
+            this.Box8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box8.Location = new System.Drawing.Point(277, 147);
             this.Box8.Name = "Box8";
-            this.Box8.Size = new System.Drawing.Size(30, 30);
+            this.Box8.Size = new System.Drawing.Size(40, 40);
             this.Box8.TabIndex = 4;
             this.Box8.TabStop = false;
             this.Box8.Tag = "playground";
@@ -273,9 +276,10 @@
             // 
             this.Box7.BackColor = System.Drawing.Color.White;
             this.Box7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box7.Location = new System.Drawing.Point(186, 131);
+            this.Box7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box7.Location = new System.Drawing.Point(277, 191);
             this.Box7.Name = "Box7";
-            this.Box7.Size = new System.Drawing.Size(30, 30);
+            this.Box7.Size = new System.Drawing.Size(40, 40);
             this.Box7.TabIndex = 5;
             this.Box7.TabStop = false;
             this.Box7.Tag = "playground";
@@ -284,9 +288,10 @@
             // 
             this.Box6.BackColor = System.Drawing.Color.White;
             this.Box6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box6.Location = new System.Drawing.Point(186, 167);
+            this.Box6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box6.Location = new System.Drawing.Point(277, 237);
             this.Box6.Name = "Box6";
-            this.Box6.Size = new System.Drawing.Size(30, 30);
+            this.Box6.Size = new System.Drawing.Size(40, 40);
             this.Box6.TabIndex = 6;
             this.Box6.TabStop = false;
             this.Box6.Tag = "playground";
@@ -295,9 +300,10 @@
             // 
             this.Box5.BackColor = System.Drawing.Color.White;
             this.Box5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box5.Location = new System.Drawing.Point(186, 203);
+            this.Box5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box5.Location = new System.Drawing.Point(277, 283);
             this.Box5.Name = "Box5";
-            this.Box5.Size = new System.Drawing.Size(30, 30);
+            this.Box5.Size = new System.Drawing.Size(40, 40);
             this.Box5.TabIndex = 7;
             this.Box5.TabStop = false;
             this.Box5.Tag = "playground";
@@ -306,9 +312,10 @@
             // 
             this.Box4.BackColor = System.Drawing.Color.White;
             this.Box4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box4.Location = new System.Drawing.Point(186, 239);
+            this.Box4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box4.Location = new System.Drawing.Point(277, 329);
             this.Box4.Name = "Box4";
-            this.Box4.Size = new System.Drawing.Size(30, 30);
+            this.Box4.Size = new System.Drawing.Size(40, 40);
             this.Box4.TabIndex = 8;
             this.Box4.TabStop = false;
             this.Box4.Tag = "playground";
@@ -317,9 +324,10 @@
             // 
             this.BoxG4.BackColor = System.Drawing.Color.Green;
             this.BoxG4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxG4.Location = new System.Drawing.Point(150, 275);
+            this.BoxG4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxG4.Location = new System.Drawing.Point(231, 375);
             this.BoxG4.Name = "BoxG4";
-            this.BoxG4.Size = new System.Drawing.Size(30, 30);
+            this.BoxG4.Size = new System.Drawing.Size(40, 40);
             this.BoxG4.TabIndex = 9;
             this.BoxG4.TabStop = false;
             this.BoxG4.Tag = "greenfinal";
@@ -328,9 +336,10 @@
             // 
             this.BoxG3.BackColor = System.Drawing.Color.Green;
             this.BoxG3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxG3.Location = new System.Drawing.Point(114, 275);
+            this.BoxG3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxG3.Location = new System.Drawing.Point(185, 375);
             this.BoxG3.Name = "BoxG3";
-            this.BoxG3.Size = new System.Drawing.Size(30, 30);
+            this.BoxG3.Size = new System.Drawing.Size(40, 40);
             this.BoxG3.TabIndex = 10;
             this.BoxG3.TabStop = false;
             this.BoxG3.Tag = "greenfinal";
@@ -339,9 +348,10 @@
             // 
             this.BoxG2.BackColor = System.Drawing.Color.Green;
             this.BoxG2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxG2.Location = new System.Drawing.Point(78, 275);
+            this.BoxG2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxG2.Location = new System.Drawing.Point(139, 375);
             this.BoxG2.Name = "BoxG2";
-            this.BoxG2.Size = new System.Drawing.Size(30, 30);
+            this.BoxG2.Size = new System.Drawing.Size(40, 40);
             this.BoxG2.TabIndex = 11;
             this.BoxG2.TabStop = false;
             this.BoxG2.Tag = "greenfinal";
@@ -350,9 +360,10 @@
             // 
             this.BoxG1.BackColor = System.Drawing.Color.Green;
             this.BoxG1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxG1.Location = new System.Drawing.Point(42, 275);
+            this.BoxG1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxG1.Location = new System.Drawing.Point(93, 375);
             this.BoxG1.Name = "BoxG1";
-            this.BoxG1.Size = new System.Drawing.Size(30, 30);
+            this.BoxG1.Size = new System.Drawing.Size(40, 40);
             this.BoxG1.TabIndex = 12;
             this.BoxG1.TabStop = false;
             this.BoxG1.Tag = "greenfinal";
@@ -361,9 +372,10 @@
             // 
             this.Box41.BackColor = System.Drawing.Color.White;
             this.Box41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box41.Location = new System.Drawing.Point(150, 311);
+            this.Box41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box41.Location = new System.Drawing.Point(231, 421);
             this.Box41.Name = "Box41";
-            this.Box41.Size = new System.Drawing.Size(30, 30);
+            this.Box41.Size = new System.Drawing.Size(40, 40);
             this.Box41.TabIndex = 13;
             this.Box41.TabStop = false;
             this.Box41.Tag = "playground";
@@ -372,9 +384,10 @@
             // 
             this.Box42.BackColor = System.Drawing.Color.White;
             this.Box42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box42.Location = new System.Drawing.Point(114, 311);
+            this.Box42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box42.Location = new System.Drawing.Point(185, 421);
             this.Box42.Name = "Box42";
-            this.Box42.Size = new System.Drawing.Size(30, 30);
+            this.Box42.Size = new System.Drawing.Size(40, 40);
             this.Box42.TabIndex = 14;
             this.Box42.TabStop = false;
             this.Box42.Tag = "playground";
@@ -383,9 +396,10 @@
             // 
             this.Box43.BackColor = System.Drawing.Color.White;
             this.Box43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box43.Location = new System.Drawing.Point(78, 311);
+            this.Box43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box43.Location = new System.Drawing.Point(139, 421);
             this.Box43.Name = "Box43";
-            this.Box43.Size = new System.Drawing.Size(30, 30);
+            this.Box43.Size = new System.Drawing.Size(40, 40);
             this.Box43.TabIndex = 15;
             this.Box43.TabStop = false;
             this.Box43.Tag = "playground";
@@ -394,9 +408,10 @@
             // 
             this.Box44.BackColor = System.Drawing.Color.White;
             this.Box44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box44.Location = new System.Drawing.Point(42, 311);
+            this.Box44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box44.Location = new System.Drawing.Point(93, 421);
             this.Box44.Name = "Box44";
-            this.Box44.Size = new System.Drawing.Size(30, 30);
+            this.Box44.Size = new System.Drawing.Size(40, 40);
             this.Box44.TabIndex = 16;
             this.Box44.TabStop = false;
             this.Box44.Tag = "playground";
@@ -405,9 +420,10 @@
             // 
             this.Box45.BackColor = System.Drawing.Color.White;
             this.Box45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box45.Location = new System.Drawing.Point(6, 311);
+            this.Box45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box45.Location = new System.Drawing.Point(47, 421);
             this.Box45.Name = "Box45";
-            this.Box45.Size = new System.Drawing.Size(30, 30);
+            this.Box45.Size = new System.Drawing.Size(40, 40);
             this.Box45.TabIndex = 17;
             this.Box45.TabStop = false;
             this.Box45.Tag = "playground";
@@ -416,9 +432,10 @@
             // 
             this.Box47.BackColor = System.Drawing.Color.White;
             this.Box47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box47.Location = new System.Drawing.Point(6, 239);
+            this.Box47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box47.Location = new System.Drawing.Point(47, 329);
             this.Box47.Name = "Box47";
-            this.Box47.Size = new System.Drawing.Size(30, 30);
+            this.Box47.Size = new System.Drawing.Size(40, 40);
             this.Box47.TabIndex = 19;
             this.Box47.TabStop = false;
             this.Box47.Tag = "playground";
@@ -427,9 +444,10 @@
             // 
             this.Box3.BackColor = System.Drawing.Color.White;
             this.Box3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box3.Location = new System.Drawing.Point(150, 239);
+            this.Box3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box3.Location = new System.Drawing.Point(231, 329);
             this.Box3.Name = "Box3";
-            this.Box3.Size = new System.Drawing.Size(30, 30);
+            this.Box3.Size = new System.Drawing.Size(40, 40);
             this.Box3.TabIndex = 20;
             this.Box3.TabStop = false;
             this.Box3.Tag = "playground";
@@ -438,9 +456,10 @@
             // 
             this.Box2.BackColor = System.Drawing.Color.White;
             this.Box2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box2.Location = new System.Drawing.Point(114, 239);
+            this.Box2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box2.Location = new System.Drawing.Point(185, 329);
             this.Box2.Name = "Box2";
-            this.Box2.Size = new System.Drawing.Size(30, 30);
+            this.Box2.Size = new System.Drawing.Size(40, 40);
             this.Box2.TabIndex = 21;
             this.Box2.TabStop = false;
             this.Box2.Tag = "playground";
@@ -449,9 +468,10 @@
             // 
             this.BoxR4.BackColor = System.Drawing.Color.Red;
             this.BoxR4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxR4.Location = new System.Drawing.Point(222, 203);
+            this.BoxR4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxR4.Location = new System.Drawing.Point(323, 283);
             this.BoxR4.Name = "BoxR4";
-            this.BoxR4.Size = new System.Drawing.Size(30, 30);
+            this.BoxR4.Size = new System.Drawing.Size(40, 40);
             this.BoxR4.TabIndex = 25;
             this.BoxR4.TabStop = false;
             this.BoxR4.Tag = "redfinal";
@@ -460,9 +480,10 @@
             // 
             this.BoxR3.BackColor = System.Drawing.Color.Red;
             this.BoxR3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxR3.Location = new System.Drawing.Point(222, 167);
+            this.BoxR3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxR3.Location = new System.Drawing.Point(323, 237);
             this.BoxR3.Name = "BoxR3";
-            this.BoxR3.Size = new System.Drawing.Size(30, 30);
+            this.BoxR3.Size = new System.Drawing.Size(40, 40);
             this.BoxR3.TabIndex = 24;
             this.BoxR3.TabStop = false;
             this.BoxR3.Tag = "redfinal";
@@ -471,9 +492,10 @@
             // 
             this.BoxR2.BackColor = System.Drawing.Color.Red;
             this.BoxR2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxR2.Location = new System.Drawing.Point(222, 131);
+            this.BoxR2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxR2.Location = new System.Drawing.Point(323, 191);
             this.BoxR2.Name = "BoxR2";
-            this.BoxR2.Size = new System.Drawing.Size(30, 30);
+            this.BoxR2.Size = new System.Drawing.Size(40, 40);
             this.BoxR2.TabIndex = 23;
             this.BoxR2.TabStop = false;
             this.BoxR2.Tag = "redfinal";
@@ -482,9 +504,10 @@
             // 
             this.BoxR1.BackColor = System.Drawing.Color.Red;
             this.BoxR1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxR1.Location = new System.Drawing.Point(222, 95);
+            this.BoxR1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxR1.Location = new System.Drawing.Point(323, 147);
             this.BoxR1.Name = "BoxR1";
-            this.BoxR1.Size = new System.Drawing.Size(30, 30);
+            this.BoxR1.Size = new System.Drawing.Size(40, 40);
             this.BoxR1.TabIndex = 22;
             this.BoxR1.TabStop = false;
             this.BoxR1.Tag = "redfinal";
@@ -493,9 +516,10 @@
             // 
             this.Box15.BackColor = System.Drawing.Color.White;
             this.Box15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box15.Location = new System.Drawing.Point(258, 203);
+            this.Box15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box15.Location = new System.Drawing.Point(369, 283);
             this.Box15.Name = "Box15";
-            this.Box15.Size = new System.Drawing.Size(30, 30);
+            this.Box15.Size = new System.Drawing.Size(40, 40);
             this.Box15.TabIndex = 30;
             this.Box15.TabStop = false;
             this.Box15.Tag = "playground";
@@ -504,9 +528,10 @@
             // 
             this.Box14.BackColor = System.Drawing.Color.White;
             this.Box14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box14.Location = new System.Drawing.Point(258, 167);
+            this.Box14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box14.Location = new System.Drawing.Point(369, 237);
             this.Box14.Name = "Box14";
-            this.Box14.Size = new System.Drawing.Size(30, 30);
+            this.Box14.Size = new System.Drawing.Size(40, 40);
             this.Box14.TabIndex = 29;
             this.Box14.TabStop = false;
             this.Box14.Tag = "playground";
@@ -515,9 +540,10 @@
             // 
             this.Box13.BackColor = System.Drawing.Color.White;
             this.Box13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box13.Location = new System.Drawing.Point(258, 131);
+            this.Box13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box13.Location = new System.Drawing.Point(369, 191);
             this.Box13.Name = "Box13";
-            this.Box13.Size = new System.Drawing.Size(30, 30);
+            this.Box13.Size = new System.Drawing.Size(40, 40);
             this.Box13.TabIndex = 28;
             this.Box13.TabStop = false;
             this.Box13.Tag = "playground";
@@ -526,9 +552,10 @@
             // 
             this.Box11.BackColor = System.Drawing.Color.White;
             this.Box11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box11.Location = new System.Drawing.Point(258, 59);
+            this.Box11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box11.Location = new System.Drawing.Point(369, 101);
             this.Box11.Name = "Box11";
-            this.Box11.Size = new System.Drawing.Size(30, 30);
+            this.Box11.Size = new System.Drawing.Size(40, 40);
             this.Box11.TabIndex = 26;
             this.Box11.TabStop = false;
             this.Box11.Tag = "playground";
@@ -537,9 +564,10 @@
             // 
             this.Box20.BackColor = System.Drawing.Color.White;
             this.Box20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box20.Location = new System.Drawing.Point(402, 239);
+            this.Box20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box20.Location = new System.Drawing.Point(553, 329);
             this.Box20.Name = "Box20";
-            this.Box20.Size = new System.Drawing.Size(30, 30);
+            this.Box20.Size = new System.Drawing.Size(40, 40);
             this.Box20.TabIndex = 47;
             this.Box20.TabStop = false;
             this.Box20.Tag = "playground";
@@ -548,9 +576,10 @@
             // 
             this.Box21.BackColor = System.Drawing.Color.White;
             this.Box21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box21.Location = new System.Drawing.Point(438, 239);
+            this.Box21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box21.Location = new System.Drawing.Point(599, 329);
             this.Box21.Name = "Box21";
-            this.Box21.Size = new System.Drawing.Size(30, 30);
+            this.Box21.Size = new System.Drawing.Size(40, 40);
             this.Box21.TabIndex = 46;
             this.Box21.TabStop = false;
             this.Box21.Tag = "playground";
@@ -559,9 +588,10 @@
             // 
             this.Box17.BackColor = System.Drawing.Color.White;
             this.Box17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box17.Location = new System.Drawing.Point(294, 239);
+            this.Box17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box17.Location = new System.Drawing.Point(415, 329);
             this.Box17.Name = "Box17";
-            this.Box17.Size = new System.Drawing.Size(30, 30);
+            this.Box17.Size = new System.Drawing.Size(40, 40);
             this.Box17.TabIndex = 45;
             this.Box17.TabStop = false;
             this.Box17.Tag = "playground";
@@ -570,9 +600,10 @@
             // 
             this.BoxY4.BackColor = System.Drawing.Color.Yellow;
             this.BoxY4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxY4.Location = new System.Drawing.Point(294, 275);
+            this.BoxY4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxY4.Location = new System.Drawing.Point(415, 374);
             this.BoxY4.Name = "BoxY4";
-            this.BoxY4.Size = new System.Drawing.Size(30, 30);
+            this.BoxY4.Size = new System.Drawing.Size(40, 40);
             this.BoxY4.TabIndex = 44;
             this.BoxY4.TabStop = false;
             this.BoxY4.Tag = "yellowfinal";
@@ -581,9 +612,10 @@
             // 
             this.Box27.BackColor = System.Drawing.Color.White;
             this.Box27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box27.Location = new System.Drawing.Point(294, 311);
+            this.Box27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box27.Location = new System.Drawing.Point(415, 421);
             this.Box27.Name = "Box27";
-            this.Box27.Size = new System.Drawing.Size(30, 30);
+            this.Box27.Size = new System.Drawing.Size(40, 40);
             this.Box27.TabIndex = 43;
             this.Box27.TabStop = false;
             this.Box27.Tag = "playground";
@@ -592,9 +624,10 @@
             // 
             this.Box26.BackColor = System.Drawing.Color.White;
             this.Box26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box26.Location = new System.Drawing.Point(330, 311);
+            this.Box26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box26.Location = new System.Drawing.Point(461, 421);
             this.Box26.Name = "Box26";
-            this.Box26.Size = new System.Drawing.Size(30, 30);
+            this.Box26.Size = new System.Drawing.Size(40, 40);
             this.Box26.TabIndex = 42;
             this.Box26.TabStop = false;
             this.Box26.Tag = "playground";
@@ -603,9 +636,10 @@
             // 
             this.Box25.BackColor = System.Drawing.Color.White;
             this.Box25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box25.Location = new System.Drawing.Point(366, 311);
+            this.Box25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box25.Location = new System.Drawing.Point(507, 421);
             this.Box25.Name = "Box25";
-            this.Box25.Size = new System.Drawing.Size(30, 30);
+            this.Box25.Size = new System.Drawing.Size(40, 40);
             this.Box25.TabIndex = 41;
             this.Box25.TabStop = false;
             this.Box25.Tag = "playground";
@@ -614,9 +648,10 @@
             // 
             this.Box23.BackColor = System.Drawing.Color.White;
             this.Box23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box23.Location = new System.Drawing.Point(438, 311);
+            this.Box23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box23.Location = new System.Drawing.Point(599, 421);
             this.Box23.Name = "Box23";
-            this.Box23.Size = new System.Drawing.Size(30, 30);
+            this.Box23.Size = new System.Drawing.Size(40, 40);
             this.Box23.TabIndex = 39;
             this.Box23.TabStop = false;
             this.Box23.Tag = "playground";
@@ -625,9 +660,10 @@
             // 
             this.BoxY3.BackColor = System.Drawing.Color.Yellow;
             this.BoxY3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxY3.Location = new System.Drawing.Point(330, 275);
+            this.BoxY3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxY3.Location = new System.Drawing.Point(461, 374);
             this.BoxY3.Name = "BoxY3";
-            this.BoxY3.Size = new System.Drawing.Size(30, 30);
+            this.BoxY3.Size = new System.Drawing.Size(40, 40);
             this.BoxY3.TabIndex = 38;
             this.BoxY3.TabStop = false;
             this.BoxY3.Tag = "yellowfinal";
@@ -636,9 +672,10 @@
             // 
             this.BoxY2.BackColor = System.Drawing.Color.Yellow;
             this.BoxY2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxY2.Location = new System.Drawing.Point(366, 275);
+            this.BoxY2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxY2.Location = new System.Drawing.Point(507, 374);
             this.BoxY2.Name = "BoxY2";
-            this.BoxY2.Size = new System.Drawing.Size(30, 30);
+            this.BoxY2.Size = new System.Drawing.Size(40, 40);
             this.BoxY2.TabIndex = 37;
             this.BoxY2.TabStop = false;
             this.BoxY2.Tag = "yellowfinal";
@@ -647,9 +684,10 @@
             // 
             this.BoxY1.BackColor = System.Drawing.Color.Yellow;
             this.BoxY1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxY1.Location = new System.Drawing.Point(402, 275);
+            this.BoxY1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxY1.Location = new System.Drawing.Point(553, 374);
             this.BoxY1.Name = "BoxY1";
-            this.BoxY1.Size = new System.Drawing.Size(30, 30);
+            this.BoxY1.Size = new System.Drawing.Size(40, 40);
             this.BoxY1.TabIndex = 36;
             this.BoxY1.TabStop = false;
             this.BoxY1.Tag = "yellowfinal";
@@ -658,9 +696,10 @@
             // 
             this.Box16.BackColor = System.Drawing.Color.White;
             this.Box16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box16.Location = new System.Drawing.Point(258, 239);
+            this.Box16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box16.Location = new System.Drawing.Point(369, 329);
             this.Box16.Name = "Box16";
-            this.Box16.Size = new System.Drawing.Size(30, 30);
+            this.Box16.Size = new System.Drawing.Size(40, 40);
             this.Box16.TabIndex = 33;
             this.Box16.TabStop = false;
             this.Box16.Tag = "playground";
@@ -669,9 +708,10 @@
             // 
             this.Box19.BackColor = System.Drawing.Color.White;
             this.Box19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box19.Location = new System.Drawing.Point(366, 239);
+            this.Box19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box19.Location = new System.Drawing.Point(507, 329);
             this.Box19.Name = "Box19";
-            this.Box19.Size = new System.Drawing.Size(30, 30);
+            this.Box19.Size = new System.Drawing.Size(40, 40);
             this.Box19.TabIndex = 32;
             this.Box19.TabStop = false;
             this.Box19.Tag = "playground";
@@ -680,9 +720,10 @@
             // 
             this.Box18.BackColor = System.Drawing.Color.White;
             this.Box18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box18.Location = new System.Drawing.Point(330, 239);
+            this.Box18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box18.Location = new System.Drawing.Point(461, 329);
             this.Box18.Name = "Box18";
-            this.Box18.Size = new System.Drawing.Size(30, 30);
+            this.Box18.Size = new System.Drawing.Size(40, 40);
             this.Box18.TabIndex = 31;
             this.Box18.TabStop = false;
             this.Box18.Tag = "playground";
@@ -691,9 +732,10 @@
             // 
             this.Box33.BackColor = System.Drawing.Color.White;
             this.Box33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box33.Location = new System.Drawing.Point(258, 489);
+            this.Box33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box33.Location = new System.Drawing.Point(369, 651);
             this.Box33.Name = "Box33";
-            this.Box33.Size = new System.Drawing.Size(30, 30);
+            this.Box33.Size = new System.Drawing.Size(40, 40);
             this.Box33.TabIndex = 62;
             this.Box33.TabStop = false;
             this.Box33.Tag = "playground";
@@ -702,9 +744,10 @@
             // 
             this.Box32.BackColor = System.Drawing.Color.White;
             this.Box32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box32.Location = new System.Drawing.Point(258, 453);
+            this.Box32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box32.Location = new System.Drawing.Point(369, 605);
             this.Box32.Name = "Box32";
-            this.Box32.Size = new System.Drawing.Size(30, 30);
+            this.Box32.Size = new System.Drawing.Size(40, 40);
             this.Box32.TabIndex = 61;
             this.Box32.TabStop = false;
             this.Box32.Tag = "playground";
@@ -713,9 +756,10 @@
             // 
             this.Box31.BackColor = System.Drawing.Color.White;
             this.Box31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box31.Location = new System.Drawing.Point(258, 417);
+            this.Box31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box31.Location = new System.Drawing.Point(369, 559);
             this.Box31.Name = "Box31";
-            this.Box31.Size = new System.Drawing.Size(30, 30);
+            this.Box31.Size = new System.Drawing.Size(40, 40);
             this.Box31.TabIndex = 60;
             this.Box31.TabStop = false;
             this.Box31.Tag = "playground";
@@ -724,9 +768,10 @@
             // 
             this.Box30.BackColor = System.Drawing.Color.White;
             this.Box30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box30.Location = new System.Drawing.Point(258, 381);
+            this.Box30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box30.Location = new System.Drawing.Point(369, 513);
             this.Box30.Name = "Box30";
-            this.Box30.Size = new System.Drawing.Size(30, 30);
+            this.Box30.Size = new System.Drawing.Size(40, 40);
             this.Box30.TabIndex = 59;
             this.Box30.TabStop = false;
             this.Box30.Tag = "playground";
@@ -735,9 +780,10 @@
             // 
             this.Box29.BackColor = System.Drawing.Color.White;
             this.Box29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box29.Location = new System.Drawing.Point(258, 345);
+            this.Box29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box29.Location = new System.Drawing.Point(369, 467);
             this.Box29.Name = "Box29";
-            this.Box29.Size = new System.Drawing.Size(30, 30);
+            this.Box29.Size = new System.Drawing.Size(40, 40);
             this.Box29.TabIndex = 58;
             this.Box29.TabStop = false;
             this.Box29.Tag = "playground";
@@ -746,9 +792,10 @@
             // 
             this.BoxB1.BackColor = System.Drawing.Color.Blue;
             this.BoxB1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxB1.Location = new System.Drawing.Point(222, 453);
+            this.BoxB1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxB1.Location = new System.Drawing.Point(323, 605);
             this.BoxB1.Name = "BoxB1";
-            this.BoxB1.Size = new System.Drawing.Size(30, 30);
+            this.BoxB1.Size = new System.Drawing.Size(40, 40);
             this.BoxB1.TabIndex = 56;
             this.BoxB1.TabStop = false;
             this.BoxB1.Tag = "bluefinal";
@@ -757,9 +804,10 @@
             // 
             this.BoxB2.BackColor = System.Drawing.Color.Blue;
             this.BoxB2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxB2.Location = new System.Drawing.Point(222, 417);
+            this.BoxB2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxB2.Location = new System.Drawing.Point(323, 559);
             this.BoxB2.Name = "BoxB2";
-            this.BoxB2.Size = new System.Drawing.Size(30, 30);
+            this.BoxB2.Size = new System.Drawing.Size(40, 40);
             this.BoxB2.TabIndex = 55;
             this.BoxB2.TabStop = false;
             this.BoxB2.Tag = "bluefinal";
@@ -768,9 +816,10 @@
             // 
             this.BoxB3.BackColor = System.Drawing.Color.Blue;
             this.BoxB3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxB3.Location = new System.Drawing.Point(222, 381);
+            this.BoxB3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxB3.Location = new System.Drawing.Point(323, 513);
             this.BoxB3.Name = "BoxB3";
-            this.BoxB3.Size = new System.Drawing.Size(30, 30);
+            this.BoxB3.Size = new System.Drawing.Size(40, 40);
             this.BoxB3.TabIndex = 54;
             this.BoxB3.TabStop = false;
             this.BoxB3.Tag = "bluefinal";
@@ -779,9 +828,10 @@
             // 
             this.Box35.BackColor = System.Drawing.Color.White;
             this.Box35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box35.Location = new System.Drawing.Point(186, 489);
+            this.Box35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box35.Location = new System.Drawing.Point(277, 651);
             this.Box35.Name = "Box35";
-            this.Box35.Size = new System.Drawing.Size(30, 30);
+            this.Box35.Size = new System.Drawing.Size(40, 40);
             this.Box35.TabIndex = 53;
             this.Box35.TabStop = false;
             this.Box35.Tag = "playground";
@@ -790,9 +840,10 @@
             // 
             this.Box37.BackColor = System.Drawing.Color.White;
             this.Box37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box37.Location = new System.Drawing.Point(186, 417);
+            this.Box37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box37.Location = new System.Drawing.Point(277, 559);
             this.Box37.Name = "Box37";
-            this.Box37.Size = new System.Drawing.Size(30, 30);
+            this.Box37.Size = new System.Drawing.Size(40, 40);
             this.Box37.TabIndex = 51;
             this.Box37.TabStop = false;
             this.Box37.Tag = "playground";
@@ -801,9 +852,10 @@
             // 
             this.Box38.BackColor = System.Drawing.Color.White;
             this.Box38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box38.Location = new System.Drawing.Point(186, 381);
+            this.Box38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box38.Location = new System.Drawing.Point(277, 513);
             this.Box38.Name = "Box38";
-            this.Box38.Size = new System.Drawing.Size(30, 30);
+            this.Box38.Size = new System.Drawing.Size(40, 40);
             this.Box38.TabIndex = 50;
             this.Box38.TabStop = false;
             this.Box38.Tag = "playground";
@@ -812,9 +864,10 @@
             // 
             this.Box39.BackColor = System.Drawing.Color.White;
             this.Box39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box39.Location = new System.Drawing.Point(186, 345);
+            this.Box39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box39.Location = new System.Drawing.Point(277, 467);
             this.Box39.Name = "Box39";
-            this.Box39.Size = new System.Drawing.Size(30, 30);
+            this.Box39.Size = new System.Drawing.Size(40, 40);
             this.Box39.TabIndex = 49;
             this.Box39.TabStop = false;
             this.Box39.Tag = "playground";
@@ -823,9 +876,10 @@
             // 
             this.BoxB4.BackColor = System.Drawing.Color.Blue;
             this.BoxB4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BoxB4.Location = new System.Drawing.Point(222, 345);
+            this.BoxB4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BoxB4.Location = new System.Drawing.Point(323, 467);
             this.BoxB4.Name = "BoxB4";
-            this.BoxB4.Size = new System.Drawing.Size(30, 30);
+            this.BoxB4.Size = new System.Drawing.Size(40, 40);
             this.BoxB4.TabIndex = 48;
             this.BoxB4.TabStop = false;
             this.BoxB4.Tag = "bluefinal";
@@ -834,9 +888,10 @@
             // 
             this.Box28.BackColor = System.Drawing.Color.White;
             this.Box28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box28.Location = new System.Drawing.Point(258, 311);
+            this.Box28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box28.Location = new System.Drawing.Point(369, 421);
             this.Box28.Name = "Box28";
-            this.Box28.Size = new System.Drawing.Size(30, 30);
+            this.Box28.Size = new System.Drawing.Size(40, 40);
             this.Box28.TabIndex = 63;
             this.Box28.TabStop = false;
             this.Box28.Tag = "playground";
@@ -845,9 +900,10 @@
             // 
             this.Box40.BackColor = System.Drawing.Color.White;
             this.Box40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box40.Location = new System.Drawing.Point(186, 311);
+            this.Box40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box40.Location = new System.Drawing.Point(277, 421);
             this.Box40.Name = "Box40";
-            this.Box40.Size = new System.Drawing.Size(30, 30);
+            this.Box40.Size = new System.Drawing.Size(40, 40);
             this.Box40.TabIndex = 64;
             this.Box40.TabStop = false;
             this.Box40.Tag = "playground";
@@ -856,9 +912,10 @@
             // 
             this.RN4.BackColor = System.Drawing.Color.Red;
             this.RN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RN4.Location = new System.Drawing.Point(402, 167);
+            this.RN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RN4.Location = new System.Drawing.Point(507, 219);
             this.RN4.Name = "RN4";
-            this.RN4.Size = new System.Drawing.Size(30, 30);
+            this.RN4.Size = new System.Drawing.Size(20, 20);
             this.RN4.TabIndex = 68;
             this.RN4.TabStop = false;
             this.RN4.Tag = "rednest4";
@@ -867,9 +924,10 @@
             // 
             this.RN2.BackColor = System.Drawing.Color.Red;
             this.RN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RN2.Location = new System.Drawing.Point(402, 95);
+            this.RN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RN2.Location = new System.Drawing.Point(507, 147);
             this.RN2.Name = "RN2";
-            this.RN2.Size = new System.Drawing.Size(30, 30);
+            this.RN2.Size = new System.Drawing.Size(20, 20);
             this.RN2.TabIndex = 67;
             this.RN2.TabStop = false;
             this.RN2.Tag = "rednest2";
@@ -878,9 +936,10 @@
             // 
             this.RN3.BackColor = System.Drawing.Color.Red;
             this.RN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RN3.Location = new System.Drawing.Point(330, 167);
+            this.RN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RN3.Location = new System.Drawing.Point(435, 219);
             this.RN3.Name = "RN3";
-            this.RN3.Size = new System.Drawing.Size(30, 30);
+            this.RN3.Size = new System.Drawing.Size(20, 20);
             this.RN3.TabIndex = 66;
             this.RN3.TabStop = false;
             this.RN3.Tag = "rednnest3";
@@ -889,9 +948,10 @@
             // 
             this.RN1.BackColor = System.Drawing.Color.Red;
             this.RN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RN1.Location = new System.Drawing.Point(330, 95);
+            this.RN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RN1.Location = new System.Drawing.Point(435, 147);
             this.RN1.Name = "RN1";
-            this.RN1.Size = new System.Drawing.Size(30, 30);
+            this.RN1.Size = new System.Drawing.Size(20, 20);
             this.RN1.TabIndex = 65;
             this.RN1.TabStop = false;
             this.RN1.Tag = "rednest1";
@@ -900,9 +960,10 @@
             // 
             this.YN1.BackColor = System.Drawing.Color.Yellow;
             this.YN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.YN1.Location = new System.Drawing.Point(330, 381);
+            this.YN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YN1.Location = new System.Drawing.Point(501, 487);
             this.YN1.Name = "YN1";
-            this.YN1.Size = new System.Drawing.Size(30, 30);
+            this.YN1.Size = new System.Drawing.Size(20, 20);
             this.YN1.TabIndex = 70;
             this.YN1.TabStop = false;
             this.YN1.Tag = "yellownest1";
@@ -911,9 +972,10 @@
             // 
             this.YN2.BackColor = System.Drawing.Color.Yellow;
             this.YN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.YN2.Location = new System.Drawing.Point(402, 381);
+            this.YN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YN2.Location = new System.Drawing.Point(573, 487);
             this.YN2.Name = "YN2";
-            this.YN2.Size = new System.Drawing.Size(30, 30);
+            this.YN2.Size = new System.Drawing.Size(20, 20);
             this.YN2.TabIndex = 69;
             this.YN2.TabStop = false;
             this.YN2.Tag = "yellownest2";
@@ -922,9 +984,10 @@
             // 
             this.YN3.BackColor = System.Drawing.Color.Yellow;
             this.YN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.YN3.Location = new System.Drawing.Point(330, 453);
+            this.YN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YN3.Location = new System.Drawing.Point(501, 559);
             this.YN3.Name = "YN3";
-            this.YN3.Size = new System.Drawing.Size(30, 30);
+            this.YN3.Size = new System.Drawing.Size(20, 20);
             this.YN3.TabIndex = 72;
             this.YN3.TabStop = false;
             this.YN3.Tag = "yellownest3";
@@ -933,9 +996,10 @@
             // 
             this.YN4.BackColor = System.Drawing.Color.Yellow;
             this.YN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.YN4.Location = new System.Drawing.Point(402, 453);
+            this.YN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YN4.Location = new System.Drawing.Point(573, 559);
             this.YN4.Name = "YN4";
-            this.YN4.Size = new System.Drawing.Size(30, 30);
+            this.YN4.Size = new System.Drawing.Size(20, 20);
             this.YN4.TabIndex = 71;
             this.YN4.TabStop = false;
             this.YN4.Tag = "yellownest4";
@@ -944,9 +1008,10 @@
             // 
             this.BN4.BackColor = System.Drawing.Color.Blue;
             this.BN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BN4.Location = new System.Drawing.Point(114, 453);
+            this.BN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BN4.Location = new System.Drawing.Point(231, 625);
             this.BN4.Name = "BN4";
-            this.BN4.Size = new System.Drawing.Size(30, 30);
+            this.BN4.Size = new System.Drawing.Size(20, 20);
             this.BN4.TabIndex = 74;
             this.BN4.TabStop = false;
             this.BN4.Tag = "bluenest4";
@@ -955,9 +1020,10 @@
             // 
             this.BN2.BackColor = System.Drawing.Color.Blue;
             this.BN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BN2.Location = new System.Drawing.Point(114, 381);
+            this.BN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BN2.Location = new System.Drawing.Point(231, 553);
             this.BN2.Name = "BN2";
-            this.BN2.Size = new System.Drawing.Size(30, 30);
+            this.BN2.Size = new System.Drawing.Size(20, 20);
             this.BN2.TabIndex = 73;
             this.BN2.TabStop = false;
             this.BN2.Tag = "bluenest2";
@@ -966,9 +1032,10 @@
             // 
             this.BN3.BackColor = System.Drawing.Color.Blue;
             this.BN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BN3.Location = new System.Drawing.Point(42, 453);
+            this.BN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BN3.Location = new System.Drawing.Point(159, 625);
             this.BN3.Name = "BN3";
-            this.BN3.Size = new System.Drawing.Size(30, 30);
+            this.BN3.Size = new System.Drawing.Size(20, 20);
             this.BN3.TabIndex = 76;
             this.BN3.TabStop = false;
             this.BN3.Tag = "bluenest3";
@@ -977,9 +1044,10 @@
             // 
             this.BN1.BackColor = System.Drawing.Color.Blue;
             this.BN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BN1.Location = new System.Drawing.Point(42, 381);
+            this.BN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BN1.Location = new System.Drawing.Point(159, 553);
             this.BN1.Name = "BN1";
-            this.BN1.Size = new System.Drawing.Size(30, 30);
+            this.BN1.Size = new System.Drawing.Size(20, 20);
             this.BN1.TabIndex = 75;
             this.BN1.TabStop = false;
             this.BN1.Tag = "bluenest1";
@@ -988,9 +1056,10 @@
             // 
             this.GN3.BackColor = System.Drawing.Color.Green;
             this.GN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GN3.Location = new System.Drawing.Point(42, 167);
+            this.GN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GN3.Location = new System.Drawing.Point(93, 283);
             this.GN3.Name = "GN3";
-            this.GN3.Size = new System.Drawing.Size(30, 30);
+            this.GN3.Size = new System.Drawing.Size(20, 20);
             this.GN3.TabIndex = 78;
             this.GN3.TabStop = false;
             this.GN3.Tag = "greennest3";
@@ -999,9 +1068,10 @@
             // 
             this.GN4.BackColor = System.Drawing.Color.Green;
             this.GN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GN4.Location = new System.Drawing.Point(114, 167);
+            this.GN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GN4.Location = new System.Drawing.Point(165, 283);
             this.GN4.Name = "GN4";
-            this.GN4.Size = new System.Drawing.Size(30, 30);
+            this.GN4.Size = new System.Drawing.Size(20, 20);
             this.GN4.TabIndex = 77;
             this.GN4.TabStop = false;
             this.GN4.Tag = "greennest4";
@@ -1010,9 +1080,10 @@
             // 
             this.GN1.BackColor = System.Drawing.Color.Green;
             this.GN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GN1.Location = new System.Drawing.Point(42, 95);
+            this.GN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GN1.Location = new System.Drawing.Point(93, 211);
             this.GN1.Name = "GN1";
-            this.GN1.Size = new System.Drawing.Size(30, 30);
+            this.GN1.Size = new System.Drawing.Size(20, 20);
             this.GN1.TabIndex = 80;
             this.GN1.TabStop = false;
             this.GN1.Tag = "greennest1";
@@ -1021,9 +1092,10 @@
             // 
             this.GN2.BackColor = System.Drawing.Color.Green;
             this.GN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GN2.Location = new System.Drawing.Point(114, 95);
+            this.GN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GN2.Location = new System.Drawing.Point(165, 211);
             this.GN2.Name = "GN2";
-            this.GN2.Size = new System.Drawing.Size(30, 30);
+            this.GN2.Size = new System.Drawing.Size(20, 20);
             this.GN2.TabIndex = 79;
             this.GN2.TabStop = false;
             this.GN2.Tag = "greennest2";
@@ -1032,9 +1104,10 @@
             // 
             this.BP1.Enabled = false;
             this.BP1.Image = global::Ludo_board.Properties.Resources.bluepawn;
-            this.BP1.Location = new System.Drawing.Point(42, 381);
+            this.BP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BP1.Location = new System.Drawing.Point(159, 553);
             this.BP1.Name = "BP1";
-            this.BP1.Size = new System.Drawing.Size(30, 30);
+            this.BP1.Size = new System.Drawing.Size(20, 20);
             this.BP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP1.TabIndex = 81;
             this.BP1.TabStop = false;
@@ -1044,9 +1117,10 @@
             // 
             this.BP2.Enabled = false;
             this.BP2.Image = global::Ludo_board.Properties.Resources.bluepawn;
-            this.BP2.Location = new System.Drawing.Point(114, 381);
+            this.BP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BP2.Location = new System.Drawing.Point(231, 553);
             this.BP2.Name = "BP2";
-            this.BP2.Size = new System.Drawing.Size(30, 30);
+            this.BP2.Size = new System.Drawing.Size(20, 20);
             this.BP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP2.TabIndex = 82;
             this.BP2.TabStop = false;
@@ -1057,9 +1131,10 @@
             // 
             this.BP3.Enabled = false;
             this.BP3.Image = global::Ludo_board.Properties.Resources.bluepawn;
-            this.BP3.Location = new System.Drawing.Point(42, 453);
+            this.BP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BP3.Location = new System.Drawing.Point(159, 625);
             this.BP3.Name = "BP3";
-            this.BP3.Size = new System.Drawing.Size(30, 30);
+            this.BP3.Size = new System.Drawing.Size(20, 20);
             this.BP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP3.TabIndex = 83;
             this.BP3.TabStop = false;
@@ -1070,9 +1145,10 @@
             // 
             this.BP4.Enabled = false;
             this.BP4.Image = global::Ludo_board.Properties.Resources.bluepawn;
-            this.BP4.Location = new System.Drawing.Point(114, 453);
+            this.BP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BP4.Location = new System.Drawing.Point(231, 625);
             this.BP4.Name = "BP4";
-            this.BP4.Size = new System.Drawing.Size(30, 30);
+            this.BP4.Size = new System.Drawing.Size(20, 20);
             this.BP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP4.TabIndex = 84;
             this.BP4.TabStop = false;
@@ -1084,9 +1160,10 @@
             this.GP1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.GP1.Enabled = false;
             this.GP1.Image = global::Ludo_board.Properties.Resources.greenpawn;
-            this.GP1.Location = new System.Drawing.Point(42, 95);
+            this.GP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GP1.Location = new System.Drawing.Point(93, 211);
             this.GP1.Name = "GP1";
-            this.GP1.Size = new System.Drawing.Size(30, 30);
+            this.GP1.Size = new System.Drawing.Size(20, 20);
             this.GP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP1.TabIndex = 85;
             this.GP1.TabStop = false;
@@ -1097,9 +1174,10 @@
             // 
             this.GP4.Enabled = false;
             this.GP4.Image = global::Ludo_board.Properties.Resources.greenpawn;
-            this.GP4.Location = new System.Drawing.Point(114, 167);
+            this.GP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GP4.Location = new System.Drawing.Point(165, 283);
             this.GP4.Name = "GP4";
-            this.GP4.Size = new System.Drawing.Size(30, 30);
+            this.GP4.Size = new System.Drawing.Size(20, 20);
             this.GP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP4.TabIndex = 86;
             this.GP4.TabStop = false;
@@ -1110,9 +1188,10 @@
             // 
             this.GP3.Enabled = false;
             this.GP3.Image = global::Ludo_board.Properties.Resources.greenpawn;
-            this.GP3.Location = new System.Drawing.Point(42, 167);
+            this.GP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GP3.Location = new System.Drawing.Point(93, 283);
             this.GP3.Name = "GP3";
-            this.GP3.Size = new System.Drawing.Size(30, 30);
+            this.GP3.Size = new System.Drawing.Size(20, 20);
             this.GP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP3.TabIndex = 87;
             this.GP3.TabStop = false;
@@ -1123,9 +1202,10 @@
             // 
             this.GP2.Enabled = false;
             this.GP2.Image = global::Ludo_board.Properties.Resources.greenpawn;
-            this.GP2.Location = new System.Drawing.Point(114, 95);
+            this.GP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GP2.Location = new System.Drawing.Point(165, 211);
             this.GP2.Name = "GP2";
-            this.GP2.Size = new System.Drawing.Size(30, 30);
+            this.GP2.Size = new System.Drawing.Size(20, 20);
             this.GP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP2.TabIndex = 88;
             this.GP2.TabStop = false;
@@ -1136,9 +1216,10 @@
             // 
             this.YP1.Enabled = false;
             this.YP1.Image = global::Ludo_board.Properties.Resources.yellowpawn;
-            this.YP1.Location = new System.Drawing.Point(330, 381);
+            this.YP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YP1.Location = new System.Drawing.Point(501, 487);
             this.YP1.Name = "YP1";
-            this.YP1.Size = new System.Drawing.Size(30, 30);
+            this.YP1.Size = new System.Drawing.Size(20, 20);
             this.YP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP1.TabIndex = 89;
             this.YP1.TabStop = false;
@@ -1149,9 +1230,10 @@
             // 
             this.YP2.Enabled = false;
             this.YP2.Image = global::Ludo_board.Properties.Resources.yellowpawn;
-            this.YP2.Location = new System.Drawing.Point(402, 381);
+            this.YP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YP2.Location = new System.Drawing.Point(573, 487);
             this.YP2.Name = "YP2";
-            this.YP2.Size = new System.Drawing.Size(30, 30);
+            this.YP2.Size = new System.Drawing.Size(20, 20);
             this.YP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP2.TabIndex = 90;
             this.YP2.TabStop = false;
@@ -1162,9 +1244,10 @@
             // 
             this.YP3.Enabled = false;
             this.YP3.Image = global::Ludo_board.Properties.Resources.yellowpawn;
-            this.YP3.Location = new System.Drawing.Point(330, 453);
+            this.YP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YP3.Location = new System.Drawing.Point(501, 559);
             this.YP3.Name = "YP3";
-            this.YP3.Size = new System.Drawing.Size(30, 30);
+            this.YP3.Size = new System.Drawing.Size(20, 20);
             this.YP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP3.TabIndex = 91;
             this.YP3.TabStop = false;
@@ -1175,9 +1258,10 @@
             // 
             this.YP4.Enabled = false;
             this.YP4.Image = global::Ludo_board.Properties.Resources.yellowpawn;
-            this.YP4.Location = new System.Drawing.Point(402, 453);
+            this.YP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.YP4.Location = new System.Drawing.Point(573, 559);
             this.YP4.Name = "YP4";
-            this.YP4.Size = new System.Drawing.Size(30, 30);
+            this.YP4.Size = new System.Drawing.Size(20, 20);
             this.YP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP4.TabIndex = 92;
             this.YP4.TabStop = false;
@@ -1188,9 +1272,10 @@
             // 
             this.RP1.Enabled = false;
             this.RP1.Image = global::Ludo_board.Properties.Resources.redpawn;
-            this.RP1.Location = new System.Drawing.Point(330, 95);
+            this.RP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RP1.Location = new System.Drawing.Point(435, 147);
             this.RP1.Name = "RP1";
-            this.RP1.Size = new System.Drawing.Size(30, 30);
+            this.RP1.Size = new System.Drawing.Size(20, 20);
             this.RP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP1.TabIndex = 93;
             this.RP1.TabStop = false;
@@ -1201,9 +1286,10 @@
             // 
             this.RP2.Enabled = false;
             this.RP2.Image = global::Ludo_board.Properties.Resources.redpawn;
-            this.RP2.Location = new System.Drawing.Point(402, 95);
+            this.RP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RP2.Location = new System.Drawing.Point(507, 147);
             this.RP2.Name = "RP2";
-            this.RP2.Size = new System.Drawing.Size(30, 30);
+            this.RP2.Size = new System.Drawing.Size(20, 20);
             this.RP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP2.TabIndex = 94;
             this.RP2.TabStop = false;
@@ -1214,9 +1300,10 @@
             // 
             this.RP3.Enabled = false;
             this.RP3.Image = global::Ludo_board.Properties.Resources.redpawn;
-            this.RP3.Location = new System.Drawing.Point(330, 167);
+            this.RP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RP3.Location = new System.Drawing.Point(435, 219);
             this.RP3.Name = "RP3";
-            this.RP3.Size = new System.Drawing.Size(30, 30);
+            this.RP3.Size = new System.Drawing.Size(20, 20);
             this.RP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP3.TabIndex = 95;
             this.RP3.TabStop = false;
@@ -1227,9 +1314,10 @@
             // 
             this.RP4.Enabled = false;
             this.RP4.Image = global::Ludo_board.Properties.Resources.redpawn;
-            this.RP4.Location = new System.Drawing.Point(402, 167);
+            this.RP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.RP4.Location = new System.Drawing.Point(507, 219);
             this.RP4.Name = "RP4";
-            this.RP4.Size = new System.Drawing.Size(30, 30);
+            this.RP4.Size = new System.Drawing.Size(20, 20);
             this.RP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP4.TabIndex = 96;
             this.RP4.TabStop = false;
@@ -1238,12 +1326,12 @@
             // 
             // Box12
             // 
-            this.Box12.BackColor = System.Drawing.Color.Red;
+            this.Box12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Box12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box12.Image = global::Ludo_board.Properties.Resources.start;
-            this.Box12.Location = new System.Drawing.Point(258, 95);
+            this.Box12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box12.Location = new System.Drawing.Point(369, 147);
             this.Box12.Name = "Box12";
-            this.Box12.Size = new System.Drawing.Size(30, 30);
+            this.Box12.Size = new System.Drawing.Size(40, 40);
             this.Box12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box12.TabIndex = 97;
             this.Box12.TabStop = false;
@@ -1251,12 +1339,12 @@
             // 
             // Box0
             // 
-            this.Box0.BackColor = System.Drawing.Color.Green;
+            this.Box0.BackColor = System.Drawing.Color.PaleGreen;
             this.Box0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box0.Image = global::Ludo_board.Properties.Resources.start;
-            this.Box0.Location = new System.Drawing.Point(42, 239);
+            this.Box0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box0.Location = new System.Drawing.Point(93, 329);
             this.Box0.Name = "Box0";
-            this.Box0.Size = new System.Drawing.Size(30, 30);
+            this.Box0.Size = new System.Drawing.Size(40, 40);
             this.Box0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box0.TabIndex = 98;
             this.Box0.TabStop = false;
@@ -1264,12 +1352,12 @@
             // 
             // Box36
             // 
-            this.Box36.BackColor = System.Drawing.Color.Blue;
+            this.Box36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Box36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box36.Image = global::Ludo_board.Properties.Resources.start;
-            this.Box36.Location = new System.Drawing.Point(186, 453);
+            this.Box36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box36.Location = new System.Drawing.Point(277, 605);
             this.Box36.Name = "Box36";
-            this.Box36.Size = new System.Drawing.Size(30, 30);
+            this.Box36.Size = new System.Drawing.Size(40, 40);
             this.Box36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box36.TabIndex = 99;
             this.Box36.TabStop = false;
@@ -1277,12 +1365,12 @@
             // 
             // Box24
             // 
-            this.Box24.BackColor = System.Drawing.Color.Yellow;
+            this.Box24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Box24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box24.Image = global::Ludo_board.Properties.Resources.start;
-            this.Box24.Location = new System.Drawing.Point(402, 311);
+            this.Box24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box24.Location = new System.Drawing.Point(553, 421);
             this.Box24.Name = "Box24";
-            this.Box24.Size = new System.Drawing.Size(30, 30);
+            this.Box24.Size = new System.Drawing.Size(40, 40);
             this.Box24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box24.TabIndex = 100;
             this.Box24.TabStop = false;
@@ -1293,9 +1381,10 @@
             this.Box10.BackColor = System.Drawing.Color.White;
             this.Box10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box10.Image = global::Ludo_board.Properties.Resources.rarrow;
-            this.Box10.Location = new System.Drawing.Point(222, 59);
+            this.Box10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box10.Location = new System.Drawing.Point(323, 101);
             this.Box10.Name = "Box10";
-            this.Box10.Size = new System.Drawing.Size(30, 30);
+            this.Box10.Size = new System.Drawing.Size(40, 40);
             this.Box10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box10.TabIndex = 101;
             this.Box10.TabStop = false;
@@ -1306,9 +1395,10 @@
             this.Box46.BackColor = System.Drawing.Color.White;
             this.Box46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box46.Image = global::Ludo_board.Properties.Resources.garrow;
-            this.Box46.Location = new System.Drawing.Point(6, 275);
+            this.Box46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box46.Location = new System.Drawing.Point(47, 375);
             this.Box46.Name = "Box46";
-            this.Box46.Size = new System.Drawing.Size(30, 30);
+            this.Box46.Size = new System.Drawing.Size(40, 40);
             this.Box46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box46.TabIndex = 102;
             this.Box46.TabStop = false;
@@ -1319,9 +1409,10 @@
             this.Box22.BackColor = System.Drawing.Color.White;
             this.Box22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box22.Image = global::Ludo_board.Properties.Resources.yarrow;
-            this.Box22.Location = new System.Drawing.Point(438, 275);
+            this.Box22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box22.Location = new System.Drawing.Point(599, 374);
             this.Box22.Name = "Box22";
-            this.Box22.Size = new System.Drawing.Size(30, 30);
+            this.Box22.Size = new System.Drawing.Size(40, 40);
             this.Box22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box22.TabIndex = 103;
             this.Box22.TabStop = false;
@@ -1332,9 +1423,10 @@
             this.Box34.BackColor = System.Drawing.Color.White;
             this.Box34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box34.Image = global::Ludo_board.Properties.Resources.barrow;
-            this.Box34.Location = new System.Drawing.Point(222, 489);
+            this.Box34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Box34.Location = new System.Drawing.Point(323, 651);
             this.Box34.Name = "Box34";
-            this.Box34.Size = new System.Drawing.Size(30, 30);
+            this.Box34.Size = new System.Drawing.Size(40, 40);
             this.Box34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Box34.TabIndex = 104;
             this.Box34.TabStop = false;
@@ -1344,9 +1436,10 @@
             // 
             this.Home.BackColor = System.Drawing.Color.Transparent;
             this.Home.Image = global::Ludo_board.Properties.Resources.centrs;
-            this.Home.Location = new System.Drawing.Point(186, 239);
+            this.Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Home.Location = new System.Drawing.Point(277, 329);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(102, 102);
+            this.Home.Size = new System.Drawing.Size(132, 132);
             this.Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Home.TabIndex = 105;
             this.Home.TabStop = false;
@@ -1356,8 +1449,8 @@
             // 
             this.lbl_dice.AccessibleName = "Dice";
             this.lbl_dice.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.lbl_dice.Image = global::Ludo_board.Properties.Resources.Dice_1;
-            this.lbl_dice.Location = new System.Drawing.Point(563, 39);
+            this.lbl_dice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_dice.Location = new System.Drawing.Point(723, 91);
             this.lbl_dice.Name = "lbl_dice";
             this.lbl_dice.Size = new System.Drawing.Size(50, 50);
             this.lbl_dice.TabIndex = 106;
@@ -1367,7 +1460,8 @@
             this.rollDice.BackColor = System.Drawing.Color.White;
             this.rollDice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rollDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rollDice.Location = new System.Drawing.Point(543, 95);
+            this.rollDice.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rollDice.Location = new System.Drawing.Point(703, 147);
             this.rollDice.Name = "rollDice";
             this.rollDice.Size = new System.Drawing.Size(87, 30);
             this.rollDice.TabIndex = 107;
@@ -1381,7 +1475,8 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(519, 185);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(679, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 226);
             this.label2.TabIndex = 109;
@@ -1396,7 +1491,8 @@
             this.Player1.BackColor = System.Drawing.Color.White;
             this.Player1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player1.ForeColor = System.Drawing.Color.Green;
-            this.Player1.Location = new System.Drawing.Point(12, 59);
+            this.Player1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Player1.Location = new System.Drawing.Point(93, 160);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(60, 25);
             this.Player1.TabIndex = 110;
@@ -1409,7 +1505,8 @@
             this.Player2.BackColor = System.Drawing.Color.White;
             this.Player2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player2.ForeColor = System.Drawing.Color.Red;
-            this.Player2.Location = new System.Drawing.Point(408, 59);
+            this.Player2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Player2.Location = new System.Drawing.Point(467, 101);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(60, 25);
             this.Player2.TabIndex = 111;
@@ -1422,7 +1519,8 @@
             this.Player3.BackColor = System.Drawing.Color.White;
             this.Player3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.Player3.Location = new System.Drawing.Point(408, 494);
+            this.Player3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Player3.Location = new System.Drawing.Point(533, 605);
             this.Player3.Name = "Player3";
             this.Player3.Size = new System.Drawing.Size(60, 25);
             this.Player3.TabIndex = 112;
@@ -1435,7 +1533,8 @@
             this.Player4.BackColor = System.Drawing.Color.White;
             this.Player4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Player4.ForeColor = System.Drawing.Color.Blue;
-            this.Player4.Location = new System.Drawing.Point(12, 494);
+            this.Player4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Player4.Location = new System.Drawing.Point(159, 666);
             this.Player4.Name = "Player4";
             this.Player4.Size = new System.Drawing.Size(60, 25);
             this.Player4.TabIndex = 113;
@@ -1447,7 +1546,8 @@
             // 
             this.LogInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogInfo.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LogInfo.Location = new System.Drawing.Point(543, 517);
+            this.LogInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LogInfo.Location = new System.Drawing.Point(703, 569);
             this.LogInfo.Name = "LogInfo";
             this.LogInfo.Size = new System.Drawing.Size(123, 32);
             this.LogInfo.TabIndex = 114;
@@ -1458,7 +1558,8 @@
             // Exit
             // 
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Exit.Location = new System.Drawing.Point(538, 364);
+            this.Exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Exit.Location = new System.Drawing.Point(698, 416);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(114, 29);
             this.Exit.TabIndex = 117;
@@ -1469,7 +1570,8 @@
             // NewGame
             // 
             this.NewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewGame.Location = new System.Drawing.Point(527, 326);
+            this.NewGame.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NewGame.Location = new System.Drawing.Point(687, 378);
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(133, 32);
             this.NewGame.TabIndex = 116;
@@ -1482,7 +1584,8 @@
             this.Gameover.BackColor = System.Drawing.Color.BurlyWood;
             this.Gameover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Gameover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Gameover.Location = new System.Drawing.Point(519, 185);
+            this.Gameover.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Gameover.Location = new System.Drawing.Point(679, 237);
             this.Gameover.Name = "Gameover";
             this.Gameover.Size = new System.Drawing.Size(147, 226);
             this.Gameover.TabIndex = 115;
@@ -1494,7 +1597,8 @@
             this.label1.BackColor = System.Drawing.Color.Snow;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(519, 185);
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(679, 237);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.label1.Size = new System.Drawing.Size(147, 226);
@@ -1508,7 +1612,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(687, 561);
+            this.ClientSize = new System.Drawing.Size(1165, 799);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
