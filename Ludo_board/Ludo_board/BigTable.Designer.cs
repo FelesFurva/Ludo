@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ludoboard));
             this.Box1 = new System.Windows.Forms.PictureBox();
             this.Box9 = new System.Windows.Forms.PictureBox();
             this.Box8 = new System.Windows.Forms.PictureBox();
@@ -322,7 +323,7 @@
             // 
             // BoxG4
             // 
-            this.BoxG4.BackColor = System.Drawing.Color.Green;
+            this.BoxG4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxG4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxG4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxG4.Location = new System.Drawing.Point(231, 375);
@@ -334,7 +335,7 @@
             // 
             // BoxG3
             // 
-            this.BoxG3.BackColor = System.Drawing.Color.Green;
+            this.BoxG3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxG3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxG3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxG3.Location = new System.Drawing.Point(185, 375);
@@ -346,7 +347,7 @@
             // 
             // BoxG2
             // 
-            this.BoxG2.BackColor = System.Drawing.Color.Green;
+            this.BoxG2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxG2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxG2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxG2.Location = new System.Drawing.Point(139, 375);
@@ -358,7 +359,7 @@
             // 
             // BoxG1
             // 
-            this.BoxG1.BackColor = System.Drawing.Color.Green;
+            this.BoxG1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxG1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxG1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxG1.Location = new System.Drawing.Point(93, 375);
@@ -466,7 +467,7 @@
             // 
             // BoxR4
             // 
-            this.BoxR4.BackColor = System.Drawing.Color.Red;
+            this.BoxR4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BoxR4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxR4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxR4.Location = new System.Drawing.Point(323, 283);
@@ -478,7 +479,7 @@
             // 
             // BoxR3
             // 
-            this.BoxR3.BackColor = System.Drawing.Color.Red;
+            this.BoxR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BoxR3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxR3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxR3.Location = new System.Drawing.Point(323, 237);
@@ -490,7 +491,7 @@
             // 
             // BoxR2
             // 
-            this.BoxR2.BackColor = System.Drawing.Color.Red;
+            this.BoxR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BoxR2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxR2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxR2.Location = new System.Drawing.Point(323, 191);
@@ -502,7 +503,7 @@
             // 
             // BoxR1
             // 
-            this.BoxR1.BackColor = System.Drawing.Color.Red;
+            this.BoxR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BoxR1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxR1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxR1.Location = new System.Drawing.Point(323, 147);
@@ -598,7 +599,7 @@
             // 
             // BoxY4
             // 
-            this.BoxY4.BackColor = System.Drawing.Color.Yellow;
+            this.BoxY4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxY4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxY4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxY4.Location = new System.Drawing.Point(415, 374);
@@ -658,7 +659,7 @@
             // 
             // BoxY3
             // 
-            this.BoxY3.BackColor = System.Drawing.Color.Yellow;
+            this.BoxY3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxY3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxY3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxY3.Location = new System.Drawing.Point(461, 374);
@@ -670,7 +671,7 @@
             // 
             // BoxY2
             // 
-            this.BoxY2.BackColor = System.Drawing.Color.Yellow;
+            this.BoxY2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxY2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxY2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxY2.Location = new System.Drawing.Point(507, 374);
@@ -682,7 +683,7 @@
             // 
             // BoxY1
             // 
-            this.BoxY1.BackColor = System.Drawing.Color.Yellow;
+            this.BoxY1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BoxY1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxY1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxY1.Location = new System.Drawing.Point(553, 374);
@@ -790,7 +791,7 @@
             // 
             // BoxB1
             // 
-            this.BoxB1.BackColor = System.Drawing.Color.Blue;
+            this.BoxB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BoxB1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxB1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxB1.Location = new System.Drawing.Point(323, 605);
@@ -802,7 +803,7 @@
             // 
             // BoxB2
             // 
-            this.BoxB2.BackColor = System.Drawing.Color.Blue;
+            this.BoxB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BoxB2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxB2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxB2.Location = new System.Drawing.Point(323, 559);
@@ -814,7 +815,7 @@
             // 
             // BoxB3
             // 
-            this.BoxB3.BackColor = System.Drawing.Color.Blue;
+            this.BoxB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BoxB3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxB3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxB3.Location = new System.Drawing.Point(323, 513);
@@ -874,7 +875,7 @@
             // 
             // BoxB4
             // 
-            this.BoxB4.BackColor = System.Drawing.Color.Blue;
+            this.BoxB4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BoxB4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BoxB4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BoxB4.Location = new System.Drawing.Point(323, 467);
@@ -910,7 +911,7 @@
             // 
             // RN4
             // 
-            this.RN4.BackColor = System.Drawing.Color.Red;
+            this.RN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.RN4.Location = new System.Drawing.Point(613, 219);
@@ -922,7 +923,7 @@
             // 
             // RN2
             // 
-            this.RN2.BackColor = System.Drawing.Color.Red;
+            this.RN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.RN2.Location = new System.Drawing.Point(613, 147);
@@ -934,7 +935,7 @@
             // 
             // RN3
             // 
-            this.RN3.BackColor = System.Drawing.Color.Red;
+            this.RN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.RN3.Location = new System.Drawing.Point(541, 219);
@@ -946,7 +947,7 @@
             // 
             // RN1
             // 
-            this.RN1.BackColor = System.Drawing.Color.Red;
+            this.RN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.RN1.Location = new System.Drawing.Point(541, 147);
@@ -958,7 +959,7 @@
             // 
             // YN1
             // 
-            this.YN1.BackColor = System.Drawing.Color.Yellow;
+            this.YN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.YN1.Location = new System.Drawing.Point(547, 548);
@@ -970,7 +971,7 @@
             // 
             // YN2
             // 
-            this.YN2.BackColor = System.Drawing.Color.Yellow;
+            this.YN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.YN2.Location = new System.Drawing.Point(619, 548);
@@ -982,7 +983,7 @@
             // 
             // YN3
             // 
-            this.YN3.BackColor = System.Drawing.Color.Yellow;
+            this.YN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.YN3.Location = new System.Drawing.Point(547, 620);
@@ -994,7 +995,7 @@
             // 
             // YN4
             // 
-            this.YN4.BackColor = System.Drawing.Color.Yellow;
+            this.YN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.YN4.Location = new System.Drawing.Point(619, 620);
@@ -1006,7 +1007,7 @@
             // 
             // BN4
             // 
-            this.BN4.BackColor = System.Drawing.Color.Blue;
+            this.BN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BN4.Location = new System.Drawing.Point(119, 625);
@@ -1018,7 +1019,7 @@
             // 
             // BN2
             // 
-            this.BN2.BackColor = System.Drawing.Color.Blue;
+            this.BN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BN2.Location = new System.Drawing.Point(119, 553);
@@ -1030,7 +1031,7 @@
             // 
             // BN3
             // 
-            this.BN3.BackColor = System.Drawing.Color.Blue;
+            this.BN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BN3.Location = new System.Drawing.Point(47, 625);
@@ -1042,7 +1043,7 @@
             // 
             // BN1
             // 
-            this.BN1.BackColor = System.Drawing.Color.Blue;
+            this.BN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BN1.Location = new System.Drawing.Point(47, 553);
@@ -1054,7 +1055,7 @@
             // 
             // GN3
             // 
-            this.GN3.BackColor = System.Drawing.Color.Green;
+            this.GN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GN3.Location = new System.Drawing.Point(47, 224);
@@ -1066,7 +1067,7 @@
             // 
             // GN4
             // 
-            this.GN4.BackColor = System.Drawing.Color.Green;
+            this.GN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GN4.Location = new System.Drawing.Point(119, 224);
@@ -1078,7 +1079,7 @@
             // 
             // GN1
             // 
-            this.GN1.BackColor = System.Drawing.Color.Green;
+            this.GN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GN1.Location = new System.Drawing.Point(47, 152);
@@ -1090,7 +1091,7 @@
             // 
             // GN2
             // 
-            this.GN2.BackColor = System.Drawing.Color.Green;
+            this.GN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GN2.Location = new System.Drawing.Point(119, 152);
@@ -1340,7 +1341,7 @@
             // 
             // Box0
             // 
-            this.Box0.BackColor = System.Drawing.Color.PaleGreen;
+            this.Box0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Box0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box0.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box0.Location = new System.Drawing.Point(93, 329);
@@ -1366,7 +1367,7 @@
             // 
             // Box24
             // 
-            this.Box24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Box24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Box24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Box24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box24.Location = new System.Drawing.Point(553, 421);
@@ -1381,7 +1382,7 @@
             // 
             this.Box10.BackColor = System.Drawing.Color.White;
             this.Box10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box10.Image = global::Ludo_board.Properties.Resources.rarrow;
+            this.Box10.Image = ((System.Drawing.Image)(resources.GetObject("Box10.Image")));
             this.Box10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box10.Location = new System.Drawing.Point(323, 101);
             this.Box10.Name = "Box10";
@@ -1395,7 +1396,7 @@
             // 
             this.Box46.BackColor = System.Drawing.Color.White;
             this.Box46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box46.Image = global::Ludo_board.Properties.Resources.garrow;
+            this.Box46.Image = ((System.Drawing.Image)(resources.GetObject("Box46.Image")));
             this.Box46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box46.Location = new System.Drawing.Point(47, 375);
             this.Box46.Name = "Box46";
@@ -1409,7 +1410,7 @@
             // 
             this.Box22.BackColor = System.Drawing.Color.White;
             this.Box22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box22.Image = global::Ludo_board.Properties.Resources.yarrow;
+            this.Box22.Image = ((System.Drawing.Image)(resources.GetObject("Box22.Image")));
             this.Box22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box22.Location = new System.Drawing.Point(599, 374);
             this.Box22.Name = "Box22";
@@ -1423,7 +1424,7 @@
             // 
             this.Box34.BackColor = System.Drawing.Color.White;
             this.Box34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Box34.Image = global::Ludo_board.Properties.Resources.barrow;
+            this.Box34.Image = ((System.Drawing.Image)(resources.GetObject("Box34.Image")));
             this.Box34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Box34.Location = new System.Drawing.Point(323, 651);
             this.Box34.Name = "Box34";
@@ -1436,7 +1437,7 @@
             // Home
             // 
             this.Home.BackColor = System.Drawing.Color.Transparent;
-            this.Home.Image = global::Ludo_board.Properties.Resources.centrs;
+            this.Home.Image = ((System.Drawing.Image)(resources.GetObject("Home.Image")));
             this.Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Home.Location = new System.Drawing.Point(277, 329);
             this.Home.Name = "Home";

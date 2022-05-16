@@ -53,13 +53,13 @@ namespace Ludo_board
             { GP1, GP2, GP3, GP4, RP1, RP2, RP3, RP4, YP1, YP2, YP3, YP4, BP1, BP2, BP3, BP4 };
             diceImages = new Image[7]
             {
-                Properties.Resources.Dice_blank,
-                Properties.Resources.Dice_1,
-                Properties.Resources.Dice_2,
-                Properties.Resources.Dice_3,
-                Properties.Resources.Dice_4,
-                Properties.Resources.Dice_5,
-                Properties.Resources.Dice_6
+                Properties.Resources.Dice_blank1,
+                Properties.Resources.Dice_11,
+                Properties.Resources.Dice_21,
+                Properties.Resources.Dice_31,
+                Properties.Resources.Dice_41,
+                Properties.Resources.Dice_51,
+                Properties.Resources.Dice_61
             };
             PlayerLabelList = new Label[4]
             { Player1,Player2,Player3,Player4};
@@ -149,7 +149,7 @@ namespace Ludo_board
 
         private void RollDice()
         {
-            dice = random.Next(4, 7);
+            dice = random.Next(1, 7);
             lbl_dice.Image = diceImages[dice];
         }
 

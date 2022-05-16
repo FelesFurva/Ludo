@@ -169,4 +169,25 @@
   <data name="bluepawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bluepawn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Dice_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dice_blank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dice_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
