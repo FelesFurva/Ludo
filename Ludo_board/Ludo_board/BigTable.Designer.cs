@@ -914,9 +914,9 @@
             this.RN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN4.Location = new System.Drawing.Point(613, 219);
+            this.RN4.Location = new System.Drawing.Point(507, 191);
             this.RN4.Name = "RN4";
-            this.RN4.Size = new System.Drawing.Size(20, 20);
+            this.RN4.Size = new System.Drawing.Size(40, 40);
             this.RN4.TabIndex = 68;
             this.RN4.TabStop = false;
             this.RN4.Tag = "rednest4";
@@ -926,9 +926,9 @@
             this.RN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN2.Location = new System.Drawing.Point(613, 147);
+            this.RN2.Location = new System.Drawing.Point(507, 147);
             this.RN2.Name = "RN2";
-            this.RN2.Size = new System.Drawing.Size(20, 20);
+            this.RN2.Size = new System.Drawing.Size(40, 40);
             this.RN2.TabIndex = 67;
             this.RN2.TabStop = false;
             this.RN2.Tag = "rednest2";
@@ -938,9 +938,9 @@
             this.RN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN3.Location = new System.Drawing.Point(541, 219);
+            this.RN3.Location = new System.Drawing.Point(461, 191);
             this.RN3.Name = "RN3";
-            this.RN3.Size = new System.Drawing.Size(20, 20);
+            this.RN3.Size = new System.Drawing.Size(40, 40);
             this.RN3.TabIndex = 66;
             this.RN3.TabStop = false;
             this.RN3.Tag = "rednnest3";
@@ -950,9 +950,9 @@
             this.RN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.RN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RN1.Location = new System.Drawing.Point(541, 147);
+            this.RN1.Location = new System.Drawing.Point(461, 147);
             this.RN1.Name = "RN1";
-            this.RN1.Size = new System.Drawing.Size(20, 20);
+            this.RN1.Size = new System.Drawing.Size(40, 40);
             this.RN1.TabIndex = 65;
             this.RN1.TabStop = false;
             this.RN1.Tag = "rednest1";
@@ -962,9 +962,9 @@
             this.YN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN1.Location = new System.Drawing.Point(547, 548);
+            this.YN1.Location = new System.Drawing.Point(507, 513);
             this.YN1.Name = "YN1";
-            this.YN1.Size = new System.Drawing.Size(20, 20);
+            this.YN1.Size = new System.Drawing.Size(40, 40);
             this.YN1.TabIndex = 70;
             this.YN1.TabStop = false;
             this.YN1.Tag = "yellownest1";
@@ -974,9 +974,9 @@
             this.YN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN2.Location = new System.Drawing.Point(619, 548);
+            this.YN2.Location = new System.Drawing.Point(553, 513);
             this.YN2.Name = "YN2";
-            this.YN2.Size = new System.Drawing.Size(20, 20);
+            this.YN2.Size = new System.Drawing.Size(40, 40);
             this.YN2.TabIndex = 69;
             this.YN2.TabStop = false;
             this.YN2.Tag = "yellownest2";
@@ -986,9 +986,9 @@
             this.YN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN3.Location = new System.Drawing.Point(547, 620);
+            this.YN3.Location = new System.Drawing.Point(507, 559);
             this.YN3.Name = "YN3";
-            this.YN3.Size = new System.Drawing.Size(20, 20);
+            this.YN3.Size = new System.Drawing.Size(40, 40);
             this.YN3.TabIndex = 72;
             this.YN3.TabStop = false;
             this.YN3.Tag = "yellownest3";
@@ -998,9 +998,9 @@
             this.YN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.YN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.YN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YN4.Location = new System.Drawing.Point(619, 620);
+            this.YN4.Location = new System.Drawing.Point(553, 559);
             this.YN4.Name = "YN4";
-            this.YN4.Size = new System.Drawing.Size(20, 20);
+            this.YN4.Size = new System.Drawing.Size(40, 40);
             this.YN4.TabIndex = 71;
             this.YN4.TabStop = false;
             this.YN4.Tag = "yellownest4";
@@ -1010,9 +1010,9 @@
             this.BN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN4.Location = new System.Drawing.Point(119, 625);
+            this.BN4.Location = new System.Drawing.Point(185, 605);
             this.BN4.Name = "BN4";
-            this.BN4.Size = new System.Drawing.Size(20, 20);
+            this.BN4.Size = new System.Drawing.Size(40, 40);
             this.BN4.TabIndex = 74;
             this.BN4.TabStop = false;
             this.BN4.Tag = "bluenest4";
@@ -1022,9 +1022,9 @@
             this.BN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN2.Location = new System.Drawing.Point(119, 553);
+            this.BN2.Location = new System.Drawing.Point(185, 559);
             this.BN2.Name = "BN2";
-            this.BN2.Size = new System.Drawing.Size(20, 20);
+            this.BN2.Size = new System.Drawing.Size(40, 40);
             this.BN2.TabIndex = 73;
             this.BN2.TabStop = false;
             this.BN2.Tag = "bluenest2";
@@ -1034,9 +1034,9 @@
             this.BN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN3.Location = new System.Drawing.Point(47, 625);
+            this.BN3.Location = new System.Drawing.Point(139, 605);
             this.BN3.Name = "BN3";
-            this.BN3.Size = new System.Drawing.Size(20, 20);
+            this.BN3.Size = new System.Drawing.Size(40, 40);
             this.BN3.TabIndex = 76;
             this.BN3.TabStop = false;
             this.BN3.Tag = "bluenest3";
@@ -1046,9 +1046,9 @@
             this.BN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BN1.Location = new System.Drawing.Point(47, 553);
+            this.BN1.Location = new System.Drawing.Point(139, 559);
             this.BN1.Name = "BN1";
-            this.BN1.Size = new System.Drawing.Size(20, 20);
+            this.BN1.Size = new System.Drawing.Size(40, 40);
             this.BN1.TabIndex = 75;
             this.BN1.TabStop = false;
             this.BN1.Tag = "bluenest1";
@@ -1058,9 +1058,9 @@
             this.GN3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN3.Location = new System.Drawing.Point(47, 224);
+            this.GN3.Location = new System.Drawing.Point(93, 237);
             this.GN3.Name = "GN3";
-            this.GN3.Size = new System.Drawing.Size(20, 20);
+            this.GN3.Size = new System.Drawing.Size(40, 40);
             this.GN3.TabIndex = 78;
             this.GN3.TabStop = false;
             this.GN3.Tag = "greennest3";
@@ -1070,9 +1070,9 @@
             this.GN4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN4.Location = new System.Drawing.Point(119, 224);
+            this.GN4.Location = new System.Drawing.Point(139, 237);
             this.GN4.Name = "GN4";
-            this.GN4.Size = new System.Drawing.Size(20, 20);
+            this.GN4.Size = new System.Drawing.Size(40, 40);
             this.GN4.TabIndex = 77;
             this.GN4.TabStop = false;
             this.GN4.Tag = "greennest4";
@@ -1082,9 +1082,9 @@
             this.GN1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN1.Location = new System.Drawing.Point(47, 152);
+            this.GN1.Location = new System.Drawing.Point(93, 191);
             this.GN1.Name = "GN1";
-            this.GN1.Size = new System.Drawing.Size(20, 20);
+            this.GN1.Size = new System.Drawing.Size(40, 40);
             this.GN1.TabIndex = 80;
             this.GN1.TabStop = false;
             this.GN1.Tag = "greennest1";
@@ -1094,9 +1094,9 @@
             this.GN2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.GN2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GN2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GN2.Location = new System.Drawing.Point(119, 152);
+            this.GN2.Location = new System.Drawing.Point(139, 191);
             this.GN2.Name = "GN2";
-            this.GN2.Size = new System.Drawing.Size(20, 20);
+            this.GN2.Size = new System.Drawing.Size(40, 40);
             this.GN2.TabIndex = 79;
             this.GN2.TabStop = false;
             this.GN2.Tag = "greennest2";
@@ -1106,12 +1106,13 @@
             this.BP1.Enabled = false;
             this.BP1.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP1.Location = new System.Drawing.Point(47, 553);
+            this.BP1.Location = new System.Drawing.Point(139, 559);
             this.BP1.Name = "BP1";
-            this.BP1.Size = new System.Drawing.Size(20, 20);
+            this.BP1.Size = new System.Drawing.Size(40, 40);
             this.BP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP1.TabIndex = 81;
             this.BP1.TabStop = false;
+            this.BP1.Tag = "BluePawn";
             this.BP1.Click += new System.EventHandler(this.BP1_Click);
             // 
             // BP2
@@ -1119,13 +1120,13 @@
             this.BP2.Enabled = false;
             this.BP2.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP2.Location = new System.Drawing.Point(119, 553);
+            this.BP2.Location = new System.Drawing.Point(185, 559);
             this.BP2.Name = "BP2";
-            this.BP2.Size = new System.Drawing.Size(20, 20);
+            this.BP2.Size = new System.Drawing.Size(40, 40);
             this.BP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP2.TabIndex = 82;
             this.BP2.TabStop = false;
-            this.BP2.Tag = "bp2";
+            this.BP2.Tag = "BluePawn";
             this.BP2.Click += new System.EventHandler(this.BP2_Click);
             // 
             // BP3
@@ -1133,13 +1134,13 @@
             this.BP3.Enabled = false;
             this.BP3.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP3.Location = new System.Drawing.Point(47, 625);
+            this.BP3.Location = new System.Drawing.Point(139, 605);
             this.BP3.Name = "BP3";
-            this.BP3.Size = new System.Drawing.Size(20, 20);
+            this.BP3.Size = new System.Drawing.Size(40, 40);
             this.BP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP3.TabIndex = 83;
             this.BP3.TabStop = false;
-            this.BP3.Tag = "bp3";
+            this.BP3.Tag = "BluePawn";
             this.BP3.Click += new System.EventHandler(this.BP3_Click);
             // 
             // BP4
@@ -1147,13 +1148,13 @@
             this.BP4.Enabled = false;
             this.BP4.Image = global::Ludo_board.Properties.Resources.bluepawn;
             this.BP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BP4.Location = new System.Drawing.Point(119, 625);
+            this.BP4.Location = new System.Drawing.Point(185, 605);
             this.BP4.Name = "BP4";
-            this.BP4.Size = new System.Drawing.Size(20, 20);
+            this.BP4.Size = new System.Drawing.Size(40, 40);
             this.BP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BP4.TabIndex = 84;
             this.BP4.TabStop = false;
-            this.BP4.Tag = "bp4";
+            this.BP4.Tag = "BluePawn";
             this.BP4.Click += new System.EventHandler(this.BP4_Click);
             // 
             // GP1
@@ -1162,13 +1163,13 @@
             this.GP1.Enabled = false;
             this.GP1.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP1.Location = new System.Drawing.Point(47, 152);
+            this.GP1.Location = new System.Drawing.Point(93, 191);
             this.GP1.Name = "GP1";
-            this.GP1.Size = new System.Drawing.Size(20, 20);
+            this.GP1.Size = new System.Drawing.Size(40, 40);
             this.GP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP1.TabIndex = 85;
             this.GP1.TabStop = false;
-            this.GP1.Tag = "gp1";
+            this.GP1.Tag = "GreenPawn";
             this.GP1.Click += new System.EventHandler(this.GP1_Click);
             // 
             // GP4
@@ -1177,13 +1178,13 @@
             this.GP4.Enabled = false;
             this.GP4.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP4.Location = new System.Drawing.Point(119, 224);
+            this.GP4.Location = new System.Drawing.Point(139, 237);
             this.GP4.Name = "GP4";
-            this.GP4.Size = new System.Drawing.Size(20, 20);
+            this.GP4.Size = new System.Drawing.Size(40, 40);
             this.GP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP4.TabIndex = 86;
             this.GP4.TabStop = false;
-            this.GP4.Tag = "gp4";
+            this.GP4.Tag = "GreenPawn";
             this.GP4.Click += new System.EventHandler(this.GP4_Click);
             // 
             // GP3
@@ -1191,13 +1192,13 @@
             this.GP3.Enabled = false;
             this.GP3.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP3.Location = new System.Drawing.Point(47, 224);
+            this.GP3.Location = new System.Drawing.Point(93, 237);
             this.GP3.Name = "GP3";
-            this.GP3.Size = new System.Drawing.Size(20, 20);
+            this.GP3.Size = new System.Drawing.Size(40, 40);
             this.GP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP3.TabIndex = 87;
             this.GP3.TabStop = false;
-            this.GP3.Tag = "gp3";
+            this.GP3.Tag = "GreenPawn";
             this.GP3.Click += new System.EventHandler(this.GP3_Click);
             // 
             // GP2
@@ -1205,13 +1206,13 @@
             this.GP2.Enabled = false;
             this.GP2.Image = global::Ludo_board.Properties.Resources.greenpawn;
             this.GP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GP2.Location = new System.Drawing.Point(119, 152);
+            this.GP2.Location = new System.Drawing.Point(139, 191);
             this.GP2.Name = "GP2";
-            this.GP2.Size = new System.Drawing.Size(20, 20);
+            this.GP2.Size = new System.Drawing.Size(40, 40);
             this.GP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GP2.TabIndex = 88;
             this.GP2.TabStop = false;
-            this.GP2.Tag = "gp2";
+            this.GP2.Tag = "GreenPawn";
             this.GP2.Click += new System.EventHandler(this.GP2_Click);
             // 
             // YP1
@@ -1219,13 +1220,13 @@
             this.YP1.Enabled = false;
             this.YP1.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP1.Location = new System.Drawing.Point(547, 548);
+            this.YP1.Location = new System.Drawing.Point(507, 513);
             this.YP1.Name = "YP1";
-            this.YP1.Size = new System.Drawing.Size(20, 20);
+            this.YP1.Size = new System.Drawing.Size(40, 40);
             this.YP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP1.TabIndex = 89;
             this.YP1.TabStop = false;
-            this.YP1.Tag = "yp1";
+            this.YP1.Tag = "YellowPawn";
             this.YP1.Click += new System.EventHandler(this.YP1_Click);
             // 
             // YP2
@@ -1233,13 +1234,13 @@
             this.YP2.Enabled = false;
             this.YP2.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP2.Location = new System.Drawing.Point(619, 548);
+            this.YP2.Location = new System.Drawing.Point(553, 513);
             this.YP2.Name = "YP2";
-            this.YP2.Size = new System.Drawing.Size(20, 20);
+            this.YP2.Size = new System.Drawing.Size(40, 40);
             this.YP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP2.TabIndex = 90;
             this.YP2.TabStop = false;
-            this.YP2.Tag = "yp2";
+            this.YP2.Tag = "YellowPawn";
             this.YP2.Click += new System.EventHandler(this.YP2_Click);
             // 
             // YP3
@@ -1247,13 +1248,13 @@
             this.YP3.Enabled = false;
             this.YP3.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP3.Location = new System.Drawing.Point(547, 620);
+            this.YP3.Location = new System.Drawing.Point(507, 559);
             this.YP3.Name = "YP3";
-            this.YP3.Size = new System.Drawing.Size(20, 20);
+            this.YP3.Size = new System.Drawing.Size(40, 40);
             this.YP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP3.TabIndex = 91;
             this.YP3.TabStop = false;
-            this.YP3.Tag = "yp3";
+            this.YP3.Tag = "YellowPawn";
             this.YP3.Click += new System.EventHandler(this.YP3_Click);
             // 
             // YP4
@@ -1261,13 +1262,13 @@
             this.YP4.Enabled = false;
             this.YP4.Image = global::Ludo_board.Properties.Resources.yellowpawn;
             this.YP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.YP4.Location = new System.Drawing.Point(619, 620);
+            this.YP4.Location = new System.Drawing.Point(553, 559);
             this.YP4.Name = "YP4";
-            this.YP4.Size = new System.Drawing.Size(20, 20);
+            this.YP4.Size = new System.Drawing.Size(40, 40);
             this.YP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YP4.TabIndex = 92;
             this.YP4.TabStop = false;
-            this.YP4.Tag = "yp4";
+            this.YP4.Tag = "YellowPawn";
             this.YP4.Click += new System.EventHandler(this.YP4_Click);
             // 
             // RP1
@@ -1275,13 +1276,13 @@
             this.RP1.Enabled = false;
             this.RP1.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP1.Location = new System.Drawing.Point(541, 147);
+            this.RP1.Location = new System.Drawing.Point(461, 147);
             this.RP1.Name = "RP1";
-            this.RP1.Size = new System.Drawing.Size(20, 20);
+            this.RP1.Size = new System.Drawing.Size(40, 40);
             this.RP1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP1.TabIndex = 93;
             this.RP1.TabStop = false;
-            this.RP1.Tag = "rp1";
+            this.RP1.Tag = "RedPawn";
             this.RP1.Click += new System.EventHandler(this.RP1_Click);
             // 
             // RP2
@@ -1289,13 +1290,13 @@
             this.RP2.Enabled = false;
             this.RP2.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP2.Location = new System.Drawing.Point(613, 147);
+            this.RP2.Location = new System.Drawing.Point(507, 147);
             this.RP2.Name = "RP2";
-            this.RP2.Size = new System.Drawing.Size(20, 20);
+            this.RP2.Size = new System.Drawing.Size(40, 40);
             this.RP2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP2.TabIndex = 94;
             this.RP2.TabStop = false;
-            this.RP2.Tag = "rp2";
+            this.RP2.Tag = "RedPawn";
             this.RP2.Click += new System.EventHandler(this.RP2_Click);
             // 
             // RP3
@@ -1303,13 +1304,13 @@
             this.RP3.Enabled = false;
             this.RP3.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP3.Location = new System.Drawing.Point(541, 219);
+            this.RP3.Location = new System.Drawing.Point(461, 191);
             this.RP3.Name = "RP3";
-            this.RP3.Size = new System.Drawing.Size(20, 20);
+            this.RP3.Size = new System.Drawing.Size(40, 40);
             this.RP3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP3.TabIndex = 95;
             this.RP3.TabStop = false;
-            this.RP3.Tag = "rp3";
+            this.RP3.Tag = "RedPawn";
             this.RP3.Click += new System.EventHandler(this.RP3_Click);
             // 
             // RP4
@@ -1317,13 +1318,13 @@
             this.RP4.Enabled = false;
             this.RP4.Image = global::Ludo_board.Properties.Resources.redpawn;
             this.RP4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RP4.Location = new System.Drawing.Point(613, 219);
+            this.RP4.Location = new System.Drawing.Point(507, 191);
             this.RP4.Name = "RP4";
-            this.RP4.Size = new System.Drawing.Size(20, 20);
+            this.RP4.Size = new System.Drawing.Size(40, 40);
             this.RP4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RP4.TabIndex = 96;
             this.RP4.TabStop = false;
-            this.RP4.Tag = "rp4";
+            this.RP4.Tag = "RedPawn";
             this.RP4.Click += new System.EventHandler(this.RP4_Click);
             // 
             // Box12

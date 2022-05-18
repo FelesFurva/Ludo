@@ -71,6 +71,7 @@ namespace Ludo_board
             DatabaseConnection databaseConnection = new DatabaseConnection();
             logManager = new LogManager(databaseConnection);
             
+
             PlayerList = new List<Player>();
 
             for (int i = 0; i < playerCount; i++)
@@ -80,6 +81,13 @@ namespace Ludo_board
             TurnPlayerButtonsOn();
             label2.Text = "Click on the player name for the initial dice roll!" +
               "\nThen click here to find out who starts first!";
+            
+            for (int i=0; i<=allPawns.Length; i++)
+            {
+                string Label2Text = $"Pawn has made 0 steps";
+                int pawnID = i+1;
+                this.logManager.UpdateMovementLog(pawnID, Label2Text);
+            }
         }
 
         //Dice
@@ -198,6 +206,14 @@ namespace Ludo_board
             }
         }
 
+        //Pawn location reset
+        private void Pawnreset(int j)
+        {
+             allPawns[j].Location = allNests[j].Location;
+            pawnStepsMade[j] = 0;
+
+        }
+
         // Option to choose which pawn to move by clicking on them
         // Can't accidentally skip a turn by clicking a pawn in nest if there are active pawns
 
@@ -294,21 +310,21 @@ namespace Ludo_board
                 {
                     MovePawn(i);
                     Nextplayer();
-                    switch (j)
-                    {
-                        case 0:
-                            GPoffset(i);
-                            break;
-                        case 1:
-                            RPoffset(i);
-                            break;
-                        case 2:
-                            YPoffset(i);
-                            break;
-                        case 3:
-                            BPoffset(i);
-                            break;
-                    }
+                    //switch (j)
+                    //{
+                    //    case 0:
+                    //        GPoffset(i);
+                    //        break;
+                    //    case 1:
+                    //        RPoffset(i);
+                    //        break;
+                    //    case 2:
+                    //        YPoffset(i);
+                    //        break;
+                    //    case 3:
+                    //        BPoffset(i);
+                    //        break;
+                    //}
                 }
             }
             else
@@ -321,28 +337,35 @@ namespace Ludo_board
         {
             if (allPawns[i].Location == allNests[i].Location)
             {
-                
                 if (dice == 6)
                 {
                     if (i<=3)
                     {
                         allPawns[i].MoveTo(Box0);
-                        allPawns[i].BackColor = Box0.BackColor;                       
+                        //allPawns[i].BackColor = Box0.BackColor;                       
                     }
                     if (i>3 && i<=7)
                     {
                         allPawns[i].MoveTo(Box12);
-                        allPawns[i].BackColor = Box12.BackColor;
+                        //allPawns[i].BackColor = Box12.BackColor;
                     }
                     if (i>7 && i<=11)
                     {
                         allPawns[i].MoveTo(Box24);
-                        allPawns[i].BackColor = Box24.BackColor;
+                        //allPawns[i].BackColor = Box24.BackColor;
                     }
                     if (i>11 && i<=15)
                     {
                         allPawns[i].MoveTo(Box36);
-                        allPawns[i].BackColor = Box36.BackColor;
+                        //allPawns[i].BackColor = Box36.BackColor;
+                    }
+                    for (int j = 0; j<allPawns.Length; j++)
+                    {
+                        if (allPawns[j].Tag != allPawns[i].Tag && allPawns[j].Location == allPawns[i].Location)
+                        {
+                            Pawnreset(j);
+                        }
+
                     }
                 }
                 dice=0;
@@ -361,12 +384,21 @@ namespace Ludo_board
                 if (pawnStepsMade[i]<=46)
                 {
                     allPawns[i].MoveTo(boardtiles[pawnBoxnumber[i]]);
-                    allPawns[i].BackColor = boardtiles[pawnBoxnumber[i]].BackColor;
+
+                    for (int j=0; j<allPawns.Length; j++)
+                    {
+                        if (allPawns[j].Tag != allPawns[i].Tag && allPawns[j].Location == allPawns[i].Location)
+                        {
+                            Pawnreset(j);
+                        }
+                        
+                    }
+                    //allPawns[i].BackColor = boardtiles[pawnBoxnumber[i]].BackColor;
                 }
                 if (pawnStepsMade[i] > 46 && pawnStepsMade[i] <51)
                 {
                     allPawns[i].MoveTo(specialLanes[pawnStepsMade[i]-47+((ActivePlayerID - 1) * 4)]);
-                    allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+((ActivePlayerID - 1) * 4)].BackColor;
+                    //allPawns[i].BackColor = specialLanes[pawnStepsMade[i]-47+((ActivePlayerID - 1) * 4)].BackColor;
                 }
 
                 if (pawnStepsMade[i] >= 51) 
@@ -515,6 +547,7 @@ namespace Ludo_board
         private void NewGame_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void Exit_Click(object sender, EventArgs e)
